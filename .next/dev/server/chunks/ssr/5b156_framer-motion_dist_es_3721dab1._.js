@@ -2,14 +2,14 @@ module.exports = [
 "[project]/vd-final/node_modules/framer-motion/dist/es/render/svg/lowercase-elements.mjs [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-/**
- * We keep these listed separately as we use the lowercase tag names as part
- * of the runtime bundle to detect SVG components
- */ __turbopack_context__.s([
+__turbopack_context__.s([
     "lowercaseSVGElements",
     ()=>lowercaseSVGElements
 ]);
-const lowercaseSVGElements = [
+/**
+ * We keep these listed separately as we use the lowercase tag names as part
+ * of the runtime bundle to detect SVG components
+ */ const lowercaseSVGElements = [
     "animate",
     "circle",
     "defs",
@@ -352,16 +352,16 @@ function useSVGProps(props, visualState, _isStatic, Component) {
 "[project]/vd-final/node_modules/framer-motion/dist/es/motion/utils/valid-prop.mjs [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
+__turbopack_context__.s([
+    "isValidMotionProp",
+    ()=>isValidMotionProp
+]);
 /**
  * A list of all valid MotionProps.
  *
  * @privateRemarks
  * This doesn't throw if a `MotionProp` name is missing - it should.
- */ __turbopack_context__.s([
-    "isValidMotionProp",
-    ()=>isValidMotionProp
-]);
-const validMotionProps = new Set([
+ */ const validMotionProps = new Set([
     "animate",
     "exit",
     "variants",
@@ -1399,11 +1399,11 @@ function addPointerEvent(target, eventName, handler, options) {
 "[project]/vd-final/node_modules/framer-motion/dist/es/utils/get-context-window.mjs [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-// Fixes https://github.com/motiondivision/motion/issues/2270
 __turbopack_context__.s([
     "getContextWindow",
     ()=>getContextWindow
 ]);
+// Fixes https://github.com/motiondivision/motion/issues/2270
 const getContextWindow = ({ current })=>{
     return current ? current.ownerDocument.defaultView : null;
 };
@@ -2874,15 +2874,15 @@ class PressGesture extends __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d
 "[project]/vd-final/node_modules/framer-motion/dist/es/motion/features/viewport/observers.mjs [app-ssr] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
+__turbopack_context__.s([
+    "observeIntersection",
+    ()=>observeIntersection
+]);
 /**
  * Map an IntersectionHandler callback to an element. We only ever make one handler for one
  * element, so even though these handlers might all be triggered by different
  * observers, we can keep them in the same map.
- */ __turbopack_context__.s([
-    "observeIntersection",
-    ()=>observeIntersection
-]);
-const observerCallbacks = new WeakMap();
+ */ const observerCallbacks = new WeakMap();
 /**
  * Multiple observers can be created for multiple element/document roots. Each with
  * different settings. So here we store dictionaries of observers to each root,

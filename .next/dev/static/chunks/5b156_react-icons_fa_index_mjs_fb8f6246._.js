@@ -2,7 +2,6 @@
 "[project]/vd-final/node_modules/react-icons/fa/index.mjs [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-// THIS FILE IS AUTO GENERATED
 __turbopack_context__.s([
     "Fa500Px",
     ()=>Fa500Px,
@@ -3227,6 +3226,7 @@ __turbopack_context__.s([
     "FaZhihu",
     ()=>FaZhihu
 ]);
+// THIS FILE IS AUTO GENERATED
 var __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$react$2d$icons$2f$lib$2f$iconBase$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/vd-final/node_modules/react-icons/lib/iconBase.mjs [app-client] (ecmascript)");
 ;
 function Fa500Px(props) {

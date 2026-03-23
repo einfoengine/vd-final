@@ -2,15 +2,15 @@
 "[project]/vd-final/node_modules/motion-dom/dist/es/render/utils/keys-transform.mjs [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-/**
- * Generate a list of every possible transform key.
- */ __turbopack_context__.s([
+__turbopack_context__.s([
     "transformPropOrder",
     ()=>transformPropOrder,
     "transformProps",
     ()=>transformProps
 ]);
-const transformPropOrder = [
+/**
+ * Generate a list of every possible transform key.
+ */ const transformPropOrder = [
     "transformPerspective",
     "x",
     "y",
@@ -67,12 +67,12 @@ const scale = {
 "[project]/vd-final/node_modules/motion-dom/dist/es/value/types/utils/sanitize.mjs [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-// If this number is a decimal, make it just five decimal places
-// to avoid exponents
 __turbopack_context__.s([
     "sanitize",
     ()=>sanitize
 ]);
+// If this number is a decimal, make it just five decimal places
+// to avoid exponents
 const sanitize = (v)=>Math.round(v * 100000) / 100000;
 ;
  //# sourceMappingURL=sanitize.mjs.map
@@ -227,7 +227,7 @@ const hex = {
 "[project]/vd-final/node_modules/motion-dom/dist/es/value/types/numbers/units.mjs [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-/*#__NO_SIDE_EFFECTS__*/ __turbopack_context__.s([
+__turbopack_context__.s([
     "degrees",
     ()=>degrees,
     "percent",
@@ -241,7 +241,7 @@ const hex = {
     "vw",
     ()=>vw
 ]);
-const createUnitType = (unit)=>({
+/*#__NO_SIDE_EFFECTS__*/ const createUnitType = (unit)=>({
         test: (v)=>typeof v === "string" && v.endsWith(unit) && v.split(" ").length === 1,
         parse: parseFloat,
         transform: (v)=>`${v}${unit}`
@@ -718,13 +718,13 @@ const positionalKeys = new Set([
 "[project]/vd-final/node_modules/motion-dom/dist/es/value/types/auto.mjs [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-/**
- * ValueType for "auto"
- */ __turbopack_context__.s([
+__turbopack_context__.s([
     "auto",
     ()=>auto
 ]);
-const auto = {
+/**
+ * ValueType for "auto"
+ */ const auto = {
     test: (v)=>v === "auto",
     parse: (v)=>v
 };
@@ -734,13 +734,13 @@ const auto = {
 "[project]/vd-final/node_modules/motion-dom/dist/es/value/types/test.mjs [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-/**
- * Tests a provided value against a ValueType
- */ __turbopack_context__.s([
+__turbopack_context__.s([
     "testValueType",
     ()=>testValueType
 ]);
-const testValueType = (v)=>(type)=>type.test(v);
+/**
+ * Tests a provided value against a ValueType
+ */ const testValueType = (v)=>(type)=>type.test(v);
 ;
  //# sourceMappingURL=test.mjs.map
 }),
@@ -2034,13 +2034,13 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$
 "[project]/vd-final/node_modules/motion-dom/dist/es/render/utils/reduced-motion/state.mjs [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-// Does this device prefer reduced motion? Returns `null` server-side.
 __turbopack_context__.s([
     "hasReducedMotionListener",
     ()=>hasReducedMotionListener,
     "prefersReducedMotion",
     ()=>prefersReducedMotion
 ]);
+// Does this device prefer reduced motion? Returns `null` server-side.
 const prefersReducedMotion = {
     current: null
 };
@@ -2102,13 +2102,13 @@ function isAnimationControls(v) {
 "[project]/vd-final/node_modules/motion-dom/dist/es/render/utils/is-variant-label.mjs [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-/**
- * Decides if the supplied variable is variant label
- */ __turbopack_context__.s([
+__turbopack_context__.s([
     "isVariantLabel",
     ()=>isVariantLabel
 ]);
-function isVariantLabel(v) {
+/**
+ * Decides if the supplied variable is variant label
+ */ function isVariantLabel(v) {
     return typeof v === "string" || Array.isArray(v);
 }
 ;
@@ -2827,13 +2827,13 @@ function camelToDash(str) {
 "[project]/vd-final/node_modules/motion-dom/dist/es/value/types/utils/get-as-type.mjs [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-/**
- * Provided a value and a ValueType, returns the value as that value type.
- */ __turbopack_context__.s([
+__turbopack_context__.s([
     "getValueAsType",
     ()=>getValueAsType
 ]);
-const getValueAsType = (value, type)=>{
+/**
+ * Provided a value and a ValueType, returns the value as that value type.
+ */ const getValueAsType = (value, type)=>{
     return type && typeof value === "number" ? type.transform(value) : value;
 };
 ;
@@ -3089,13 +3089,13 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$
 "[project]/vd-final/node_modules/motion-dom/dist/es/render/svg/utils/camel-case-attrs.mjs [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-/**
- * A set of attribute names that are always read/written as camel case.
- */ __turbopack_context__.s([
+__turbopack_context__.s([
     "camelCaseAttributes",
     ()=>camelCaseAttributes
 ]);
-const camelCaseAttributes = new Set([
+/**
+ * A set of attribute names that are always read/written as camel case.
+ */ const camelCaseAttributes = new Set([
     "baseFrequency",
     "diffuseConstant",
     "kernelMatrix",
@@ -3229,6 +3229,10 @@ function pixelsToPercent(pixels, axis) {
 "[project]/vd-final/node_modules/motion-dom/dist/es/utils/mix/number.mjs [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
+__turbopack_context__.s([
+    "mixNumber",
+    ()=>mixNumber
+]);
 /*
   Value in range from progress
 
@@ -3249,11 +3253,7 @@ function pixelsToPercent(pixels, axis) {
   @param [number]: Upper limit of range
   @param [number]: The progress between lower and upper limits expressed 0-1
   @return [number]: Value as calculated from progress within range (not limited within range)
-*/ __turbopack_context__.s([
-    "mixNumber",
-    ()=>mixNumber
-]);
-const mixNumber = (from, to, progress)=>{
+*/ const mixNumber = (from, to, progress)=>{
     return from + (to - from) * progress;
 };
 ;
@@ -3476,11 +3476,7 @@ class SVGVisualElement extends __TURBOPACK__imported__module__$5b$project$5d2f$v
 "[project]/vd-final/node_modules/motion-dom/dist/es/projection/geometry/conversion.mjs [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-/**
- * Bounding boxes tend to be defined as top, left, right, bottom. For various operations
- * it's easier to consider each axis individually. This function returns a bounding box
- * as a map of single-axis min/max values.
- */ __turbopack_context__.s([
+__turbopack_context__.s([
     "convertBoundingBoxToBox",
     ()=>convertBoundingBoxToBox,
     "convertBoxToBoundingBox",
@@ -3488,7 +3484,11 @@ class SVGVisualElement extends __TURBOPACK__imported__module__$5b$project$5d2f$v
     "transformBoxPoints",
     ()=>transformBoxPoints
 ]);
-function convertBoundingBoxToBox({ top, left, right, bottom }) {
+/**
+ * Bounding boxes tend to be defined as top, left, right, bottom. For various operations
+ * it's easier to consider each axis individually. This function returns a bounding box
+ * as a map of single-axis min/max values.
+ */ function convertBoundingBoxToBox({ top, left, right, bottom }) {
     return {
         x: {
             min: left,
@@ -3824,15 +3824,15 @@ const optimizedAppearDataAttribute = "data-" + (0, __TURBOPACK__imported__module
 "[project]/vd-final/node_modules/motion-dom/dist/es/render/Feature.mjs [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
+__turbopack_context__.s([
+    "Feature",
+    ()=>Feature
+]);
 /**
  * Feature base class for extending VisualElement functionality.
  * Features are plugins that can be mounted/unmounted to add behavior
  * like gestures, animations, or layout tracking.
- */ __turbopack_context__.s([
-    "Feature",
-    ()=>Feature
-]);
-class Feature {
+ */ class Feature {
     constructor(node){
         this.isMounted = false;
         this.node = node;
@@ -4001,11 +4001,11 @@ const activeAnimations = {
 "[project]/vd-final/node_modules/motion-dom/dist/es/value/types/color/hsla-to-rgba.mjs [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-// Adapted from https://gist.github.com/mjackson/5311256
 __turbopack_context__.s([
     "hslaToRgba",
     ()=>hslaToRgba
 ]);
+// Adapted from https://gist.github.com/mjackson/5311256
 function hueToRgb(p, q, t) {
     if (t < 0) t += 1;
     if (t > 1) t -= 1;
@@ -4326,16 +4326,16 @@ const generateLinearEasing = (easing, duration, resolution = 10 // as millisecon
 "[project]/vd-final/node_modules/motion-dom/dist/es/animation/generators/utils/calc-duration.mjs [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-/**
- * Implement a practical max duration for keyframe generation
- * to prevent infinite loops
- */ __turbopack_context__.s([
+__turbopack_context__.s([
     "calcGeneratorDuration",
     ()=>calcGeneratorDuration,
     "maxGeneratorDuration",
     ()=>maxGeneratorDuration
 ]);
-const maxGeneratorDuration = 20000;
+/**
+ * Implement a practical max duration for keyframe generation
+ * to prevent infinite loops
+ */ const maxGeneratorDuration = 20000;
 function calcGeneratorDuration(generator) {
     let duration = 0;
     const timeStep = 50;
@@ -5438,14 +5438,14 @@ const supportsScrollTimeline = /* @__PURE__ */ (0, __TURBOPACK__imported__module
 "[project]/vd-final/node_modules/motion-dom/dist/es/utils/supports/flags.mjs [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-/**
- * Add the ability for test suites to manually set support flags
- * to better test more environments.
- */ __turbopack_context__.s([
+__turbopack_context__.s([
     "supportsFlags",
     ()=>supportsFlags
 ]);
-const supportsFlags = {};
+/**
+ * Add the ability for test suites to manually set support flags
+ * to better test more environments.
+ */ const supportsFlags = {};
 ;
  //# sourceMappingURL=flags.mjs.map
 }),
@@ -6322,15 +6322,15 @@ function getFinalKeyframe(keyframes, { repeat, repeatType = "loop" }, finalKeyfr
 "[project]/vd-final/node_modules/motion-dom/dist/es/animation/utils/is-transition-defined.mjs [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
+__turbopack_context__.s([
+    "isTransitionDefined",
+    ()=>isTransitionDefined
+]);
 /**
  * Decide whether a transition is defined on a given Transition.
  * This filters out orchestration options and returns true
  * if any options are left.
- */ __turbopack_context__.s([
-    "isTransitionDefined",
-    ()=>isTransitionDefined
-]);
-function isTransitionDefined({ when, delay: _delay, delayChildren, staggerChildren, staggerDirection, repeat, repeatType, repeatDelay, from, elapsed, ...transition }) {
+ */ function isTransitionDefined({ when, delay: _delay, delayChildren, staggerChildren, staggerDirection, repeat, repeatType, repeatDelay, from, elapsed, ...transition }) {
     return !!Object.keys(transition).length;
 }
 ;
@@ -7264,15 +7264,15 @@ const isPrimaryPointer = (event)=>{
 "[project]/vd-final/node_modules/motion-dom/dist/es/projection/node/state.mjs [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
+__turbopack_context__.s([
+    "globalProjectionState",
+    ()=>globalProjectionState
+]);
 /**
  * This should only ever be modified on the client otherwise it'll
  * persist through server requests. If we need instanced states we
  * could lazy-init via root.
- */ __turbopack_context__.s([
-    "globalProjectionState",
-    ()=>globalProjectionState
-]);
-const globalProjectionState = {
+ */ const globalProjectionState = {
     /**
      * Global flag as to whether the tree has animated since the last time
      * we resized the window
@@ -7452,11 +7452,7 @@ function compress(min, max, easing) {
 "[project]/vd-final/node_modules/motion-dom/dist/es/projection/geometry/copy.mjs [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
-/**
- * Reset an axis to the provided origin box.
- *
- * This is a mutative operation.
- */ __turbopack_context__.s([
+__turbopack_context__.s([
     "copyAxisDeltaInto",
     ()=>copyAxisDeltaInto,
     "copyAxisInto",
@@ -7464,7 +7460,11 @@ function compress(min, max, easing) {
     "copyBoxInto",
     ()=>copyBoxInto
 ]);
-function copyAxisInto(axis, originAxis) {
+/**
+ * Reset an axis to the provided origin box.
+ *
+ * This is a mutative operation.
+ */ function copyAxisInto(axis, originAxis) {
     axis.min = originAxis.min;
     axis.max = originAxis.max;
 }
@@ -9426,17 +9426,17 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$
 "[project]/vd-final/node_modules/motion-dom/dist/es/gestures/utils/is-node-or-child.mjs [app-client] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
+__turbopack_context__.s([
+    "isNodeOrChild",
+    ()=>isNodeOrChild
+]);
 /**
  * Recursively traverse up the tree to check whether the provided child node
  * is the parent or a descendant of it.
  *
  * @param parent - Element to find
  * @param child - Element to test against parent
- */ __turbopack_context__.s([
-    "isNodeOrChild",
-    ()=>isNodeOrChild
-]);
-const isNodeOrChild = (parent, child)=>{
+ */ const isNodeOrChild = (parent, child)=>{
     if (!child) {
         return false;
     } else if (parent === child) {

@@ -2,6 +2,7 @@
 "[project]/vd-final/node_modules/next/dist/compiled/react/cjs/react-jsx-dev-runtime.development.js [app-client] (ecmascript)", ((__turbopack_context__, module, exports) => {
 "use strict";
 
+var __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = /*#__PURE__*/ __turbopack_context__.i("[project]/vd-final/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
 /**
  * @license React
  * react-jsx-dev-runtime.development.js
@@ -10,8 +11,7 @@
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
- */ var __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = /*#__PURE__*/ __turbopack_context__.i("[project]/vd-final/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
-"use strict";
+ */ "use strict";
 "production" !== ("TURBOPACK compile-time value", "development") && function() {
     function getComponentNameFromType(type) {
         if (null == type) return null;
@@ -311,7 +311,9 @@ const imageConfigDefault = {
     formats: [
         'image/webp'
     ],
+    maximumDiskCacheSize: undefined,
     maximumRedirects: 3,
+    maximumResponseBody: 50000000,
     dangerouslyAllowLocalIP: false,
     dangerouslyAllowSVG: false,
     contentSecurityPolicy: `script-src 'none'; frame-src 'none'; sandbox;`,
@@ -339,6 +341,7 @@ Object.defineProperty(exports, "getImgProps", {
     }
 });
 const _warnonce = __turbopack_context__.r("[project]/vd-final/node_modules/next/dist/shared/lib/utils/warn-once.js [app-client] (ecmascript)");
+const _deploymentid = __turbopack_context__.r("[project]/vd-final/node_modules/next/dist/shared/lib/deployment-id.js [app-client] (ecmascript)");
 const _imageblursvg = __turbopack_context__.r("[project]/vd-final/node_modules/next/dist/shared/lib/image-blur-svg.js [app-client] (ecmascript)");
 const _imageconfig = __turbopack_context__.r("[project]/vd-final/node_modules/next/dist/shared/lib/image-config.js [app-client] (ecmascript)");
 const VALID_LOADING_VALUES = [
@@ -423,6 +426,11 @@ function getWidths({ deviceSizes, allSizes }, width, sizes) {
 }
 function generateImgAttrs({ config, src, unoptimized, width, quality, sizes, loader }) {
     if (unoptimized) {
+        const deploymentId = (0, _deploymentid.getDeploymentId)();
+        if (src.startsWith('/') && !src.startsWith('//') && deploymentId) {
+            const sep = src.includes('?') ? '&' : '?';
+            src = `${src}${sep}dpl=${deploymentId}`;
+        }
         return {
             src,
             srcSet: undefined,
@@ -2927,6 +2935,7 @@ Object.defineProperty(exports, "default", {
     }
 });
 const _findclosestquality = __turbopack_context__.r("[project]/vd-final/node_modules/next/dist/shared/lib/find-closest-quality.js [app-client] (ecmascript)");
+const _deploymentid = __turbopack_context__.r("[project]/vd-final/node_modules/next/dist/shared/lib/deployment-id.js [app-client] (ecmascript)");
 function defaultLoader({ config, src, width, quality }) {
     if (src.startsWith('/') && src.includes('?') && config.localPatterns?.length === 1 && config.localPatterns[0].pathname === '**' && config.localPatterns[0].search === '') {
         throw Object.defineProperty(new Error(`Image with src "${src}" is using a query string which is not configured in images.localPatterns.` + `\nRead more: https://nextjs.org/docs/messages/next-image-unconfigured-localpatterns`), "__NEXT_ERROR_CODE", {
@@ -2997,7 +3006,8 @@ function defaultLoader({ config, src, width, quality }) {
         }
     }
     const q = (0, _findclosestquality.findClosestQuality)(quality, config);
-    return `${config.path}?url=${encodeURIComponent(src)}&w=${width}&q=${q}${src.startsWith('/_next/static/media/') && ("TURBOPACK compile-time value", false) ? "TURBOPACK unreachable" : ''}`;
+    let deploymentId = (0, _deploymentid.getDeploymentId)();
+    return `${config.path}?url=${encodeURIComponent(src)}&w=${width}&q=${q}${src.startsWith('/') && deploymentId ? `&dpl=${deploymentId}` : ''}`;
 }
 // We use this to determine if the import is the default loader
 // or a custom loader defined by the user in next.config.js
@@ -3607,6 +3617,7 @@ function assign(target, ...searchParamsList) {
 "[project]/vd-final/node_modules/next/dist/shared/lib/router/utils/format-url.js [app-client] (ecmascript)", ((__turbopack_context__, module, exports) => {
 "use strict";
 
+var __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = /*#__PURE__*/ __turbopack_context__.i("[project]/vd-final/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
 // Format function modified from nodejs
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -3628,7 +3639,6 @@ function assign(target, ...searchParamsList) {
 // DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
-var __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = /*#__PURE__*/ __turbopack_context__.i("[project]/vd-final/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -4027,7 +4037,7 @@ const _addbasepath = __turbopack_context__.r("[project]/vd-final/node_modules/ne
 const _warnonce = __turbopack_context__.r("[project]/vd-final/node_modules/next/dist/shared/lib/utils/warn-once.js [app-client] (ecmascript)");
 const _links = __turbopack_context__.r("[project]/vd-final/node_modules/next/dist/client/components/links.js [app-client] (ecmascript)");
 const _islocalurl = __turbopack_context__.r("[project]/vd-final/node_modules/next/dist/shared/lib/router/utils/is-local-url.js [app-client] (ecmascript)");
-const _segmentcache = __turbopack_context__.r("[project]/vd-final/node_modules/next/dist/client/components/segment-cache.js [app-client] (ecmascript)");
+const _types = __turbopack_context__.r("[project]/vd-final/node_modules/next/dist/client/components/segment-cache/types.js [app-client] (ecmascript)");
 const _erroronce = __turbopack_context__.r("[project]/vd-final/node_modules/next/dist/shared/lib/utils/error-once.js [app-client] (ecmascript)");
 function isModifiedEvent(event) {
     const eventTarget = event.currentTarget;
@@ -4091,7 +4101,7 @@ function LinkComponent(props) {
     }
     const router = _react.default.useContext(_approutercontextsharedruntime.AppRouterContext);
     const prefetchEnabled = prefetchProp !== false;
-    const fetchStrategy = prefetchProp !== false ? getFetchStrategyFromPrefetchProp(prefetchProp) : _segmentcache.FetchStrategy.PPR;
+    const fetchStrategy = prefetchProp !== false ? getFetchStrategyFromPrefetchProp(prefetchProp) : _types.FetchStrategy.PPR;
     if ("TURBOPACK compile-time truthy", 1) {
         function createPropError(args) {
             return Object.defineProperty(new Error(`Failed prop type: The prop \`${args.key}\` expects a ${args.expected} in \`<Link>\`, but got \`${args.actual}\` instead.` + (typeof window !== 'undefined' ? "\nOpen your browser's console to view the Component stack trace." : '')), "__NEXT_ERROR_CODE", {
@@ -4376,8 +4386,8 @@ function getFetchStrategyFromPrefetchProp(prefetchProp) {
     if ("TURBOPACK compile-time falsy", 0) //TURBOPACK unreachable
     ;
     else {
-        return prefetchProp === null || prefetchProp === 'auto' ? _segmentcache.FetchStrategy.PPR : // (although invalid values should've been filtered out by prop validation in dev)
-        _segmentcache.FetchStrategy.Full;
+        return prefetchProp === null || prefetchProp === 'auto' ? _types.FetchStrategy.PPR : // (although invalid values should've been filtered out by prop validation in dev)
+        _types.FetchStrategy.Full;
     }
 }
 if ((typeof exports.default === 'function' || typeof exports.default === 'object' && exports.default !== null) && typeof exports.default.__esModule === 'undefined') {
