@@ -16,7 +16,6 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/_global-error",
       "dataRoute": "/_global-error.rsc",
-      "prefetchDataRoute": null,
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -42,7 +41,6 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/_not-found",
       "dataRoute": "/_not-found.rsc",
-      "prefetchDataRoute": null,
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -67,7 +65,6 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/about",
       "dataRoute": "/about.rsc",
-      "prefetchDataRoute": null,
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -92,7 +89,6 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/blog/[slug]",
       "dataRoute": "/blog/restaurant-ui-ux-trends-2025.rsc",
-      "prefetchDataRoute": null,
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -117,7 +113,6 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/blog/[slug]",
       "dataRoute": "/blog/ux-ui-design-trends-2025.rsc",
-      "prefetchDataRoute": null,
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -142,7 +137,6 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/blog",
       "dataRoute": "/blog.rsc",
-      "prefetchDataRoute": null,
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -167,7 +161,6 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/case-studies/[slug]",
       "dataRoute": "/case-studies/restaurant-ui-ux-trends-2025.rsc",
-      "prefetchDataRoute": null,
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -192,7 +185,6 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/case-studies/[slug]",
       "dataRoute": "/case-studies/ux-ui-design-trends-2025.rsc",
-      "prefetchDataRoute": null,
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -217,7 +209,6 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/case-studies",
       "dataRoute": "/case-studies.rsc",
-      "prefetchDataRoute": null,
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -242,7 +233,6 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/contact",
       "dataRoute": "/contact.rsc",
-      "prefetchDataRoute": null,
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -272,7 +262,6 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/favicon.ico",
       "dataRoute": null,
-      "prefetchDataRoute": null,
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -297,7 +286,6 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/",
       "dataRoute": "/index.rsc",
-      "prefetchDataRoute": null,
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -322,7 +310,6 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/services/[slug]",
       "dataRoute": "/services/ad-management.rsc",
-      "prefetchDataRoute": null,
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -347,7 +334,6 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/services/[slug]",
       "dataRoute": "/services/content-retainer.rsc",
-      "prefetchDataRoute": null,
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -372,7 +358,6 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/services/[slug]",
       "dataRoute": "/services/copywriting-service.rsc",
-      "prefetchDataRoute": null,
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -397,7 +382,6 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/services/[slug]",
       "dataRoute": "/services/design-service.rsc",
-      "prefetchDataRoute": null,
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -422,7 +406,6 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/services/[slug]",
       "dataRoute": "/services/digital-marketing-audit.rsc",
-      "prefetchDataRoute": null,
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -447,7 +430,6 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/services/[slug]",
       "dataRoute": "/services/growth-roadmap.rsc",
-      "prefetchDataRoute": null,
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -472,7 +454,6 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/services/[slug]",
       "dataRoute": "/services/seo-management.rsc",
-      "prefetchDataRoute": null,
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -497,7 +478,6 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/services/[slug]",
       "dataRoute": "/services/seo-project.rsc",
-      "prefetchDataRoute": null,
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -522,7 +502,6 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/services/[slug]",
       "dataRoute": "/services/Social-media-management.rsc",
-      "prefetchDataRoute": null,
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -547,7 +526,6 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/services/[slug]",
       "dataRoute": "/services/tiktok-youtube-management.rsc",
-      "prefetchDataRoute": null,
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -572,7 +550,6 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/services/[slug]",
       "dataRoute": "/services/video-production.rsc",
-      "prefetchDataRoute": null,
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -597,7 +574,6 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/services/[slug]",
       "dataRoute": "/services/website-maintenance.rsc",
-      "prefetchDataRoute": null,
       "allowHeader": [
         "host",
         "x-matched-path",
@@ -622,7 +598,6 @@
       "initialRevalidateSeconds": false,
       "srcRoute": "/services",
       "dataRoute": "/services.rsc",
-      "prefetchDataRoute": null,
       "allowHeader": [
         "host",
         "x-matched-path",

@@ -10,6 +10,7 @@
     "/case-studies/$d$slug/__PAGE__",
     "/case-studies/$d$slug",
     "/case-studies",
-    "/_index"
+    "/_index",
+    "/_head"
   ]
 }

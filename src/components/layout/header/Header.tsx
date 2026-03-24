@@ -154,7 +154,7 @@ export default function Header() {
               </div>
             </div>
           ) : (
-            <div className="rounded-full bg-white/20 backdrop-blur-md border border-white/30 shadow-sm transition-all duration-300 ease-in-out">
+            <div className="rounded-full transition-all duration-300 ease-in-out">
               <div className="flex items-center justify-between h-20 px-6">
                 {menuContent}
               </div>

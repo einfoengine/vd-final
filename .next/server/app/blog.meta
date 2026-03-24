@@ -9,6 +9,7 @@
     "/_full",
     "/blog/__PAGE__",
     "/blog",
-    "/_index"
+    "/_index",
+    "/_head"
   ]
 }
