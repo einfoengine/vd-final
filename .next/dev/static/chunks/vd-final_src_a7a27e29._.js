@@ -321,7 +321,6 @@ function HeroVideo({ video }) {
         x: 0,
         y: 0
     });
-    const [scrollProgress, setScrollProgress] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
     const handleMouseMove = (e)=>{
         setCursorPos({
             x: e.clientX,
@@ -348,29 +347,10 @@ function HeroVideo({ video }) {
             })["HeroVideo.useEffect"];
         }
     }["HeroVideo.useEffect"], []);
-    (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
-        "HeroVideo.useEffect": ()=>{
-            const handleScroll = {
-                "HeroVideo.useEffect.handleScroll": ()=>{
-                    const scrollY = window.scrollY;
-                    const maxScroll = 400;
-                    const progress = Math.min(scrollY / maxScroll, 1);
-                    setScrollProgress(progress);
-                }
-            }["HeroVideo.useEffect.handleScroll"];
-            window.addEventListener("scroll", handleScroll);
-            return ({
-                "HeroVideo.useEffect": ()=>window.removeEventListener("scroll", handleScroll)
-            })["HeroVideo.useEffect"];
-        }
-    }["HeroVideo.useEffect"], []);
-    // Animate size - start small and grow with scroll
-    const baseHeight = isMdScreen ? 30 : 50; // Start smaller: 30vh for md+, 50vh for mobile
-    const targetHeight = isMdScreen ? 90 : 100; // End at: 90vh for md+, 100vh for mobile
-    const baseWidth = isMdScreen ? 60 : 80; // Start at 60% width for md+, 80% for mobile
-    const targetWidth = 100; // End at 100% width
-    const currentHeight = baseHeight + (targetHeight - baseHeight) * scrollProgress;
-    const currentWidth = baseWidth + (targetWidth - baseWidth) * scrollProgress;
+    // Scroll-based growth effect removed as per user request.
+    // Fixed dimensions - no longer changes with scroll.
+    const containerHeight = isMdScreen ? "60vh" : "50vh";
+    const containerWidth = "100%";
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         onMouseEnter: ()=>setIsHovered(true),
         onMouseLeave: ()=>setIsHovered(false),
@@ -378,8 +358,8 @@ function HeroVideo({ video }) {
         onClick: handleToggleSound,
         style: {
             position: "relative",
-            width: `${currentWidth}%`,
-            height: `${currentHeight}vh`,
+            width: containerWidth,
+            height: containerHeight,
             margin: "0 auto",
             borderRadius: "1.5rem",
             overflow: "hidden",
@@ -400,7 +380,7 @@ function HeroVideo({ video }) {
                 children: "Your browser does not support the video tag."
             }, void 0, false, {
                 fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                lineNumber: 77,
+                lineNumber: 61,
                 columnNumber: 9
             }, this),
             !soundOn && isHovered && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -430,7 +410,7 @@ function HeroVideo({ video }) {
                                         "fill-opacity": "0.55"
                                     }, void 0, false, {
                                         fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                        lineNumber: 112,
+                                        lineNumber: 96,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -439,7 +419,7 @@ function HeroVideo({ video }) {
                                         "fill-opacity": "0.11"
                                     }, void 0, false, {
                                         fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                        lineNumber: 117,
+                                        lineNumber: 101,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("g", {
@@ -450,7 +430,7 @@ function HeroVideo({ video }) {
                                                 fill: "#0059FF"
                                             }, void 0, false, {
                                                 fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                                lineNumber: 123,
+                                                lineNumber: 107,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -458,13 +438,13 @@ function HeroVideo({ video }) {
                                                 fill: "url(#paint0_linear_112_419)"
                                             }, void 0, false, {
                                                 fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                                lineNumber: 127,
+                                                lineNumber: 111,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                        lineNumber: 122,
+                                        lineNumber: 106,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -472,7 +452,7 @@ function HeroVideo({ video }) {
                                         stroke: "#0059FF"
                                     }, void 0, false, {
                                         fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                        lineNumber: 132,
+                                        lineNumber: 116,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -480,7 +460,7 @@ function HeroVideo({ video }) {
                                         fill: "#454A51"
                                     }, void 0, false, {
                                         fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                        lineNumber: 136,
+                                        lineNumber: 120,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -488,7 +468,7 @@ function HeroVideo({ video }) {
                                         fill: "#454A51"
                                     }, void 0, false, {
                                         fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                        lineNumber: 140,
+                                        lineNumber: 124,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -496,7 +476,7 @@ function HeroVideo({ video }) {
                                         fill: "#454A51"
                                     }, void 0, false, {
                                         fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                        lineNumber: 144,
+                                        lineNumber: 128,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -504,7 +484,7 @@ function HeroVideo({ video }) {
                                         fill: "#454A51"
                                     }, void 0, false, {
                                         fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                        lineNumber: 148,
+                                        lineNumber: 132,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -512,7 +492,7 @@ function HeroVideo({ video }) {
                                         fill: "#454A51"
                                     }, void 0, false, {
                                         fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                        lineNumber: 152,
+                                        lineNumber: 136,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -520,7 +500,7 @@ function HeroVideo({ video }) {
                                         fill: "#454A51"
                                     }, void 0, false, {
                                         fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                        lineNumber: 156,
+                                        lineNumber: 140,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -528,7 +508,7 @@ function HeroVideo({ video }) {
                                         fill: "#454A51"
                                     }, void 0, false, {
                                         fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                        lineNumber: 160,
+                                        lineNumber: 144,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -536,7 +516,7 @@ function HeroVideo({ video }) {
                                         fill: "#454A51"
                                     }, void 0, false, {
                                         fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                        lineNumber: 164,
+                                        lineNumber: 148,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -544,7 +524,7 @@ function HeroVideo({ video }) {
                                         fill: "#454A51"
                                     }, void 0, false, {
                                         fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                        lineNumber: 168,
+                                        lineNumber: 152,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -552,7 +532,7 @@ function HeroVideo({ video }) {
                                         fill: "#454A51"
                                     }, void 0, false, {
                                         fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                        lineNumber: 172,
+                                        lineNumber: 156,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -560,7 +540,7 @@ function HeroVideo({ video }) {
                                         fill: "#454A51"
                                     }, void 0, false, {
                                         fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                        lineNumber: 176,
+                                        lineNumber: 160,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -568,7 +548,7 @@ function HeroVideo({ video }) {
                                         fill: "#454A51"
                                     }, void 0, false, {
                                         fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                        lineNumber: 180,
+                                        lineNumber: 164,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -576,7 +556,7 @@ function HeroVideo({ video }) {
                                         fill: "#454A51"
                                     }, void 0, false, {
                                         fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                        lineNumber: 184,
+                                        lineNumber: 168,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -584,7 +564,7 @@ function HeroVideo({ video }) {
                                         fill: "#454A51"
                                     }, void 0, false, {
                                         fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                        lineNumber: 188,
+                                        lineNumber: 172,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -592,7 +572,7 @@ function HeroVideo({ video }) {
                                         fill: "#454A51"
                                     }, void 0, false, {
                                         fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                        lineNumber: 192,
+                                        lineNumber: 176,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -600,7 +580,7 @@ function HeroVideo({ video }) {
                                         fill: "#454A51"
                                     }, void 0, false, {
                                         fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                        lineNumber: 196,
+                                        lineNumber: 180,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -608,7 +588,7 @@ function HeroVideo({ video }) {
                                         fill: "#454A51"
                                     }, void 0, false, {
                                         fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                        lineNumber: 200,
+                                        lineNumber: 184,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -616,7 +596,7 @@ function HeroVideo({ video }) {
                                         fill: "#454A51"
                                     }, void 0, false, {
                                         fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                        lineNumber: 204,
+                                        lineNumber: 188,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -624,7 +604,7 @@ function HeroVideo({ video }) {
                                         fill: "#454A51"
                                     }, void 0, false, {
                                         fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                        lineNumber: 208,
+                                        lineNumber: 192,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -632,7 +612,7 @@ function HeroVideo({ video }) {
                                         fill: "#454A51"
                                     }, void 0, false, {
                                         fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                        lineNumber: 212,
+                                        lineNumber: 196,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -640,7 +620,7 @@ function HeroVideo({ video }) {
                                         fill: "#454A51"
                                     }, void 0, false, {
                                         fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                        lineNumber: 216,
+                                        lineNumber: 200,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -648,13 +628,13 @@ function HeroVideo({ video }) {
                                         fill: "#454A51"
                                     }, void 0, false, {
                                         fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                        lineNumber: 220,
+                                        lineNumber: 204,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                lineNumber: 111,
+                                lineNumber: 95,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("defs", {
@@ -673,7 +653,7 @@ function HeroVideo({ video }) {
                                                 result: "BackgroundImageFix"
                                             }, void 0, false, {
                                                 fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                                lineNumber: 235,
+                                                lineNumber: 219,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("feBlend", {
@@ -683,7 +663,7 @@ function HeroVideo({ video }) {
                                                 result: "shape"
                                             }, void 0, false, {
                                                 fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                                lineNumber: 236,
+                                                lineNumber: 220,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("feColorMatrix", {
@@ -693,21 +673,21 @@ function HeroVideo({ video }) {
                                                 result: "hardAlpha"
                                             }, void 0, false, {
                                                 fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                                lineNumber: 242,
+                                                lineNumber: 226,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("feOffset", {
                                                 dy: "2"
                                             }, void 0, false, {
                                                 fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                                lineNumber: 248,
+                                                lineNumber: 232,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("feGaussianBlur", {
                                                 stdDeviation: "1.5"
                                             }, void 0, false, {
                                                 fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                                lineNumber: 249,
+                                                lineNumber: 233,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("feComposite", {
@@ -717,7 +697,7 @@ function HeroVideo({ video }) {
                                                 k3: "1"
                                             }, void 0, false, {
                                                 fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                                lineNumber: 250,
+                                                lineNumber: 234,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("feColorMatrix", {
@@ -725,7 +705,7 @@ function HeroVideo({ video }) {
                                                 values: "0 0 0 0 0.999537 0 0 0 0 0.999537 0 0 0 0 0.999537 0 0 0 0.72 0"
                                             }, void 0, false, {
                                                 fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                                lineNumber: 256,
+                                                lineNumber: 240,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("feBlend", {
@@ -734,13 +714,13 @@ function HeroVideo({ video }) {
                                                 result: "effect1_innerShadow_112_419"
                                             }, void 0, false, {
                                                 fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                                lineNumber: 260,
+                                                lineNumber: 244,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                        lineNumber: 226,
+                                        lineNumber: 210,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("linearGradient", {
@@ -756,7 +736,7 @@ function HeroVideo({ video }) {
                                                 "stop-color": "#0059FF"
                                             }, void 0, false, {
                                                 fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                                lineNumber: 274,
+                                                lineNumber: 258,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("stop", {
@@ -764,13 +744,13 @@ function HeroVideo({ video }) {
                                                 "stop-color": "#082982"
                                             }, void 0, false, {
                                                 fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                                lineNumber: 275,
+                                                lineNumber: 259,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                        lineNumber: 266,
+                                        lineNumber: 250,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("clipPath", {
@@ -782,44 +762,44 @@ function HeroVideo({ video }) {
                                             transform: "translate(0 0.617188)"
                                         }, void 0, false, {
                                             fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                            lineNumber: 278,
+                                            lineNumber: 262,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                        lineNumber: 277,
+                                        lineNumber: 261,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                                lineNumber: 225,
+                                lineNumber: 209,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                        lineNumber: 104,
+                        lineNumber: 88,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                    lineNumber: 103,
+                    lineNumber: 87,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-                lineNumber: 93,
+                lineNumber: 77,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/vd-final/src/components/common/VideoPlayer.tsx",
-        lineNumber: 60,
+        lineNumber: 44,
         columnNumber: 5
     }, this);
 }
-_s(HeroVideo, "4VfDPGaaCWAes5co7pYFdZJgS+w=");
+_s(HeroVideo, "g03lCZOWQqQ46sq4X0knQI07XzA=");
 _c = HeroVideo;
 var _c;
 __turbopack_context__.k.register(_c, "HeroVideo");

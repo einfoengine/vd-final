@@ -11,7 +11,6 @@ export default function HeroVideo({ video }: HeroVideoProps) {
   const [soundOn, setSoundOn] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
-  const [scrollProgress, setScrollProgress] = useState(0);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     setCursorPos({ x: e.clientX, y: e.clientY });
@@ -35,26 +34,11 @@ export default function HeroVideo({ video }: HeroVideoProps) {
     return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const maxScroll = 400;
-      const progress = Math.min(scrollY / maxScroll, 1);
-      setScrollProgress(progress);
-    };
+  // Scroll-based growth effect removed as per user request.
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // Animate size - start small and grow with scroll
-  const baseHeight = isMdScreen ? 30 : 50; // Start smaller: 30vh for md+, 50vh for mobile
-  const targetHeight = isMdScreen ? 90 : 100; // End at: 90vh for md+, 100vh for mobile
-  const baseWidth = isMdScreen ? 60 : 80; // Start at 60% width for md+, 80% for mobile
-  const targetWidth = 100; // End at 100% width
-  
-  const currentHeight = baseHeight + (targetHeight - baseHeight) * scrollProgress;
-  const currentWidth = baseWidth + (targetWidth - baseWidth) * scrollProgress;
+   // Fixed dimensions - no longer changes with scroll.
+  const containerHeight = isMdScreen ? "60vh" : "50vh";
+  const containerWidth = "100%";
 
   return (
     <div
@@ -64,8 +48,8 @@ export default function HeroVideo({ video }: HeroVideoProps) {
       onClick={handleToggleSound}
       style={{
         position: "relative",
-        width: `${currentWidth}%`,
-        height: `${currentHeight}vh`,
+        width: containerWidth,
+        height: containerHeight,
         margin: "0 auto",
         borderRadius: "1.5rem",
         overflow: "hidden",
