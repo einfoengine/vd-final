@@ -1,14 +1,14 @@
 "use client";
 
-import { BackgroundBeamsWithCollision } from "@/components/common/BackgroundBeamsWithCollision";
 import Button from "@/components/button/Button";
 import HeroVideo from "@/components/common/VideoPlayer";
 import { RotatingBadge } from "@/components/common/RotatingBadge";
 import { FlipText } from "@/components/common/FlipText";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { Star } from "lucide-react";
+import { LottieHeroBackground } from "./LottieHeroBackground";
 
 interface VDheroData {
   title: string;
@@ -68,7 +68,6 @@ export const Hero: React.FC<VDheroProps> = ({
   onPrimaryClick,
   onSecondaryClick,
 }) => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const heroRef = useRef<HTMLDivElement>(null);
 
   // prefer props directly, fallback to dataSource
@@ -88,44 +87,20 @@ export const Hero: React.FC<VDheroProps> = ({
     typewriterTexts: typewriterTexts || dataSource?.typewriterTexts,
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      // Change to black immediately when header changes (scrollY > 0)
-      setIsScrolled(scrollPosition > 0);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll(); // Initial check
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
-    <div className="nt-mod-hore">
-      <div className="absolute top-0 h-screen w-screen bg-linear-to-b from-theme via-white" />
-      <div className="p-2">
+    <div className="nt-mod-hore relative">
+      <div className="p-2 relative z-10 w-full h-full">
         <div
           ref={heroRef}
           className={`hero-section relative rounded-3xl overflow-hidden transition-all duration-300 ${className}`}
           style={{
-            background: isScrolled ? '#000000' : 'white',
+            background: 'transparent',
             border: '1px solid var(--theme-color)',
           }}
         >
-          <AnimatePresence>
-            {!isScrolled && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.5 }}
-                className="absolute inset-0 z-0"
-              >
-                <BackgroundBeamsWithCollision className="h-full" />
-              </motion.div>
-            )}
-          </AnimatePresence>
+          <div className="absolute inset-0 z-0 rounded-3xl overflow-hidden">
+            <LottieHeroBackground />
+          </div>
 
           <div className="container relative z-10">
             <motion.div
@@ -135,13 +110,7 @@ export const Hero: React.FC<VDheroProps> = ({
                 duration: 1,
                 ease: [0.25, 0.46, 0.45, 0.94]
               }}
-              className={`relative flex flex-col items-center justify-center max-w-[1000px] m-auto text-center pt-[160px] mb-16 transition-colors duration-300 ${
-                isScrolled ? 'text-white' : ''
-              }`}
-              style={{
-                // Prevent text color from affecting images/icons
-                color: isScrolled ? '#ffffff' : undefined,
-              }}
+              className={`relative flex flex-col items-center justify-center max-w-[1000px] m-auto text-center pt-[160px] mb-16 transition-colors duration-300 text-white`}
             >
               {/* Money Back Guarantee Badge - Top Right of Text */}
               <motion.div
@@ -157,8 +126,8 @@ export const Hero: React.FC<VDheroProps> = ({
                 <RotatingBadge
                   text=" Money Back Guarantee"
                   size={70}
-                  backgroundColor={isScrolled ? "#000000" : "#ffffff"}
-                  textColor={isScrolled ? "#ffffff" : "#000000"}
+                  backgroundColor={"#000000"}
+                  textColor={"#ffffff"}
                   rotationDuration={20}
                   fontSize={10}
                   externalBorderWidth={1}
@@ -217,7 +186,7 @@ export const Hero: React.FC<VDheroProps> = ({
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.3 }}
-                    className={`text-lg md:text-xl font-bold tracking-wide border border-theme/50 rounded-full py-2 px-6 ${isScrolled ? 'text-white' : 'text-gray-900'}`}
+                    className={`text-lg md:text-xl font-bold tracking-wide border border-theme/50 rounded-full py-2 px-6 text-white`}
                   >
                     <span className="relative z-10">{data.supertitle}</span>
                   </motion.div>
@@ -232,9 +201,7 @@ export const Hero: React.FC<VDheroProps> = ({
                   delay: 0.4,
                   ease: [0.25, 0.46, 0.45, 0.94]
                 }}
-                className={`nt-hero-heading mb-6 transition-colors duration-300 ${
-                  isScrolled ? 'text-white' : ''
-                }`}
+                className={`nt-hero-heading mb-6 transition-colors duration-300 text-white`}
               >
                 {parseHighlightedText(data.title)}
               </motion.h1>
@@ -247,9 +214,7 @@ export const Hero: React.FC<VDheroProps> = ({
                   delay: 0.5,
                   ease: [0.25, 0.46, 0.45, 0.94]
                 }}
-                className={`text-desc text-h4 transition-colors duration-300 ${
-                  isScrolled ? 'text-white' : ''
-                }`}
+                className={`text-desc text-h4 transition-colors duration-300 text-white`}
               >
               {data.typewriterTexts && (
                 <FlipText 
@@ -292,7 +257,7 @@ export const Hero: React.FC<VDheroProps> = ({
                     href={!onSecondaryClick ? data.secondaryButtonLink : undefined}
                     onClick={onSecondaryClick}
                     variant="outline"
-                    className={isScrolled ? "text-white bg-transparent": ""}
+                    className={""}
                   />}
                 </motion.div>
               </motion.div>

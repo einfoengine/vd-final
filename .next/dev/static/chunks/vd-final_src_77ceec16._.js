@@ -1517,7 +1517,7 @@ const Hero = ({ dataSource, title, supertitle, subtitle, description, primaryBut
         className: "nt-mod-hore",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute top-0 h-screen w-screen bg-linear-to-b from-theme via-white"
+                className: "absolute top-0 h-screen w-[200vw] left-[-50vw] bg-black"
             }, void 0, false, {
                 fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
                 lineNumber: 106,
