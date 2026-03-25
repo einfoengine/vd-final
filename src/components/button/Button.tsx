@@ -9,6 +9,7 @@ interface ButtonProps {
   variant?: "primary" | "secondary" | "outline" | "white" | "dark" | "link";
   size?: "sm" | "md" | "lg" | "xl";
   icon?: React.ReactNode;
+  iconPosition?: "left" | "right";
   loading?: boolean;
   disabled?: boolean;
   onClick?: () => void;
@@ -21,6 +22,7 @@ export default function Button({
   variant = "primary",
   size = "md",
   icon,
+  iconPosition = "right",
   loading = false,
   disabled = false,
   onClick,
@@ -41,11 +43,17 @@ export default function Button({
     xl: "btn-xl",
   };
 
+  const positioningClass = icon 
+    ? iconPosition === "left" 
+      ? "btn-has-icon-left" 
+      : "btn-has-icon-right" 
+    : "";
+
   const buttonClasses = [
     baseClasses,
     variantClasses[variant],
     sizeClasses[size],
-    icon ? "btn-icon" : "",
+    positioningClass,
     loading ? "btn-loading" : "",
   ]
     .filter(Boolean)
@@ -53,12 +61,24 @@ export default function Button({
 
   const buttonContent = (
     <button
-      className={`w-full ${buttonClasses}`}
+      className={`w-full ${buttonClasses} group`}
       onClick={onClick}
       disabled={disabled || loading}
       aria-disabled={disabled || loading}
     >
-      {loading ? <span className="sr-only">Loading...</span> : <>{label}</>}
+      {loading ? (
+        <span className="sr-only">Loading...</span>
+      ) : (
+        <>
+          {icon && iconPosition === "left" && (
+            <span className="btn-icon-wrapper group-hover:scale-105">{icon}</span>
+          )}
+          <span>{label}</span>
+          {icon && iconPosition === "right" && (
+            <span className="btn-icon-wrapper group-hover:scale-105">{icon}</span>
+          )}
+        </>
+      )}
     </button>
   );
 

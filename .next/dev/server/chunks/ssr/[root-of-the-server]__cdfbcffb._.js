@@ -2930,7 +2930,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$
 "use client";
 ;
 ;
-function Button({ href, label, className = "", variant = "primary", size = "md", icon, loading = false, disabled = false, onClick }) {
+function Button({ href, label, className = "", variant = "primary", size = "md", icon, iconPosition = "right", loading = false, disabled = false, onClick }) {
     const baseClasses = "btn cursor-pointer";
     const variantClasses = {
         primary: "btn-primary",
@@ -2946,15 +2946,16 @@ function Button({ href, label, className = "", variant = "primary", size = "md",
         lg: "btn-lg",
         xl: "btn-xl"
     };
+    const positioningClass = icon ? iconPosition === "left" ? "btn-has-icon-left" : "btn-has-icon-right" : "";
     const buttonClasses = [
         baseClasses,
         variantClasses[variant],
         sizeClasses[size],
-        icon ? "btn-icon" : "",
+        positioningClass,
         loading ? "btn-loading" : ""
     ].filter(Boolean).join(" ");
     const buttonContent = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-        className: `w-full ${buttonClasses}`,
+        className: `w-full ${buttonClasses} group`,
         onClick: onClick,
         disabled: disabled || loading,
         "aria-disabled": disabled || loading,
@@ -2963,14 +2964,38 @@ function Button({ href, label, className = "", variant = "primary", size = "md",
             children: "Loading..."
         }, void 0, false, {
             fileName: "[project]/vd-final/src/components/button/Button.tsx",
-            lineNumber: 61,
-            columnNumber: 18
+            lineNumber: 70,
+            columnNumber: 9
         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
-            children: label
-        }, void 0, false)
+            children: [
+                icon && iconPosition === "left" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                    className: "btn-icon-wrapper group-hover:scale-105",
+                    children: icon
+                }, void 0, false, {
+                    fileName: "[project]/vd-final/src/components/button/Button.tsx",
+                    lineNumber: 74,
+                    columnNumber: 13
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                    children: label
+                }, void 0, false, {
+                    fileName: "[project]/vd-final/src/components/button/Button.tsx",
+                    lineNumber: 76,
+                    columnNumber: 11
+                }, this),
+                icon && iconPosition === "right" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                    className: "btn-icon-wrapper group-hover:scale-105",
+                    children: icon
+                }, void 0, false, {
+                    fileName: "[project]/vd-final/src/components/button/Button.tsx",
+                    lineNumber: 78,
+                    columnNumber: 13
+                }, this)
+            ]
+        }, void 0, true)
     }, void 0, false, {
         fileName: "[project]/vd-final/src/components/button/Button.tsx",
-        lineNumber: 55,
+        lineNumber: 63,
         columnNumber: 5
     }, this);
     // If href is provided, wrap in Link
@@ -2983,7 +3008,7 @@ function Button({ href, label, className = "", variant = "primary", size = "md",
             children: buttonContent
         }, void 0, false, {
             fileName: "[project]/vd-final/src/components/button/Button.tsx",
-            lineNumber: 68,
+            lineNumber: 88,
             columnNumber: 7
         }, this);
     }
@@ -2993,7 +3018,7 @@ function Button({ href, label, className = "", variant = "primary", size = "md",
         children: buttonContent
     }, void 0, false, {
         fileName: "[project]/vd-final/src/components/button/Button.tsx",
-        lineNumber: 83,
+        lineNumber: 103,
         columnNumber: 5
     }, this);
 }

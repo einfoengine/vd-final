@@ -1,7 +1,7 @@
 import Footer from "@/components/layout/footer/Footer";
 import Header from "@/components/layout/header/Header";
 import type { Metadata } from "next";
-import { Playfair_Display, Urbanist } from "next/font/google"; // remove Poppins
+import { Playfair_Display, Urbanist, Geist } from "next/font/google"; // remove Poppins
 import "./globals.css";
 
 // Fonts - Optimized for performance
@@ -34,6 +34,10 @@ import AnimatedBackground from "@/components/common/AnimatedBackground";
 // ... existing imports
 
 import { ModalProvider } from "@/context/ModalContext";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+
 
 // ... existing imports
 
@@ -43,7 +47,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={cn("font-sans", geist.variable)}>
       <body
         className={`${titleFont.variable} ${highlightFont.variable} antialiased`}
       >

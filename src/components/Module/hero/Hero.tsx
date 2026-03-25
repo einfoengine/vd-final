@@ -4,10 +4,10 @@ import Button from "@/components/button/Button";
 import HeroVideo from "@/components/common/VideoPlayer";
 import { RotatingBadge } from "@/components/common/RotatingBadge";
 import { FlipText } from "@/components/common/FlipText";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import React, { useRef } from "react";
-import { Star } from "lucide-react";
+import React, { useRef, useState, useEffect } from "react";
+import { Star, MessageCircle, ArrowUpRight } from "lucide-react";
 import { LottieHeroBackground } from "./LottieHeroBackground";
 
 interface VDheroData {
@@ -69,6 +69,18 @@ export const Hero: React.FC<VDheroProps> = ({
   onSecondaryClick,
 }) => {
   const heroRef = useRef<HTMLDivElement>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // prefer props directly, fallback to dataSource
   const data = {
@@ -110,7 +122,7 @@ export const Hero: React.FC<VDheroProps> = ({
                 duration: 1,
                 ease: [0.25, 0.46, 0.45, 0.94]
               }}
-              className={`relative flex flex-col items-center justify-center max-w-[1000px] m-auto text-center pt-[160px] mb-16 transition-colors duration-300 text-white`}
+              className={`relative flex flex-col items-center justify-center max-w-[1000px] m-auto text-center pt-[160px] mb-16 transition-colors duration-300 ${!isScrolled ? 'text-black' : 'text-white'}`}
             >
               {/* Money Back Guarantee Badge - Top Right of Text */}
               <motion.div
@@ -126,8 +138,8 @@ export const Hero: React.FC<VDheroProps> = ({
                 <RotatingBadge
                   text=" Money Back Guarantee"
                   size={70}
-                  backgroundColor={"#000000"}
-                  textColor={"#ffffff"}
+                  backgroundColor={!isScrolled ? "#ffffff" : "#000000"}
+                  textColor={!isScrolled ? "#000000" : "#ffffff"}
                   rotationDuration={20}
                   fontSize={10}
                   externalBorderWidth={1}
@@ -186,7 +198,7 @@ export const Hero: React.FC<VDheroProps> = ({
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.3 }}
-                    className={`text-lg md:text-xl font-bold tracking-wide border border-theme/50 rounded-full py-2 px-6 text-white`}
+                    className={`text-lg md:text-xl font-bold tracking-wide border rounded-full py-2 px-6 transition-colors duration-300 ${!isScrolled ? 'border-black text-black' : 'border-theme/50 text-white'}`}
                   >
                     <span className="relative z-10">{data.supertitle}</span>
                   </motion.div>
@@ -201,7 +213,7 @@ export const Hero: React.FC<VDheroProps> = ({
                   delay: 0.4,
                   ease: [0.25, 0.46, 0.45, 0.94]
                 }}
-                className={`nt-hero-heading mb-6 transition-colors duration-300 text-white`}
+                className={`nt-hero-heading mb-6 transition-colors duration-300 ${!isScrolled ? 'text-black' : 'text-white'}`}
               >
                 {parseHighlightedText(data.title)}
               </motion.h1>
@@ -214,7 +226,7 @@ export const Hero: React.FC<VDheroProps> = ({
                   delay: 0.5,
                   ease: [0.25, 0.46, 0.45, 0.94]
                 }}
-                className={`text-desc text-h4 transition-colors duration-300 text-white`}
+                className={`text-desc text-h4 transition-colors duration-300 ${!isScrolled ? 'text-black' : 'text-white'}`}
               >
               {data.typewriterTexts && (
                 <FlipText 
@@ -244,7 +256,8 @@ export const Hero: React.FC<VDheroProps> = ({
                     label={data.primaryButtonText}
                     href={!onPrimaryClick ? data.primaryButtonLink : undefined}
                     onClick={onPrimaryClick}
-                    // variant={isScrolled ? "outline" : "primary"}
+                    icon={<ArrowUpRight size={18} />}
+                    iconPosition="right"
                   />}
                 </motion.div>
                 <motion.div
@@ -257,21 +270,20 @@ export const Hero: React.FC<VDheroProps> = ({
                     href={!onSecondaryClick ? data.secondaryButtonLink : undefined}
                     onClick={onSecondaryClick}
                     variant="outline"
+                    icon={<MessageCircle size={18} />}
+                    iconPosition="left"
                     className={""}
                   />}
                 </motion.div>
               </motion.div>
             </motion.div>
           </div>
+          
           <motion.div
-            className="p-2"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ 
-              duration: 1, 
-              delay: 0.7,
-              ease: [0.25, 0.46, 0.45, 0.94]
-            }}
+            className="relative z-20 pb-8 px-4"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
           >
             <HeroVideo video={video} />
           </motion.div>
