@@ -7492,7 +7492,7 @@ function Home() {
                         className: "pt-0 relative z-20",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$Module$2f$hero$2f$Hero$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Hero"], {
                             supertitle: "Fix your digital presence",
-                            title: "Drive [6X Growth] for your business",
+                            title: "Unlock [6X Growth] for your startup",
                             subtitle: "4.9",
                             description: "We find your flaws & fix them to [multiply your leads, conversions and retention.]",
                             primaryButtonText: "Start with a free audit",

@@ -10579,3 +10579,12 @@ It can also happen if the client has a browser extension installed which messes 
 [85:04:52.845] Server  LOG     ✓ Compiled in 28ms
 [85:04:57.484] Server  LOG     ✓ Compiled in 32ms
 [85:08:05.175] Server  LOG     ✓ Compiled in 220ms
+[85:10:50.195] Server  LOG     ✓ Compiled in 55ms
+[85:12:37.569] Server  LOG     ✓ Compiled in 140ms
+[85:12:37.890] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 4
+[85:12:47.027] Server  LOG     ✓ Compiled in 38ms
+[85:12:47.459] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 4
+[85:13:37.691] Server  LOG     ✓ Compiled in 41ms
+[85:13:37.897] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 4
+[85:14:04.043] Server  LOG     ✓ Compiled in 82ms
+[85:14:04.367] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 4

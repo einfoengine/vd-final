@@ -138,7 +138,7 @@ export default function Header() {
               ? "bg-white/70 backdrop-blur-lg shadow-sm"
               : "bg-white/[0.06] backdrop-blur-md border border-white/10 shadow-[0_2px_30px_rgba(0,0,0,0.2)]"
           }`}>
-            <div className="flex items-center justify-between px-3 py-2">
+            <div className="flex items-center justify-between px-4 py-3">
               {menuContent}
             </div>
           </div>

@@ -83,7 +83,7 @@ export default function Home() {
           <section id="hero" className="pt-0 relative z-20">
             <Hero
               supertitle="Fix your digital presence"
-              title="Drive [6X Growth] for your business"
+              title="Unlock [6X Growth] for your startup"
               subtitle="4.9"
               description="We find your flaws & fix them to [multiply your leads, conversions and retention.]"
               primaryButtonText="Start with a free audit"
