@@ -71,6 +71,7 @@ export default function Home() {
       />
       
       <motion.div 
+        id="main-body" 
         className="relative z-10 flex flex-col"
         style={{ 
           "--color-title": titleColor,
