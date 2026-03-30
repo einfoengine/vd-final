@@ -14643,3 +14643,11 @@ Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
 [85:48:17.625] Browser WARN    Image with src "/assets/svg/content-creation.svg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
 [85:48:30.974] Browser WARN    Image with src "http://localhost:3000/assets/svg/heroIcon.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[85:50:42.310] Server  LOG     ✓ Compiled in 103ms
+[85:50:42.396] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 4
+[85:51:34.135] Server  LOG     ✓ Compiled in 62ms
+[85:51:34.811] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 4
+[85:53:24.716] Server  LOG     ✓ Compiled in 217ms
+[85:53:25.664] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 4
+[85:54:29.870] Server  LOG     ✓ Compiled in 204ms
+[85:54:30.098] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 4

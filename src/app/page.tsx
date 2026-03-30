@@ -48,7 +48,7 @@ export default function Home() {
   const backgroundColor = useTransform(
     scrollYProgress,
     [0, 1],
-    ["#fef9ef", "#0a0a0a"]
+    ["#fef9ef", "#040810"]
   );
 
   const titleColor = useTransform(
@@ -65,10 +65,39 @@ export default function Home() {
 
   return (
     <>
+      {/* Dark base layer — fades in from warm cream to deep dark */}
       <motion.div 
-        className="fixed inset-0 z-0 pointer-events-none transition-colors duration-0"
+        className="fixed inset-0 z-0 pointer-events-none"
         style={{ backgroundColor }}
       />
+
+      {/* Glowing orbs — fade in and slowly drift as page scrolls dark */}
+      <motion.div
+        className="fixed inset-0 z-0 pointer-events-none overflow-hidden"
+        style={{ opacity: scrollYProgress }}
+      >
+        {/* Blue orb — top left */}
+        <motion.div
+          className="absolute w-[70vw] h-[70vw] max-w-[900px] max-h-[900px] rounded-full bg-blue-600/10 blur-[160px] mix-blend-screen"
+          style={{ top: "-20%", left: "-15%" }}
+          animate={{ x: [0, 30, 0], y: [0, -20, 0] }}
+          transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
+        />
+        {/* Cyan orb — top right */}
+        <motion.div
+          className="absolute w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] rounded-full bg-cyan-500/10 blur-[150px] mix-blend-screen"
+          style={{ top: "-10%", right: "-15%" }}
+          animate={{ x: [0, -25, 0], y: [0, 30, 0] }}
+          transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
+        />
+        {/* Emerald orb — center bottom */}
+        <motion.div
+          className="absolute w-[50vw] h-[50vw] max-w-[700px] max-h-[700px] rounded-full bg-emerald-500/8 blur-[140px] mix-blend-screen"
+          style={{ bottom: "10%", left: "25%" }}
+          animate={{ x: [0, 20, 0], y: [0, 25, 0] }}
+          transition={{ duration: 26, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </motion.div>
       
       <motion.div 
         id="main-body" 

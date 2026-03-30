@@ -7480,7 +7480,7 @@ function Home() {
         1
     ], [
         "#fef9ef",
-        "#0a0a0a"
+        "#040810"
     ]);
     const titleColor = (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$value$2f$use$2d$transform$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useTransform"])(scrollYProgress, [
         0,
@@ -7499,13 +7499,109 @@ function Home() {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
-                className: "fixed inset-0 z-0 pointer-events-none transition-colors duration-0",
+                className: "fixed inset-0 z-0 pointer-events-none",
                 style: {
                     backgroundColor
                 }
             }, void 0, false, {
                 fileName: "[project]/vd-final/src/app/page.tsx",
-                lineNumber: 68,
+                lineNumber: 69,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                className: "fixed inset-0 z-0 pointer-events-none overflow-hidden",
+                style: {
+                    opacity: scrollYProgress
+                },
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                        className: "absolute w-[70vw] h-[70vw] max-w-[900px] max-h-[900px] rounded-full bg-blue-600/10 blur-[160px] mix-blend-screen",
+                        style: {
+                            top: "-20%",
+                            left: "-15%"
+                        },
+                        animate: {
+                            x: [
+                                0,
+                                30,
+                                0
+                            ],
+                            y: [
+                                0,
+                                -20,
+                                0
+                            ]
+                        },
+                        transition: {
+                            duration: 18,
+                            repeat: Infinity,
+                            ease: "easeInOut"
+                        }
+                    }, void 0, false, {
+                        fileName: "[project]/vd-final/src/app/page.tsx",
+                        lineNumber: 80,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                        className: "absolute w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] rounded-full bg-cyan-500/10 blur-[150px] mix-blend-screen",
+                        style: {
+                            top: "-10%",
+                            right: "-15%"
+                        },
+                        animate: {
+                            x: [
+                                0,
+                                -25,
+                                0
+                            ],
+                            y: [
+                                0,
+                                30,
+                                0
+                            ]
+                        },
+                        transition: {
+                            duration: 22,
+                            repeat: Infinity,
+                            ease: "easeInOut"
+                        }
+                    }, void 0, false, {
+                        fileName: "[project]/vd-final/src/app/page.tsx",
+                        lineNumber: 87,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                        className: "absolute w-[50vw] h-[50vw] max-w-[700px] max-h-[700px] rounded-full bg-emerald-500/8 blur-[140px] mix-blend-screen",
+                        style: {
+                            bottom: "10%",
+                            left: "25%"
+                        },
+                        animate: {
+                            x: [
+                                0,
+                                20,
+                                0
+                            ],
+                            y: [
+                                0,
+                                25,
+                                0
+                            ]
+                        },
+                        transition: {
+                            duration: 26,
+                            repeat: Infinity,
+                            ease: "easeInOut"
+                        }
+                    }, void 0, false, {
+                        fileName: "[project]/vd-final/src/app/page.tsx",
+                        lineNumber: 94,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/vd-final/src/app/page.tsx",
+                lineNumber: 75,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -7538,24 +7634,24 @@ function Home() {
                             video: "/assets/video/hero.mp4"
                         }, void 0, false, {
                             fileName: "[project]/vd-final/src/app/page.tsx",
-                            lineNumber: 85,
+                            lineNumber: 114,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/vd-final/src/app/page.tsx",
-                        lineNumber: 84,
+                        lineNumber: 113,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                         className: "relative z-20 bg-white/50 backdrop-blur-sm border-b border-gray-100",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$Module$2f$clients$2f$ClientLogos$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ClientLogos"], {}, void 0, false, {
                             fileName: "[project]/vd-final/src/app/page.tsx",
-                            lineNumber: 101,
+                            lineNumber: 130,
                             columnNumber: 14
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/vd-final/src/app/page.tsx",
-                        lineNumber: 100,
+                        lineNumber: 129,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -7571,14 +7667,14 @@ function Home() {
                                     variant: "v1"
                                 }, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 107,
+                                    lineNumber: 136,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$Module$2f$methodology$2f$DigitalFramework$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["DigitalFramework"], {
                                     items: __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$data$2f$fullStackServices$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["fullStackServices"]
                                 }, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 113,
+                                    lineNumber: 142,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$button$2f$Button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -7587,18 +7683,18 @@ function Home() {
                                     className: "mt-10 table m-auto"
                                 }, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 114,
+                                    lineNumber: 143,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/vd-final/src/app/page.tsx",
-                            lineNumber: 106,
+                            lineNumber: 135,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/vd-final/src/app/page.tsx",
-                        lineNumber: 105,
+                        lineNumber: 134,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -7610,7 +7706,7 @@ function Home() {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$Module$2f$spring$2d$offer$2f$SpringOffer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SpringOffer"], {}, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 126,
+                                    lineNumber: 155,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$common$2f$ModuleTitle$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ModuleTitle"], {
@@ -7618,12 +7714,12 @@ function Home() {
                                     variant: "v1"
                                 }, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 127,
+                                    lineNumber: 156,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$Module$2f$methodology$2f$GrowthPhases$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["GrowthPhases"], {}, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 131,
+                                    lineNumber: 160,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$button$2f$Button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -7632,18 +7728,18 @@ function Home() {
                                     className: "mt-10 table m-auto"
                                 }, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 132,
+                                    lineNumber: 161,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/vd-final/src/app/page.tsx",
-                            lineNumber: 125,
+                            lineNumber: 154,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/vd-final/src/app/page.tsx",
-                        lineNumber: 124,
+                        lineNumber: 153,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -7658,12 +7754,12 @@ function Home() {
                                     variant: "v1"
                                 }, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 142,
+                                    lineNumber: 171,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$Module$2f$content$2d$mix$2f$ContentMixComparison$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ContentMixComparison"], {}, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 147,
+                                    lineNumber: 176,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$button$2f$Button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -7672,18 +7768,18 @@ function Home() {
                                     className: "mt-10 table m-auto"
                                 }, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 148,
+                                    lineNumber: 177,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/vd-final/src/app/page.tsx",
-                            lineNumber: 141,
+                            lineNumber: 170,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/vd-final/src/app/page.tsx",
-                        lineNumber: 140,
+                        lineNumber: 169,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -7691,12 +7787,12 @@ function Home() {
                         className: "nt-approach",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$Module$2f$holistic$2f$HolisticApproach$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["HolisticApproach"], {}, void 0, false, {
                             fileName: "[project]/vd-final/src/app/page.tsx",
-                            lineNumber: 158,
+                            lineNumber: 187,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/vd-final/src/app/page.tsx",
-                        lineNumber: 157,
+                        lineNumber: 186,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -7704,80 +7800,6 @@ function Home() {
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$Module$2f$website$2d$checklist$2f$WebsiteChecklist$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["WebsiteChecklist"], {}, void 0, false, {
-                                    fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 163,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$button$2f$Button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                    label: "Lest discuss, schedule a meeting",
-                                    onClick: openMeetingModal,
-                                    className: "mt-10 table m-auto"
-                                }, void 0, false, {
-                                    fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 164,
-                                    columnNumber: 15
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/vd-final/src/app/page.tsx",
-                            lineNumber: 162,
-                            columnNumber: 13
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/vd-final/src/app/page.tsx",
-                        lineNumber: 161,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                        id: "portfolio",
-                        className: "nt-portfolio",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "container mb-10",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$common$2f$ModuleTitle$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ModuleTitle"], {
-                                    suppertitle: "Proven Results",
-                                    title: "Success Stories [Built on Strategy]",
-                                    variant: "v1"
-                                }, void 0, false, {
-                                    fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 176,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$carousel$2f$PortfolioMarquee$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["PortfolioMarquee"], {
-                                    items: __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$data$2f$portfolio$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["portfolioItems"],
-                                    speed: 150
-                                }, "marquee-0", false, {
-                                    fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 181,
-                                    columnNumber: 15
-                                }, this)
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/vd-final/src/app/page.tsx",
-                            lineNumber: 175,
-                            columnNumber: 13
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/vd-final/src/app/page.tsx",
-                        lineNumber: 174,
-                        columnNumber: 11
-                    }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                        id: "why-us",
-                        className: "nt-speciality",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "container",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$common$2f$ModuleTitle$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ModuleTitle"], {
-                                    title: "Why Visionary Brands [Choose Vibely]",
-                                    subtitle: "We don't just deliver tasks. We own the outcome.",
-                                    variant: "v1"
-                                }, void 0, false, {
-                                    fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 187,
-                                    columnNumber: 15
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$Module$2f$speciality$2f$Speciality$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Speciality"], {}, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
                                     lineNumber: 192,
                                     columnNumber: 15
@@ -7794,12 +7816,86 @@ function Home() {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/vd-final/src/app/page.tsx",
-                            lineNumber: 186,
+                            lineNumber: 191,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/vd-final/src/app/page.tsx",
-                        lineNumber: 185,
+                        lineNumber: 190,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+                        id: "portfolio",
+                        className: "nt-portfolio",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "container mb-10",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$common$2f$ModuleTitle$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ModuleTitle"], {
+                                    suppertitle: "Proven Results",
+                                    title: "Success Stories [Built on Strategy]",
+                                    variant: "v1"
+                                }, void 0, false, {
+                                    fileName: "[project]/vd-final/src/app/page.tsx",
+                                    lineNumber: 205,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$carousel$2f$PortfolioMarquee$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["PortfolioMarquee"], {
+                                    items: __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$data$2f$portfolio$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["portfolioItems"],
+                                    speed: 150
+                                }, "marquee-0", false, {
+                                    fileName: "[project]/vd-final/src/app/page.tsx",
+                                    lineNumber: 210,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/vd-final/src/app/page.tsx",
+                            lineNumber: 204,
+                            columnNumber: 13
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/vd-final/src/app/page.tsx",
+                        lineNumber: 203,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+                        id: "why-us",
+                        className: "nt-speciality",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "container",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$common$2f$ModuleTitle$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ModuleTitle"], {
+                                    title: "Why Visionary Brands [Choose Vibely]",
+                                    subtitle: "We don't just deliver tasks. We own the outcome.",
+                                    variant: "v1"
+                                }, void 0, false, {
+                                    fileName: "[project]/vd-final/src/app/page.tsx",
+                                    lineNumber: 216,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$Module$2f$speciality$2f$Speciality$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Speciality"], {}, void 0, false, {
+                                    fileName: "[project]/vd-final/src/app/page.tsx",
+                                    lineNumber: 221,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$button$2f$Button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                    label: "Lest discuss, schedule a meeting",
+                                    onClick: openMeetingModal,
+                                    className: "mt-10 table m-auto"
+                                }, void 0, false, {
+                                    fileName: "[project]/vd-final/src/app/page.tsx",
+                                    lineNumber: 222,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/vd-final/src/app/page.tsx",
+                            lineNumber: 215,
+                            columnNumber: 13
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "[project]/vd-final/src/app/page.tsx",
+                        lineNumber: 214,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -7817,30 +7913,30 @@ function Home() {
                                         className: "mb-0"
                                     }, void 0, false, {
                                         fileName: "[project]/vd-final/src/app/page.tsx",
-                                        lineNumber: 204,
+                                        lineNumber: 233,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 203,
+                                    lineNumber: 232,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$Module$2f$stickyCard$2f$StickyCards$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["StickyCards"], {
                                     cards: __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$data$2f$process$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["process"].steps
                                 }, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 211,
+                                    lineNumber: 240,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/vd-final/src/app/page.tsx",
-                            lineNumber: 202,
+                            lineNumber: 231,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/vd-final/src/app/page.tsx",
-                        lineNumber: 201,
+                        lineNumber: 230,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -7855,31 +7951,31 @@ function Home() {
                                     variant: "v1"
                                 }, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 219,
+                                    lineNumber: 248,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$Module$2f$packages$2f$Packages$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                     data: __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$data$2f$packagesData$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["packagesData"]
                                 }, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 224,
+                                    lineNumber: 253,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/vd-final/src/app/page.tsx",
-                            lineNumber: 218,
+                            lineNumber: 247,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/vd-final/src/app/page.tsx",
-                        lineNumber: 217,
+                        lineNumber: 246,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/vd-final/src/app/page.tsx",
-                lineNumber: 73,
+                lineNumber: 102,
                 columnNumber: 7
             }, this)
         ]
