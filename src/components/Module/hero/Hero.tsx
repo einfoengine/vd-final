@@ -69,9 +69,7 @@ export const Hero: React.FC<VDheroProps> = ({
     
     // Create dark gradient for the non-highlighted text when not scrolled, and white gradient when scrolled.
     const baseTextClass = isHeading 
-      ? (!isScrolled 
-          ? "bg-gradient-to-b from-gray-900 via-gray-700 to-gray-500 bg-clip-text text-transparent" 
-          : "bg-gradient-to-b from-white via-gray-100 to-gray-400 bg-clip-text text-transparent")
+      ? "bg-gradient-to-b from-white via-gray-200 to-gray-400 bg-clip-text text-transparent"
       : "";
 
     return parts.map((part, index) =>
@@ -208,7 +206,7 @@ export const Hero: React.FC<VDheroProps> = ({
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.3 }}
-                    className={`text-lg md:text-xl font-bold tracking-wide border rounded-full py-2 px-6 transition-colors duration-300 ${!isScrolled ? 'border-black text-black' : 'border-theme/50 text-white'}`}
+                    className={`text-lg md:text-xl font-bold tracking-wide border rounded-full py-2 px-6 transition-colors duration-300 border-white/20 bg-white/10 text-white`}
                   >
                     <span className="relative z-10">{data.supertitle}</span>
                   </motion.div>
@@ -236,7 +234,7 @@ export const Hero: React.FC<VDheroProps> = ({
                   delay: 0.5,
                   ease: [0.25, 0.46, 0.45, 0.94]
                 }}
-                className={`text-desc text-h4 transition-colors duration-300 ${!isScrolled ? 'text-black' : 'text-white'}`}
+                className={`text-desc text-h4 transition-colors duration-300 max-w-4xl mx-auto text-white/80`}
               >
               {data.typewriterTexts && (
                 <FlipText 
