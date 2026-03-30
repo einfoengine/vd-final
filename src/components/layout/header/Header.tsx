@@ -106,27 +106,13 @@ export default function Header() {
         <LanguageSwitcher />
         <div
           onClick={openMeetingModal}
-          className="relative px-6 py-3 rounded-full font-semibold text-white transition-all duration-300 overflow-hidden group cursor-pointer"
-          style={{
-            background: "linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 50%, #1a1a1a 100%)",
-            backgroundSize: "200% 200%",
-            boxShadow: "0 0 20px rgba(255, 190, 61, 0.3), 0 0 40px rgba(255, 190, 61, 0.1)",
-            animation: "gradientShift 4s ease infinite",
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.boxShadow = "0 0 30px rgba(255, 190, 61, 0.5), 0 0 60px rgba(255, 190, 61, 0.2)";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.boxShadow = "0 0 20px rgba(255, 190, 61, 0.3), 0 0 40px rgba(255, 190, 61, 0.1)";
-          }}
+          className={`cursor-pointer px-5 py-2 rounded-full text-sm font-semibold transition-all duration-300 border ${
+            isScrolled
+              ? "bg-zinc-900 text-white border-zinc-800 hover:bg-zinc-700"
+              : "bg-white/15 text-white border-white/25 hover:bg-white/25 backdrop-blur-sm"
+          }`}
         >
-          <span className="relative z-10 animated-text-color">Schedule A Meeting</span>
-          <div
-            className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-            style={{
-              background: "radial-gradient(circle at center, rgba(255, 190, 61, 0.2), transparent 70%)",
-            }}
-          />
+          Schedule A Meeting
         </div>
       </div>
 
