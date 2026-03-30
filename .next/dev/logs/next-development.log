@@ -7450,3 +7450,6 @@ It can also happen if the client has a browser extension installed which messes 
 [74:38:38.878] Server  LOG     ✓ Compiled in 836ms
 [74:44:56.385] Server  LOG     ✓ Compiled in 216ms
 [74:50:32.053] Server  LOG     ✓ Compiled in 288ms
+[74:55:41.268] Server  LOG     ✓ Compiled in 166ms
+[74:55:43.181] Server  LOG     ✓ Compiled in 85ms
+[74:57:05.343] Server  LOG     ✓ Compiled in 94ms
