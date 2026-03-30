@@ -1,7 +1,8 @@
 "use client";
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Facebook, Youtube, Linkedin, TrendingUp, BarChart, Target, Zap } from 'lucide-react';
+import { TrendingUp, BarChart, Target, Zap, Cpu, Globe } from 'lucide-react';
+import { FaFacebook, FaYoutube, FaLinkedin, FaGoogle, FaXTwitter } from 'react-icons/fa6';
 
 export const LottieHeroBackground = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,23 +19,35 @@ export const LottieHeroBackground = () => {
   }, []);
 
   const floatingIcons = [
-    { Icon: Facebook, color: "text-blue-600", delay: 0, size: 36 },
-    { Icon: Youtube, color: "text-red-500", delay: 1, size: 40 },
-    { Icon: Linkedin, color: "text-blue-700", delay: 2, size: 32 },
-    { Icon: TrendingUp, color: "text-green-500", delay: 0.5, size: 44 },
-    { Icon: BarChart, color: "text-purple-500", delay: 1.5, size: 38 },
-    { Icon: Target, color: "text-orange-500", delay: 2.5, size: 34 },
-    { Icon: Zap, color: "text-yellow-500", delay: 0.8, size: 42 },
+    // MID: Sharp, normal size, standard shadow
+    { Icon: FaGoogle, color: "text-blue-500", delay: 0.2, size: 36, depthClass: "scale-100 z-20 shadow-[0_8px_30px_rgb(0,0,0,0.06)]" },
+    { Icon: FaLinkedin, color: "text-blue-700", delay: 2, size: 32, depthClass: "scale-100 z-20 shadow-[0_8px_30px_rgb(0,0,0,0.06)]" },
+    { Icon: Target, color: "text-orange-500", delay: 2.5, size: 38, depthClass: "scale-100 z-20 shadow-[0_8px_30px_rgb(0,0,0,0.06)]" },
+
+    // FAR: Smaller, visibly blurred, lower opacity, sitting behind
+    { Icon: FaFacebook, color: "text-blue-600", delay: 0, size: 28, depthClass: "scale-75 blur-[3px] opacity-60 z-10" },
+    { Icon: BarChart, color: "text-purple-500", delay: 1.5, size: 24, depthClass: "scale-75 blur-[4px] opacity-50 z-10" },
+    { Icon: Globe, color: "text-sky-500", delay: 3.5, size: 26, depthClass: "scale-75 blur-[3px] opacity-60 z-10" },
+
+    // CLOSE: Very large, heavily blurred, high opacity, sitting way in front
+    { Icon: FaYoutube, color: "text-red-500", delay: 0.5, size: 50, depthClass: "scale-[1.8] blur-[6px] opacity-70 z-30" },
+    { Icon: FaXTwitter, color: "text-zinc-800 dark:text-zinc-200", delay: 0.8, size: 45, depthClass: "scale-[2] blur-[8px] opacity-65 z-30" },
+    { Icon: TrendingUp, color: "text-green-500", delay: 2.2, size: 60, depthClass: "scale-[1.6] blur-[6px] opacity-70 z-30" },
   ];
 
+  // Provide initial positions scattered around the background with 9 elements now
   const positions = [
-    { top: "15%", left: "10%" },
-    { top: "25%", right: "12%" },
-    { bottom: "25%", left: "15%" },
-    { bottom: "20%", right: "15%" },
-    { top: "8%", right: "35%" },
-    { bottom: "12%", left: "35%" },
-    { top: "45%", left: "5%" },
+    { top: "15%", left: "10%" }, // FB (Mid)
+    { top: "8%", right: "35%" }, // Linkedin (Mid)
+    { bottom: "25%", left: "15%" }, // Target (Mid)
+
+    { top: "25%", right: "12%" }, // YT (Far)
+    { bottom: "20%", right: "15%" }, // BarChart (Far)
+    { top: "45%", left: "5%" }, // Globe (Far)
+
+    { top: "25%", left: "25%" }, // TrendingUp (Close)
+    { bottom: "12%", left: "35%" }, // Zap (Close)
+    { top: "35%", right: "8%" }, // Cpu (Close)
   ];
 
   return (
@@ -86,10 +99,10 @@ export const LottieHeroBackground = () => {
         <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-b from-transparent to-[#fffdfa] dark:to-black pointer-events-none" />
       </div>
 
-      {/* Floating Icons */}
-      <div className="absolute inset-0 pointer-events-none opacity-90 delay-300 z-20">
+      {/* Floating Icons with DEPTH OF FIELD */}
+      <div className="absolute inset-0 pointer-events-none delay-300 z-20">
         {floatingIcons.map((item, i) => {
-          const { Icon, color, delay, size } = item;
+          const { Icon, color, delay, size, depthClass } = item;
           const pos = positions[i];
           return (
             <motion.div
@@ -97,9 +110,9 @@ export const LottieHeroBackground = () => {
               className={`absolute ${color}`}
               style={pos}
               animate={{
-                y: [0, -25, 0],
-                x: [0, 15, 0],
-                rotate: [0, 8, -8, 0],
+                y: [0, -30, 0],
+                x: [0, 20, 0],
+                rotate: [0, 10, -10, 0],
               }}
               transition={{
                 duration: 6 + i,
@@ -109,9 +122,11 @@ export const LottieHeroBackground = () => {
               }}
             >
               <div 
-                className={`bg-white/90 dark:bg-black/90 backdrop-blur-md p-4 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-black/5 dark:border-white/10 transition-colors duration-500 ${
-                  isScrolled ? 'bg-black/80 border-white/10 shadow-none' : 'bg-white/90 border-black/5'
-                }`}
+                className={`backdrop-blur-xl p-4 rounded-2xl border transition-all duration-500 will-change-transform flex items-center justify-center ${
+                  isScrolled 
+                    ? 'bg-white/5 dark:bg-white/10 border-white/10 shadow-none' 
+                    : 'bg-white/30 dark:bg-black/30 border-white/50 shadow-[0_8px_32px_rgba(0,0,0,0.08)]'
+                } ${depthClass}`}
               >
                 <Icon size={size} strokeWidth={1.5} />
               </div>

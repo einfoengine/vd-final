@@ -7445,3 +7445,6 @@ It can also happen if the client has a browser extension installed which messes 
 [74:16:47.094] Browser WARN    Image with src "http://localhost:3000/assets/svg/heroIcon.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
 [74:16:47.094] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
 [74:19:29.193] Server  LOG     ✓ Compiled in 308ms
+[74:30:45.697] Server  LOG     ✓ Compiled in 919ms
+[74:35:32.999] Server  LOG     ✓ Compiled in 184ms
+[74:38:38.878] Server  LOG     ✓ Compiled in 836ms

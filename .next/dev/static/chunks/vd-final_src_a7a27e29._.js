@@ -738,16 +738,15 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/vd-final/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/vd-final/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/vd-final/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$facebook$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Facebook$3e$__ = __turbopack_context__.i("[project]/vd-final/node_modules/lucide-react/dist/esm/icons/facebook.js [app-client] (ecmascript) <export default as Facebook>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$youtube$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Youtube$3e$__ = __turbopack_context__.i("[project]/vd-final/node_modules/lucide-react/dist/esm/icons/youtube.js [app-client] (ecmascript) <export default as Youtube>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$linkedin$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Linkedin$3e$__ = __turbopack_context__.i("[project]/vd-final/node_modules/lucide-react/dist/esm/icons/linkedin.js [app-client] (ecmascript) <export default as Linkedin>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trending$2d$up$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__TrendingUp$3e$__ = __turbopack_context__.i("[project]/vd-final/node_modules/lucide-react/dist/esm/icons/trending-up.js [app-client] (ecmascript) <export default as TrendingUp>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chart$2d$no$2d$axes$2d$column$2d$increasing$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__BarChart$3e$__ = __turbopack_context__.i("[project]/vd-final/node_modules/lucide-react/dist/esm/icons/chart-no-axes-column-increasing.js [app-client] (ecmascript) <export default as BarChart>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$target$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Target$3e$__ = __turbopack_context__.i("[project]/vd-final/node_modules/lucide-react/dist/esm/icons/target.js [app-client] (ecmascript) <export default as Target>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$zap$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Zap$3e$__ = __turbopack_context__.i("[project]/vd-final/node_modules/lucide-react/dist/esm/icons/zap.js [app-client] (ecmascript) <export default as Zap>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$globe$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Globe$3e$__ = __turbopack_context__.i("[project]/vd-final/node_modules/lucide-react/dist/esm/icons/globe.js [app-client] (ecmascript) <export default as Globe>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$react$2d$icons$2f$fa6$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/vd-final/node_modules/react-icons/fa6/index.mjs [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
+;
 ;
 ;
 ;
@@ -769,77 +768,110 @@ const LottieHeroBackground = ()=>{
         }
     }["LottieHeroBackground.useEffect"], []);
     const floatingIcons = [
+        // MID: Sharp, normal size, standard shadow
         {
-            Icon: __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$facebook$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Facebook$3e$__["Facebook"],
-            color: "text-blue-600",
-            delay: 0,
-            size: 36
+            Icon: __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$react$2d$icons$2f$fa6$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaGoogle"],
+            color: "text-blue-500",
+            delay: 0.2,
+            size: 36,
+            depthClass: "scale-100 z-20 shadow-[0_8px_30px_rgb(0,0,0,0.06)]"
         },
         {
-            Icon: __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$youtube$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Youtube$3e$__["Youtube"],
-            color: "text-red-500",
-            delay: 1,
-            size: 40
-        },
-        {
-            Icon: __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$linkedin$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Linkedin$3e$__["Linkedin"],
+            Icon: __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$react$2d$icons$2f$fa6$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaLinkedin"],
             color: "text-blue-700",
             delay: 2,
-            size: 32
-        },
-        {
-            Icon: __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trending$2d$up$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__TrendingUp$3e$__["TrendingUp"],
-            color: "text-green-500",
-            delay: 0.5,
-            size: 44
-        },
-        {
-            Icon: __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chart$2d$no$2d$axes$2d$column$2d$increasing$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__BarChart$3e$__["BarChart"],
-            color: "text-purple-500",
-            delay: 1.5,
-            size: 38
+            size: 32,
+            depthClass: "scale-100 z-20 shadow-[0_8px_30px_rgb(0,0,0,0.06)]"
         },
         {
             Icon: __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$target$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Target$3e$__["Target"],
             color: "text-orange-500",
             delay: 2.5,
-            size: 34
+            size: 38,
+            depthClass: "scale-100 z-20 shadow-[0_8px_30px_rgb(0,0,0,0.06)]"
+        },
+        // FAR: Smaller, visibly blurred, lower opacity, sitting behind
+        {
+            Icon: __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$react$2d$icons$2f$fa6$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaFacebook"],
+            color: "text-blue-600",
+            delay: 0,
+            size: 28,
+            depthClass: "scale-75 blur-[3px] opacity-60 z-10"
         },
         {
-            Icon: __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$zap$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Zap$3e$__["Zap"],
-            color: "text-yellow-500",
+            Icon: __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chart$2d$no$2d$axes$2d$column$2d$increasing$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__BarChart$3e$__["BarChart"],
+            color: "text-purple-500",
+            delay: 1.5,
+            size: 24,
+            depthClass: "scale-75 blur-[4px] opacity-50 z-10"
+        },
+        {
+            Icon: __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$globe$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Globe$3e$__["Globe"],
+            color: "text-sky-500",
+            delay: 3.5,
+            size: 26,
+            depthClass: "scale-75 blur-[3px] opacity-60 z-10"
+        },
+        // CLOSE: Very large, heavily blurred, high opacity, sitting way in front
+        {
+            Icon: __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$react$2d$icons$2f$fa6$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaYoutube"],
+            color: "text-red-500",
+            delay: 0.5,
+            size: 50,
+            depthClass: "scale-[1.8] blur-[6px] opacity-70 z-30"
+        },
+        {
+            Icon: __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$react$2d$icons$2f$fa6$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaXTwitter"],
+            color: "text-zinc-800 dark:text-zinc-200",
             delay: 0.8,
-            size: 42
+            size: 45,
+            depthClass: "scale-[2] blur-[8px] opacity-65 z-30"
+        },
+        {
+            Icon: __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trending$2d$up$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__TrendingUp$3e$__["TrendingUp"],
+            color: "text-green-500",
+            delay: 2.2,
+            size: 60,
+            depthClass: "scale-[1.6] blur-[6px] opacity-70 z-30"
         }
     ];
+    // Provide initial positions scattered around the background with 9 elements now
     const positions = [
         {
             top: "15%",
             left: "10%"
         },
         {
-            top: "25%",
-            right: "12%"
+            top: "8%",
+            right: "35%"
         },
         {
             bottom: "25%",
             left: "15%"
         },
         {
+            top: "25%",
+            right: "12%"
+        },
+        {
             bottom: "20%",
             right: "15%"
         },
         {
-            top: "8%",
-            right: "35%"
+            top: "45%",
+            left: "5%"
+        },
+        {
+            top: "25%",
+            left: "25%"
         },
         {
             bottom: "12%",
             left: "35%"
         },
         {
-            top: "45%",
-            left: "5%"
+            top: "35%",
+            right: "8%"
         }
     ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -849,7 +881,7 @@ const LottieHeroBackground = ()=>{
                 className: `absolute inset-0 transition-colors duration-500 z-10 ${isScrolled ? 'bg-black' : 'bg-transparent'}`
             }, void 0, false, {
                 fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
-                lineNumber: 44,
+                lineNumber: 57,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -859,41 +891,41 @@ const LottieHeroBackground = ()=>{
                         className: "absolute top-[-20%] left-[-10%] w-[60vw] h-[60vw] max-h-[800px] bg-red-400/20 dark:bg-red-600/20 rounded-full blur-[120px] mix-blend-multiply dark:mix-blend-screen pointer-events-none"
                     }, void 0, false, {
                         fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
-                        lineNumber: 48,
+                        lineNumber: 61,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute top-[-20%] right-[-10%] w-[60vw] h-[60vw] max-h-[800px] bg-orange-400/30 dark:bg-orange-600/20 rounded-full blur-[120px] mix-blend-multiply dark:mix-blend-screen pointer-events-none"
                     }, void 0, false, {
                         fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
-                        lineNumber: 49,
+                        lineNumber: 62,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute top-[10%] left-[20%] w-[40vw] h-[40vw] max-h-[600px] bg-yellow-300/20 dark:bg-yellow-500/10 rounded-full blur-[100px] mix-blend-multiply dark:mix-blend-screen pointer-events-none"
                     }, void 0, false, {
                         fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
-                        lineNumber: 50,
+                        lineNumber: 63,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute inset-0 opacity-[0.03] bg-[linear-gradient(90deg,transparent_0%,rgba(0,0,0,1)_1%,transparent_1%)] bg-[length:40px_100%] pointer-events-none"
                     }, void 0, false, {
                         fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
-                        lineNumber: 53,
+                        lineNumber: 66,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-[#fffdfa] dark:via-black/50 dark:to-background pointer-events-none"
                     }, void 0, false, {
                         fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
-                        lineNumber: 55,
+                        lineNumber: 68,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
-                lineNumber: 47,
+                lineNumber: 60,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -911,7 +943,7 @@ const LottieHeroBackground = ()=>{
                         className: "absolute top-[-10%] w-[120vw] h-[120vw] max-w-[1600px] max-h-[1600px] rounded-[100%] border-[1px] border-orange-300/60 dark:border-orange-800/40 pointer-events-none"
                     }, void 0, false, {
                         fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
-                        lineNumber: 61,
+                        lineNumber: 74,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -926,7 +958,7 @@ const LottieHeroBackground = ()=>{
                         className: "absolute top-[5%] w-[100vw] h-[70vw] max-w-[1400px] max-h-[900px] rounded-[100%] border-[2px] border-red-300/40 dark:border-red-800/30 pointer-events-none shadow-[inset_0_0_40px_rgba(248,113,113,0.05)]"
                     }, void 0, false, {
                         fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
-                        lineNumber: 67,
+                        lineNumber: 80,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -941,7 +973,7 @@ const LottieHeroBackground = ()=>{
                         className: "absolute top-[15%] w-[80vw] h-[100vw] max-w-[1100px] max-h-[1400px] rounded-[100%] border-[1px] border-yellow-300/60 dark:border-yellow-800/30 pointer-events-none"
                     }, void 0, false, {
                         fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
-                        lineNumber: 73,
+                        lineNumber: 86,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -965,26 +997,26 @@ const LottieHeroBackground = ()=>{
                         className: "absolute top-[20%] w-[60vw] h-[60vw] max-[800px] rounded-full border border-dashed border-orange-500/40 dark:border-orange-700/40 pointer-events-none"
                     }, void 0, false, {
                         fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
-                        lineNumber: 79,
+                        lineNumber: 92,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-b from-transparent to-[#fffdfa] dark:to-black pointer-events-none"
                     }, void 0, false, {
                         fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
-                        lineNumber: 86,
+                        lineNumber: 99,
                         columnNumber: 9
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
-                lineNumber: 59,
+                lineNumber: 72,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute inset-0 pointer-events-none opacity-90 delay-300 z-20",
+                className: "absolute inset-0 pointer-events-none delay-300 z-20",
                 children: floatingIcons.map((item, i)=>{
-                    const { Icon, color, delay, size } = item;
+                    const { Icon, color, delay, size, depthClass } = item;
                     const pos = positions[i];
                     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
                         className: `absolute ${color}`,
@@ -992,18 +1024,18 @@ const LottieHeroBackground = ()=>{
                         animate: {
                             y: [
                                 0,
-                                -25,
+                                -30,
                                 0
                             ],
                             x: [
                                 0,
-                                15,
+                                20,
                                 0
                             ],
                             rotate: [
                                 0,
-                                8,
-                                -8,
+                                10,
+                                -10,
                                 0
                             ]
                         },
@@ -1014,35 +1046,35 @@ const LottieHeroBackground = ()=>{
                             delay: delay
                         },
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: `bg-white/90 dark:bg-black/90 backdrop-blur-md p-4 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-black/5 dark:border-white/10 transition-colors duration-500 ${isScrolled ? 'bg-black/80 border-white/10 shadow-none' : 'bg-white/90 border-black/5'}`,
+                            className: `backdrop-blur-xl p-4 rounded-2xl border transition-all duration-500 will-change-transform flex items-center justify-center ${isScrolled ? 'bg-white/5 dark:bg-white/10 border-white/10 shadow-none' : 'bg-white/30 dark:bg-black/30 border-white/50 shadow-[0_8px_32px_rgba(0,0,0,0.08)]'} ${depthClass}`,
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Icon, {
                                 size: size,
                                 strokeWidth: 1.5
                             }, void 0, false, {
                                 fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
-                                lineNumber: 116,
+                                lineNumber: 131,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
-                            lineNumber: 111,
+                            lineNumber: 124,
                             columnNumber: 15
                         }, ("TURBOPACK compile-time value", void 0))
                     }, i, false, {
                         fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
-                        lineNumber: 95,
+                        lineNumber: 108,
                         columnNumber: 13
                     }, ("TURBOPACK compile-time value", void 0));
                 })
             }, void 0, false, {
                 fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
-                lineNumber: 90,
+                lineNumber: 103,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
-        lineNumber: 41,
+        lineNumber: 54,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
