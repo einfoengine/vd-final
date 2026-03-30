@@ -109,6 +109,33 @@ export default function Home() {
           "--desc-color": descColor    // Fallback/Direct usage
         } as any}
       >
+          {/* Moving Orbits — mirrored from hero background, spans entire main-body */}
+          <div className="fixed inset-0 overflow-hidden flex items-center justify-center pointer-events-none z-0">
+            {/* Outer Orbit */}
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 150, repeat: Infinity, ease: "linear" }}
+              className="absolute top-[-10%] w-[120vw] h-[120vw] max-w-[1600px] max-h-[1600px] rounded-[100%] border-[1px] border-blue-500/10 pointer-events-none"
+            />
+            {/* Middle Elliptical Orbit */}
+            <motion.div
+              animate={{ rotate: -360 }}
+              transition={{ duration: 200, repeat: Infinity, ease: "linear" }}
+              className="absolute top-[5%] w-[100vw] h-[70vw] max-w-[1400px] max-h-[900px] rounded-[100%] border-[1px] border-emerald-500/10 pointer-events-none shadow-[inset_0_0_40px_rgba(16,185,129,0.03)]"
+            />
+            {/* Inner Elliptical Orbit */}
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 180, repeat: Infinity, ease: "linear" }}
+              className="absolute top-[15%] w-[80vw] h-[100vw] max-w-[1100px] max-h-[1400px] rounded-[100%] border-[1px] border-cyan-500/10 pointer-events-none"
+            />
+            {/* Centered Pulsing Dashed Orbit */}
+            <motion.div
+              animate={{ scale: [1, 1.05, 1], opacity: [0.2, 0.4, 0.2] }}
+              transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute top-[20%] w-[60vw] h-[60vw] rounded-full border border-dashed border-blue-400/15 pointer-events-none"
+            />
+          </div>
           {/* 1. HERO - Attract */}
           <section id="hero" className="pt-0 relative z-20">
             <Hero
