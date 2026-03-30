@@ -236,13 +236,13 @@ export const Hero: React.FC<VDheroProps> = ({
                 }}
                 className={`text-desc text-h4 transition-colors duration-300 max-w-4xl mx-auto text-white/80`}
               >
+                {parseHighlightedText(data.description, false)}
               {data.typewriterTexts && (
                 <FlipText 
                   texts={data.typewriterTexts} 
-                  className="underline mr-2"
+                  className="underline ml-1 font-semibold"
                 />
               )}
-                {parseHighlightedText(data.description, false)}
               </motion.p>
 
               <motion.div

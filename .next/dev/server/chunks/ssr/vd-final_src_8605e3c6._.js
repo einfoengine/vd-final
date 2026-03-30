@@ -630,56 +630,76 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/vd-final/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/vd-final/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/vd-final/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/vd-final/node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs [app-ssr] (ecmascript)");
 "use client";
 ;
 ;
-;
-const FlipText = ({ texts, className = "", duration = 3000 })=>{
-    const [currentIndex, setCurrentIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
+const FlipText = ({ texts, className = "", typeSpeed = 80, deleteSpeed = 45, pauseDuration = 1800 })=>{
+    const [displayed, setDisplayed] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])("");
+    const [wordIndex, setWordIndex] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(0);
+    const [isDeleting, setIsDeleting] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [isPaused, setIsPaused] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
-        const interval = setInterval(()=>{
-            setCurrentIndex((prev)=>(prev + 1) % texts.length);
-        }, duration);
-        return ()=>clearInterval(interval);
+        const currentWord = texts[wordIndex];
+        if (isPaused) {
+            const timeout = setTimeout(()=>{
+                setIsPaused(false);
+                setIsDeleting(true);
+            }, pauseDuration);
+            return ()=>clearTimeout(timeout);
+        }
+        if (isDeleting) {
+            if (displayed.length === 0) {
+                setIsDeleting(false);
+                setWordIndex((prev)=>(prev + 1) % texts.length);
+                return;
+            }
+            const timeout = setTimeout(()=>{
+                setDisplayed((prev)=>prev.slice(0, -1));
+            }, deleteSpeed);
+            return ()=>clearTimeout(timeout);
+        }
+        // Typing
+        if (displayed.length < currentWord.length) {
+            const timeout = setTimeout(()=>{
+                setDisplayed(currentWord.slice(0, displayed.length + 1));
+            }, typeSpeed);
+            return ()=>clearTimeout(timeout);
+        }
+        // Fully typed — pause before deleting
+        setIsPaused(true);
     }, [
-        texts.length,
-        duration
+        displayed,
+        isDeleting,
+        isPaused,
+        wordIndex,
+        texts,
+        typeSpeed,
+        deleteSpeed,
+        pauseDuration
     ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-        className: `inline-block relative h-[1.2em] w-fit overflow-hidden align-bottom ${className}`,
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AnimatePresence"], {
-            mode: "popLayout",
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].span, {
-                initial: {
-                    y: "100%"
-                },
-                animate: {
-                    y: 0
-                },
-                exit: {
-                    y: "-100%"
-                },
-                transition: {
-                    duration: 0.5,
-                    ease: "easeInOut"
-                },
-                className: "block whitespace-nowrap",
-                children: texts[currentIndex]
-            }, currentIndex, false, {
+        className: `inline-block ${className}`,
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                className: "bg-gradient-to-b from-yellow-400 via-orange-500 to-red-600 bg-clip-text text-transparent font-semibold",
+                children: displayed
+            }, void 0, false, {
                 fileName: "[project]/vd-final/src/components/common/FlipText.tsx",
-                lineNumber: 30,
-                columnNumber: 9
+                lineNumber: 62,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0)),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                className: "animate-pulse text-white opacity-80",
+                children: "|"
+            }, void 0, false, {
+                fileName: "[project]/vd-final/src/components/common/FlipText.tsx",
+                lineNumber: 65,
+                columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
-        }, void 0, false, {
-            fileName: "[project]/vd-final/src/components/common/FlipText.tsx",
-            lineNumber: 29,
-            columnNumber: 7
-        }, ("TURBOPACK compile-time value", void 0))
-    }, void 0, false, {
+        ]
+    }, void 0, true, {
         fileName: "[project]/vd-final/src/components/common/FlipText.tsx",
-        lineNumber: 28,
+        lineNumber: 61,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -1411,15 +1431,15 @@ const Hero = ({ dataSource, title, supertitle, subtitle, description, primaryBut
                                     },
                                     className: `text-desc text-h4 transition-colors duration-300 max-w-4xl mx-auto text-white/80`,
                                     children: [
+                                        parseHighlightedText(data.description, false),
                                         data.typewriterTexts && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$common$2f$FlipText$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FlipText"], {
                                             texts: data.typewriterTexts,
-                                            className: "underline mr-2"
+                                            className: "underline ml-1 font-semibold"
                                         }, void 0, false, {
                                             fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-                                            lineNumber: 240,
+                                            lineNumber: 241,
                                             columnNumber: 17
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        parseHighlightedText(data.description, false)
+                                        }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
@@ -7221,7 +7241,12 @@ function Home() {
                             supertitle: "Fix your digital presence",
                             title: "Unlock [6X Growth] for your startup",
                             subtitle: "4.9",
-                            description: "We find your flaws & fix them to [multiply your leads, conversions and retention.]",
+                            description: "We find your flaws & fix them to multiply your",
+                            typewriterTexts: [
+                                "leads.",
+                                "conversions.",
+                                "retention."
+                            ],
                             primaryButtonText: "Start with a free audit",
                             onPrimaryClick: openAuditModal,
                             secondaryButtonLink: "#contact",
@@ -7241,12 +7266,12 @@ function Home() {
                         className: "relative z-20 bg-white/50 backdrop-blur-sm border-b border-gray-100",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$Module$2f$clients$2f$ClientLogos$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ClientLogos"], {}, void 0, false, {
                             fileName: "[project]/vd-final/src/app/page.tsx",
-                            lineNumber: 99,
+                            lineNumber: 100,
                             columnNumber: 14
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/vd-final/src/app/page.tsx",
-                        lineNumber: 98,
+                        lineNumber: 99,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -7262,14 +7287,14 @@ function Home() {
                                     variant: "v1"
                                 }, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 105,
+                                    lineNumber: 106,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$Module$2f$methodology$2f$DigitalFramework$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["DigitalFramework"], {
                                     items: __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$data$2f$fullStackServices$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["fullStackServices"]
                                 }, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 111,
+                                    lineNumber: 112,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$button$2f$Button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -7278,18 +7303,18 @@ function Home() {
                                     className: "mt-10 table m-auto"
                                 }, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 112,
+                                    lineNumber: 113,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/vd-final/src/app/page.tsx",
-                            lineNumber: 104,
+                            lineNumber: 105,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/vd-final/src/app/page.tsx",
-                        lineNumber: 103,
+                        lineNumber: 104,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -7301,7 +7326,7 @@ function Home() {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$Module$2f$spring$2d$offer$2f$SpringOffer$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["SpringOffer"], {}, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 124,
+                                    lineNumber: 125,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$common$2f$ModuleTitle$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ModuleTitle"], {
@@ -7309,12 +7334,12 @@ function Home() {
                                     variant: "v1"
                                 }, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 125,
+                                    lineNumber: 126,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$Module$2f$methodology$2f$GrowthPhases$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["GrowthPhases"], {}, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 129,
+                                    lineNumber: 130,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$button$2f$Button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -7323,18 +7348,18 @@ function Home() {
                                     className: "mt-10 table m-auto"
                                 }, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 130,
+                                    lineNumber: 131,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/vd-final/src/app/page.tsx",
-                            lineNumber: 123,
+                            lineNumber: 124,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/vd-final/src/app/page.tsx",
-                        lineNumber: 122,
+                        lineNumber: 123,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -7349,12 +7374,12 @@ function Home() {
                                     variant: "v1"
                                 }, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 140,
+                                    lineNumber: 141,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$Module$2f$content$2d$mix$2f$ContentMixComparison$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["ContentMixComparison"], {}, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 145,
+                                    lineNumber: 146,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$button$2f$Button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -7363,18 +7388,18 @@ function Home() {
                                     className: "mt-10 table m-auto"
                                 }, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 146,
+                                    lineNumber: 147,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/vd-final/src/app/page.tsx",
-                            lineNumber: 139,
+                            lineNumber: 140,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/vd-final/src/app/page.tsx",
-                        lineNumber: 138,
+                        lineNumber: 139,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -7382,12 +7407,12 @@ function Home() {
                         className: "nt-approach",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$Module$2f$holistic$2f$HolisticApproach$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["HolisticApproach"], {}, void 0, false, {
                             fileName: "[project]/vd-final/src/app/page.tsx",
-                            lineNumber: 156,
+                            lineNumber: 157,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/vd-final/src/app/page.tsx",
-                        lineNumber: 155,
+                        lineNumber: 156,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -7396,7 +7421,7 @@ function Home() {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$Module$2f$website$2d$checklist$2f$WebsiteChecklist$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["WebsiteChecklist"], {}, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 161,
+                                    lineNumber: 162,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$button$2f$Button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -7405,18 +7430,18 @@ function Home() {
                                     className: "mt-10 table m-auto"
                                 }, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 162,
+                                    lineNumber: 163,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/vd-final/src/app/page.tsx",
-                            lineNumber: 160,
+                            lineNumber: 161,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/vd-final/src/app/page.tsx",
-                        lineNumber: 159,
+                        lineNumber: 160,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -7431,7 +7456,7 @@ function Home() {
                                     variant: "v1"
                                 }, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 174,
+                                    lineNumber: 175,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$carousel$2f$PortfolioMarquee$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["PortfolioMarquee"], {
@@ -7439,18 +7464,18 @@ function Home() {
                                     speed: 150
                                 }, "marquee-0", false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 179,
+                                    lineNumber: 180,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/vd-final/src/app/page.tsx",
-                            lineNumber: 173,
+                            lineNumber: 174,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/vd-final/src/app/page.tsx",
-                        lineNumber: 172,
+                        lineNumber: 173,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -7465,12 +7490,12 @@ function Home() {
                                     variant: "v1"
                                 }, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 185,
+                                    lineNumber: 186,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$Module$2f$speciality$2f$Speciality$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Speciality"], {}, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 190,
+                                    lineNumber: 191,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$button$2f$Button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -7479,18 +7504,18 @@ function Home() {
                                     className: "mt-10 table m-auto"
                                 }, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 191,
+                                    lineNumber: 192,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/vd-final/src/app/page.tsx",
-                            lineNumber: 184,
+                            lineNumber: 185,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/vd-final/src/app/page.tsx",
-                        lineNumber: 183,
+                        lineNumber: 184,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -7508,30 +7533,30 @@ function Home() {
                                         className: "mb-0"
                                     }, void 0, false, {
                                         fileName: "[project]/vd-final/src/app/page.tsx",
-                                        lineNumber: 202,
+                                        lineNumber: 203,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 201,
+                                    lineNumber: 202,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$Module$2f$stickyCard$2f$StickyCards$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["StickyCards"], {
                                     cards: __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$data$2f$process$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["process"].steps
                                 }, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 209,
+                                    lineNumber: 210,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/vd-final/src/app/page.tsx",
-                            lineNumber: 200,
+                            lineNumber: 201,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/vd-final/src/app/page.tsx",
-                        lineNumber: 199,
+                        lineNumber: 200,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -7546,25 +7571,25 @@ function Home() {
                                     variant: "v1"
                                 }, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 217,
+                                    lineNumber: 218,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$Module$2f$packages$2f$Packages$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                     data: __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$data$2f$packagesData$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["packagesData"]
                                 }, void 0, false, {
                                     fileName: "[project]/vd-final/src/app/page.tsx",
-                                    lineNumber: 222,
+                                    lineNumber: 223,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/vd-final/src/app/page.tsx",
-                            lineNumber: 216,
+                            lineNumber: 217,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/vd-final/src/app/page.tsx",
-                        lineNumber: 215,
+                        lineNumber: 216,
                         columnNumber: 11
                     }, this)
                 ]

@@ -85,7 +85,8 @@ export default function Home() {
               supertitle="Fix your digital presence"
               title="Unlock [6X Growth] for your startup"
               subtitle="4.9"
-              description="We find your flaws & fix them to [multiply your leads, conversions and retention.]"
+              description="We find your flaws & fix them to multiply your"
+              typewriterTexts={["leads.", "conversions.", "retention."]}
               primaryButtonText="Start with a free audit"
               onPrimaryClick={openAuditModal}
               secondaryButtonLink="#contact"

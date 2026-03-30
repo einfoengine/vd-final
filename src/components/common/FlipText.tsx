@@ -1,43 +1,68 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 interface FlipTextProps {
   texts: string[];
   className?: string;
-  duration?: number;
+  typeSpeed?: number;
+  deleteSpeed?: number;
+  pauseDuration?: number;
 }
 
-export const FlipText: React.FC<FlipTextProps> = ({ 
-  texts, 
+export const FlipText: React.FC<FlipTextProps> = ({
+  texts,
   className = "",
-  duration = 3000
+  typeSpeed = 80,
+  deleteSpeed = 45,
+  pauseDuration = 1800,
 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [displayed, setDisplayed] = useState("");
+  const [wordIndex, setWordIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % texts.length);
-    }, duration);
+    const currentWord = texts[wordIndex];
 
-    return () => clearInterval(interval);
-  }, [texts.length, duration]);
+    if (isPaused) {
+      const timeout = setTimeout(() => {
+        setIsPaused(false);
+        setIsDeleting(true);
+      }, pauseDuration);
+      return () => clearTimeout(timeout);
+    }
+
+    if (isDeleting) {
+      if (displayed.length === 0) {
+        setIsDeleting(false);
+        setWordIndex((prev) => (prev + 1) % texts.length);
+        return;
+      }
+      const timeout = setTimeout(() => {
+        setDisplayed((prev) => prev.slice(0, -1));
+      }, deleteSpeed);
+      return () => clearTimeout(timeout);
+    }
+
+    // Typing
+    if (displayed.length < currentWord.length) {
+      const timeout = setTimeout(() => {
+        setDisplayed(currentWord.slice(0, displayed.length + 1));
+      }, typeSpeed);
+      return () => clearTimeout(timeout);
+    }
+
+    // Fully typed — pause before deleting
+    setIsPaused(true);
+  }, [displayed, isDeleting, isPaused, wordIndex, texts, typeSpeed, deleteSpeed, pauseDuration]);
 
   return (
-    <span className={`inline-block relative h-[1.2em] w-fit overflow-hidden align-bottom ${className}`}>
-      <AnimatePresence mode="popLayout">
-        <motion.span
-          key={currentIndex}
-          initial={{ y: "100%" }}
-          animate={{ y: 0 }}
-          exit={{ y: "-100%" }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="block whitespace-nowrap"
-        >
-          {texts[currentIndex]}
-        </motion.span>
-      </AnimatePresence>
+    <span className={`inline-block ${className}`}>
+      <span className="bg-gradient-to-b from-yellow-400 via-orange-500 to-red-600 bg-clip-text text-transparent font-semibold">
+        {displayed}
+      </span>
+      <span className="animate-pulse text-white opacity-80">|</span>
     </span>
   );
 };
