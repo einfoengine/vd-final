@@ -1083,38 +1083,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$compon
 ;
 ;
 ;
-// helper to highlight text inside []
-const parseHighlightedText = (text)=>{
-    if (!text) return null;
-    const parts = text.split(/(\[.*?\])/g);
-    return parts.map((part, index)=>part.startsWith("[") && part.endsWith("]") ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-            className: "font-playfair bg-gradient-to-r from-yellow-500 to-red-600 bg-clip-text text-transparent font-bold",
-            children: part.slice(1, -1)
-        }, index, false, {
-            fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-            lineNumber: 39,
-            columnNumber: 7
-        }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-            children: part.split("||").map((subPart, subIndex, array)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].Fragment, {
-                    children: [
-                        subPart,
-                        subIndex < array.length - 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
-                            fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-                            lineNumber: 47,
-                            columnNumber: 45
-                        }, ("TURBOPACK compile-time value", void 0))
-                    ]
-                }, subIndex, true, {
-                    fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-                    lineNumber: 45,
-                    columnNumber: 11
-                }, ("TURBOPACK compile-time value", void 0)))
-        }, index, false, {
-            fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-            lineNumber: 43,
-            columnNumber: 7
-        }, ("TURBOPACK compile-time value", void 0)));
-};
 const Hero = ({ dataSource, title, supertitle, subtitle, description, primaryButtonText, primaryButtonLink, secondaryButtonText, secondaryButtonLink, className = "", video, typewriterTexts, onPrimaryClick, onSecondaryClick })=>{
     const heroRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useRef"])(null);
     const [isScrolled, setIsScrolled] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
@@ -1126,6 +1094,41 @@ const Hero = ({ dataSource, title, supertitle, subtitle, description, primaryBut
         handleScroll();
         return ()=>window.removeEventListener("scroll", handleScroll);
     }, []);
+    // helper to highlight text inside []
+    const parseHighlightedText = (text, isHeading = false)=>{
+        if (!text) return null;
+        const parts = text.split(/(\[.*?\])/g);
+        // Create dark gradient for the non-highlighted text when not scrolled, and white gradient when scrolled.
+        const baseTextClass = isHeading ? !isScrolled ? "bg-gradient-to-b from-gray-900 via-gray-700 to-gray-500 bg-clip-text text-transparent" : "bg-gradient-to-b from-white via-gray-100 to-gray-400 bg-clip-text text-transparent" : "";
+        return parts.map((part, index)=>part.startsWith("[") && part.endsWith("]") ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                className: `font-playfair bg-gradient-to-b from-[#ffc107] to-[#ef4444] bg-clip-text text-transparent font-bold ${isHeading ? 'px-1 inline-block pb-2 -mb-2' : ''}`,
+                children: part.slice(1, -1)
+            }, index, false, {
+                fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
+                lineNumber: 79,
+                columnNumber: 9
+            }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                className: baseTextClass,
+                children: part.split("||").map((subPart, subIndex, array)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].Fragment, {
+                        children: [
+                            subPart,
+                            subIndex < array.length - 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                                fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
+                                lineNumber: 87,
+                                columnNumber: 47
+                            }, ("TURBOPACK compile-time value", void 0))
+                        ]
+                    }, subIndex, true, {
+                        fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
+                        lineNumber: 85,
+                        columnNumber: 13
+                    }, ("TURBOPACK compile-time value", void 0)))
+            }, index, false, {
+                fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
+                lineNumber: 83,
+                columnNumber: 9
+            }, ("TURBOPACK compile-time value", void 0)));
+    };
     // prefer props directly, fallback to dataSource
     const data = {
         title: title || dataSource?.title,
@@ -1154,12 +1157,12 @@ const Hero = ({ dataSource, title, supertitle, subtitle, description, primaryBut
                         className: "absolute inset-0 z-0 rounded-3xl overflow-hidden",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$Module$2f$hero$2f$LottieHeroBackground$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["LottieHeroBackground"], {}, void 0, false, {
                             fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-                            lineNumber: 114,
+                            lineNumber: 124,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-                        lineNumber: 113,
+                        lineNumber: 123,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1217,12 +1220,12 @@ const Hero = ({ dataSource, title, supertitle, subtitle, description, primaryBut
                                         textGap: 6
                                     }, void 0, false, {
                                         fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-                                        lineNumber: 138,
+                                        lineNumber: 148,
                                         columnNumber: 17
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-                                    lineNumber: 128,
+                                    lineNumber: 138,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 data.subtitle && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1268,19 +1271,19 @@ const Hero = ({ dataSource, title, supertitle, subtitle, description, primaryBut
                                                 height: 40
                                             }, void 0, false, {
                                                 fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-                                                lineNumber: 165,
+                                                lineNumber: 175,
                                                 columnNumber: 21
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-                                            lineNumber: 160,
+                                            lineNumber: 170,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             children: data.subtitle
                                         }, void 0, false, {
                                             fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-                                            lineNumber: 172,
+                                            lineNumber: 182,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1306,23 +1309,23 @@ const Hero = ({ dataSource, title, supertitle, subtitle, description, primaryBut
                                                         className: "w-5 h-5 text-yellow-400 fill-yellow-400"
                                                     }, void 0, false, {
                                                         fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-                                                        lineNumber: 186,
+                                                        lineNumber: 196,
                                                         columnNumber: 25
                                                     }, ("TURBOPACK compile-time value", void 0))
                                                 }, i, false, {
                                                     fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-                                                    lineNumber: 175,
+                                                    lineNumber: 185,
                                                     columnNumber: 23
                                                 }, ("TURBOPACK compile-time value", void 0)))
                                         }, void 0, false, {
                                             fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-                                            lineNumber: 173,
+                                            lineNumber: 183,
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-                                    lineNumber: 150,
+                                    lineNumber: 160,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 data.supertitle && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1346,17 +1349,17 @@ const Hero = ({ dataSource, title, supertitle, subtitle, description, primaryBut
                                             children: data.supertitle
                                         }, void 0, false, {
                                             fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-                                            lineNumber: 203,
+                                            lineNumber: 213,
                                             columnNumber: 21
                                         }, ("TURBOPACK compile-time value", void 0))
                                     }, void 0, false, {
                                         fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-                                        lineNumber: 197,
+                                        lineNumber: 207,
                                         columnNumber: 19
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-                                    lineNumber: 196,
+                                    lineNumber: 206,
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].h1, {
@@ -1380,11 +1383,11 @@ const Hero = ({ dataSource, title, supertitle, subtitle, description, primaryBut
                                             0.94
                                         ]
                                     },
-                                    className: `nt-hero-heading mb-6 transition-colors duration-300 ${!isScrolled ? 'text-black' : 'text-white'}`,
-                                    children: parseHighlightedText(data.title)
+                                    className: `nt-hero-heading mb-6 transition-colors duration-300 text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-extrabold leading-[1.1] tracking-tight`,
+                                    children: parseHighlightedText(data.title, true)
                                 }, void 0, false, {
                                     fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-                                    lineNumber: 208,
+                                    lineNumber: 218,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].p, {
@@ -1413,14 +1416,14 @@ const Hero = ({ dataSource, title, supertitle, subtitle, description, primaryBut
                                             className: "underline mr-2"
                                         }, void 0, false, {
                                             fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-                                            lineNumber: 232,
+                                            lineNumber: 242,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
-                                        parseHighlightedText(data.description)
+                                        parseHighlightedText(data.description, false)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-                                    lineNumber: 221,
+                                    lineNumber: 231,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1466,18 +1469,18 @@ const Hero = ({ dataSource, title, supertitle, subtitle, description, primaryBut
                                                     size: 18
                                                 }, void 0, false, {
                                                     fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-                                                    lineNumber: 259,
+                                                    lineNumber: 269,
                                                     columnNumber: 27
                                                 }, void 0),
                                                 iconPosition: "right"
                                             }, void 0, false, {
                                                 fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-                                                lineNumber: 255,
+                                                lineNumber: 265,
                                                 columnNumber: 44
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-                                            lineNumber: 250,
+                                            lineNumber: 260,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1501,36 +1504,36 @@ const Hero = ({ dataSource, title, supertitle, subtitle, description, primaryBut
                                                     size: 18
                                                 }, void 0, false, {
                                                     fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-                                                    lineNumber: 273,
+                                                    lineNumber: 283,
                                                     columnNumber: 27
                                                 }, void 0),
                                                 iconPosition: "left",
                                                 className: ""
                                             }, void 0, false, {
                                                 fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-                                                lineNumber: 268,
+                                                lineNumber: 278,
                                                 columnNumber: 46
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-                                            lineNumber: 263,
+                                            lineNumber: 273,
                                             columnNumber: 17
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-                                    lineNumber: 240,
+                                    lineNumber: 250,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-                            lineNumber: 118,
+                            lineNumber: 128,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-                        lineNumber: 117,
+                        lineNumber: 127,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1551,28 +1554,28 @@ const Hero = ({ dataSource, title, supertitle, subtitle, description, primaryBut
                             video: video
                         }, void 0, false, {
                             fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-                            lineNumber: 288,
+                            lineNumber: 298,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0))
                     }, void 0, false, {
                         fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-                        lineNumber: 282,
+                        lineNumber: 292,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-                lineNumber: 105,
+                lineNumber: 115,
                 columnNumber: 9
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-            lineNumber: 104,
+            lineNumber: 114,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
-        lineNumber: 103,
+        lineNumber: 113,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };

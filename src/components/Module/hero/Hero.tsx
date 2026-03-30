@@ -30,27 +30,7 @@ interface VDheroProps extends Partial<VDheroData> {
   onSecondaryClick?: () => void;
 }
 
-// helper to highlight text inside []
-const parseHighlightedText = (text?: string) => {
-  if (!text) return null;
-  const parts = text.split(/(\[.*?\])/g);
-  return parts.map((part, index) =>
-    part.startsWith("[") && part.endsWith("]") ? (
-      <span key={index} className="font-playfair bg-gradient-to-r from-yellow-500 to-red-600 bg-clip-text text-transparent font-bold">
-        {part.slice(1, -1)}
-      </span>
-    ) : (
-      <span key={index}>
-        {part.split("||").map((subPart, subIndex, array) => (
-          <React.Fragment key={subIndex}>
-            {subPart}
-            {subIndex < array.length - 1 && <br />}
-          </React.Fragment>
-        ))}
-      </span>
-    )
-  );
-};
+
 
 export const Hero: React.FC<VDheroProps> = ({
   dataSource,
@@ -81,6 +61,36 @@ export const Hero: React.FC<VDheroProps> = ({
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // helper to highlight text inside []
+  const parseHighlightedText = (text?: string, isHeading: boolean = false) => {
+    if (!text) return null;
+    const parts = text.split(/(\[.*?\])/g);
+    
+    // Create dark gradient for the non-highlighted text when not scrolled, and white gradient when scrolled.
+    const baseTextClass = isHeading 
+      ? (!isScrolled 
+          ? "bg-gradient-to-b from-gray-900 via-gray-700 to-gray-500 bg-clip-text text-transparent" 
+          : "bg-gradient-to-b from-white via-gray-100 to-gray-400 bg-clip-text text-transparent")
+      : "";
+
+    return parts.map((part, index) =>
+      part.startsWith("[") && part.endsWith("]") ? (
+        <span key={index} className={`font-playfair bg-gradient-to-b from-[#ffc107] to-[#ef4444] bg-clip-text text-transparent font-bold ${isHeading ? 'px-1 inline-block pb-2 -mb-2' : ''}`}>
+          {part.slice(1, -1)}
+        </span>
+      ) : (
+        <span key={index} className={baseTextClass}>
+          {part.split("||").map((subPart, subIndex, array) => (
+            <React.Fragment key={subIndex}>
+              {subPart}
+              {subIndex < array.length - 1 && <br />}
+            </React.Fragment>
+          ))}
+        </span>
+      )
+    );
+  };
 
   // prefer props directly, fallback to dataSource
   const data = {
@@ -213,9 +223,9 @@ export const Hero: React.FC<VDheroProps> = ({
                   delay: 0.4,
                   ease: [0.25, 0.46, 0.45, 0.94]
                 }}
-                className={`nt-hero-heading mb-6 transition-colors duration-300 ${!isScrolled ? 'text-black' : 'text-white'}`}
+                className={`nt-hero-heading mb-6 transition-colors duration-300 text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-extrabold leading-[1.1] tracking-tight`}
               >
-                {parseHighlightedText(data.title)}
+                {parseHighlightedText(data.title, true)}
               </motion.h1>
 
               <motion.p
@@ -234,7 +244,7 @@ export const Hero: React.FC<VDheroProps> = ({
                   className="underline mr-2"
                 />
               )}
-                {parseHighlightedText(data.description)}
+                {parseHighlightedText(data.description, false)}
               </motion.p>
 
               <motion.div
