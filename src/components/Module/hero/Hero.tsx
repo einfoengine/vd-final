@@ -76,7 +76,7 @@ export const Hero: React.FC<VDheroProps> = ({
 
     return parts.map((part, index) =>
       part.startsWith("[") && part.endsWith("]") ? (
-        <span key={index} className={`font-playfair bg-gradient-to-b from-[#ffc107] to-[#ef4444] bg-clip-text text-transparent font-bold ${isHeading ? 'px-1 inline-block pb-2 -mb-2' : ''}`}>
+        <span key={index} className={`font-playfair bg-gradient-to-b from-yellow-400 via-orange-500 via-40% to-red-600 bg-clip-text text-transparent font-bold ${isHeading ? 'px-1 inline-block pb-2 -mb-2' : ''}`}>
           {part.slice(1, -1)}
         </span>
       ) : (

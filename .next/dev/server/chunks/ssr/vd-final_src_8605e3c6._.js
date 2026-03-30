@@ -1101,7 +1101,7 @@ const Hero = ({ dataSource, title, supertitle, subtitle, description, primaryBut
         // Create dark gradient for the non-highlighted text when not scrolled, and white gradient when scrolled.
         const baseTextClass = isHeading ? !isScrolled ? "bg-gradient-to-b from-gray-900 via-gray-700 to-gray-500 bg-clip-text text-transparent" : "bg-gradient-to-b from-white via-gray-100 to-gray-400 bg-clip-text text-transparent" : "";
         return parts.map((part, index)=>part.startsWith("[") && part.endsWith("]") ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                className: `font-playfair bg-gradient-to-b from-[#ffc107] to-[#ef4444] bg-clip-text text-transparent font-bold ${isHeading ? 'px-1 inline-block pb-2 -mb-2' : ''}`,
+                className: `font-playfair bg-gradient-to-b from-yellow-400 via-orange-500 via-40% to-red-600 bg-clip-text text-transparent font-bold ${isHeading ? 'px-1 inline-block pb-2 -mb-2' : ''}`,
                 children: part.slice(1, -1)
             }, index, false, {
                 fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
