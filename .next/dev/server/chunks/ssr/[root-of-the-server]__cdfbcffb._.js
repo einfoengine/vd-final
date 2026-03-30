@@ -4745,7 +4745,7 @@ function Header() {
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                     width: 140,
                     height: 60,
-                    src: "/assets/logo/logo-black.svg",
+                    src: isScrolled ? "/assets/logo/logo-black.svg" : "/assets/logo/logo-white.svg",
                     alt: "DevioNex Logo",
                     priority: true,
                     className: "h-10 w-auto transition-all duration-500"
@@ -4769,7 +4769,7 @@ function Header() {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                     href: item.link || "#",
-                                    className: `group text-base font-title font-semibold transition-all duration-300 ease-in-out flex items-center gap-1 hover:scale-105 cursor-pointer ${isLinkActive(item.link) ? "bg-gradient-to-r from-red-600 to-orange-500 bg-clip-text text-transparent font-bold" : "text-title"}`,
+                                    className: `group text-base font-title font-semibold transition-all duration-300 ease-in-out flex items-center gap-1 hover:scale-105 cursor-pointer ${isLinkActive(item.link) ? "bg-gradient-to-r from-red-600 to-orange-500 bg-clip-text text-transparent font-bold" : isScrolled ? "text-title" : "text-white/90 hover:text-white"}`,
                                     children: [
                                         item.title,
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__["ChevronDown"], {
@@ -4796,7 +4796,7 @@ function Header() {
                             ]
                         }, void 0, true) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                             href: item.link || "#",
-                            className: `text-base font-title font-semibold transition-all duration-300 ease-in-out hover:scale-105 ${isLinkActive(item.link) ? "bg-gradient-to-r from-red-600 to-orange-500 bg-clip-text text-transparent font-bold" : "text-gray-800 hover:text-theme"}`,
+                            className: `text-base font-title font-semibold transition-all duration-300 ease-in-out hover:scale-105 ${isLinkActive(item.link) ? "bg-gradient-to-r from-red-600 to-orange-500 bg-clip-text text-transparent font-bold" : isScrolled ? "text-gray-800 hover:text-theme" : "text-white/90 hover:text-white"}`,
                             children: item.title
                         }, void 0, false, {
                             fileName: "[project]/vd-final/src/components/layout/header/Header.tsx",
@@ -4899,38 +4899,24 @@ function Header() {
     }, void 0, true);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
-            className: "fixed top-2 left-0 right-0 transition-all duration-300 ease-in-out z-50",
+            className: "fixed top-4 left-0 right-0 transition-all duration-300 ease-in-out z-50",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "container mx-auto px-4",
-                    children: isScrolled ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "rounded-full bg-white/70 backdrop-blur-lg shadow-sm transition-all duration-300 ease-in-out",
+                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: `rounded-full transition-all duration-500 ease-in-out ${isScrolled ? "bg-white/70 backdrop-blur-lg shadow-sm" : "bg-white/[0.06] backdrop-blur-md border border-white/10 shadow-[0_2px_30px_rgba(0,0,0,0.2)]"}`,
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "flex items-center justify-between h-20 px-6",
+                            className: "flex items-center justify-between px-3 py-2",
                             children: menuContent
                         }, void 0, false, {
                             fileName: "[project]/vd-final/src/components/layout/header/Header.tsx",
-                            lineNumber: 152,
-                            columnNumber: 15
+                            lineNumber: 155,
+                            columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/vd-final/src/components/layout/header/Header.tsx",
-                        lineNumber: 151,
-                        columnNumber: 13
-                    }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "rounded-full transition-all duration-300 ease-in-out",
-                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "flex items-center justify-between h-20 px-6",
-                            children: menuContent
-                        }, void 0, false, {
-                            fileName: "[project]/vd-final/src/components/layout/header/Header.tsx",
-                            lineNumber: 158,
-                            columnNumber: 15
-                        }, this)
-                    }, void 0, false, {
-                        fileName: "[project]/vd-final/src/components/layout/header/Header.tsx",
-                        lineNumber: 157,
-                        columnNumber: 13
+                        lineNumber: 150,
+                        columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/vd-final/src/components/layout/header/Header.tsx",
@@ -4941,7 +4927,7 @@ function Header() {
                     onClose: ()=>setIsMobileMenuOpen(false)
                 }, void 0, false, {
                     fileName: "[project]/vd-final/src/components/layout/header/Header.tsx",
-                    lineNumber: 167,
+                    lineNumber: 163,
                     columnNumber: 11
                 }, this)
             ]

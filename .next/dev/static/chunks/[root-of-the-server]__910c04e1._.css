@@ -2632,6 +2632,16 @@
   }
 }
 
+.bg-white\/\[0\.06\] {
+  background-color: var(--color-white);
+}
+
+@supports (color: color-mix(in lab, red, red)) {
+  .bg-white\/\[0\.06\] {
+    background-color: color-mix(in oklab, var(--color-white) 6%, transparent);
+  }
+}
+
 .bg-yellow-50 {
   background-color: var(--color-yellow-50);
 }
@@ -3916,6 +3926,16 @@
   }
 }
 
+.text-white\/90 {
+  color: var(--color-white);
+}
+
+@supports (color: color-mix(in lab, red, red)) {
+  .text-white\/90 {
+    color: color-mix(in oklab, var(--color-white) 90%, transparent);
+  }
+}
+
 .text-yellow-400 {
   color: var(--color-yellow-400);
 }
@@ -4021,6 +4041,11 @@
 
 .shadow-2xl {
   --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, #00000040);
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
+
+.shadow-\[0_2px_30px_rgba\(0\,0\,0\,0\.2\)\] {
+  --tw-shadow: 0 2px 30px var(--tw-shadow-color, #0003);
   box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
 }
 

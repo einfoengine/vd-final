@@ -47,7 +47,7 @@ export default function Header() {
         <Image
           width={140}
           height={60}
-          src="/assets/logo/logo-black.svg"
+          src={isScrolled ? "/assets/logo/logo-black.svg" : "/assets/logo/logo-white.svg"}
           alt="DevioNex Logo"
           priority={true}
           className="h-10 w-auto transition-all duration-500"
@@ -70,7 +70,7 @@ export default function Header() {
                 <Link
                   href={item.link || "#"}
                   className={`group text-base font-title font-semibold transition-all duration-300 ease-in-out flex items-center gap-1 hover:scale-105 cursor-pointer ${
-                    isLinkActive(item.link) ? "bg-gradient-to-r from-red-600 to-orange-500 bg-clip-text text-transparent font-bold" : "text-title"
+                    isLinkActive(item.link) ? "bg-gradient-to-r from-red-600 to-orange-500 bg-clip-text text-transparent font-bold" : isScrolled ? "text-title" : "text-white/90 hover:text-white"
                   }`}
                 >
                   {item.title}
@@ -91,7 +91,7 @@ export default function Header() {
                 className={`text-base font-title font-semibold transition-all duration-300 ease-in-out hover:scale-105 ${
                   isLinkActive(item.link)
                     ? "bg-gradient-to-r from-red-600 to-orange-500 bg-clip-text text-transparent font-bold"
-                    : "text-gray-800 hover:text-theme"
+                    : isScrolled ? "text-gray-800 hover:text-theme" : "text-white/90 hover:text-white"
                 }`}
               >
                 {item.title}
@@ -144,22 +144,18 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-2 left-0 right-0 transition-all duration-300 ease-in-out z-50">
+      <header className="fixed top-4 left-0 right-0 transition-all duration-300 ease-in-out z-50">
         <div className="container mx-auto px-4">
           {/* Inner Content Container */}
-          {isScrolled ? (
-            <div className="rounded-full bg-white/70 backdrop-blur-lg shadow-sm transition-all duration-300 ease-in-out">
-              <div className="flex items-center justify-between h-20 px-6">
-                {menuContent}
-              </div>
+          <div className={`rounded-full transition-all duration-500 ease-in-out ${
+            isScrolled
+              ? "bg-white/70 backdrop-blur-lg shadow-sm"
+              : "bg-white/[0.06] backdrop-blur-md border border-white/10 shadow-[0_2px_30px_rgba(0,0,0,0.2)]"
+          }`}>
+            <div className="flex items-center justify-between px-3 py-2">
+              {menuContent}
             </div>
-          ) : (
-            <div className="rounded-full transition-all duration-300 ease-in-out">
-              <div className="flex items-center justify-between h-20 px-6">
-                {menuContent}
-              </div>
-            </div>
-          )}
+          </div>
         </div>
 
         {/* Mobile Navigation */}
