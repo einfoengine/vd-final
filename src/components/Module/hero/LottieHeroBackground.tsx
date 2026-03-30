@@ -19,35 +19,41 @@ export const LottieHeroBackground = () => {
   }, []);
 
   const floatingIcons = [
-    // MID: Sharp, normal size, standard shadow
-    { Icon: FaGoogle, color: "text-blue-500", delay: 0.2, size: 36, depthClass: "scale-100 z-20 shadow-[0_8px_30px_rgb(0,0,0,0.06)]" },
-    { Icon: FaLinkedin, color: "text-blue-700", delay: 2, size: 32, depthClass: "scale-100 z-20 shadow-[0_8px_30px_rgb(0,0,0,0.06)]" },
-    { Icon: Target, color: "text-orange-500", delay: 2.5, size: 38, depthClass: "scale-100 z-20 shadow-[0_8px_30px_rgb(0,0,0,0.06)]" },
+    // PROMINENT: Sharp, in-focus, clear brand icons
+    { Icon: FaGoogle, color: "text-blue-500", delay: 0.2, size: 38, depthClass: "scale-100 z-20 shadow-[0_8px_30px_rgb(0,0,0,0.06)]" },
+    { Icon: FaLinkedin, color: "text-blue-700", delay: 2, size: 36, depthClass: "scale-100 z-20 shadow-[0_8px_30px_rgb(0,0,0,0.06)]" },
+    { Icon: FaFacebook, color: "text-blue-600", delay: 0, size: 40, depthClass: "scale-100 z-20 shadow-[0_8px_30px_rgb(0,0,0,0.06)]" },
+    { Icon: FaYoutube, color: "text-red-500", delay: 0.5, size: 42, depthClass: "scale-100 z-20 shadow-[0_8px_30px_rgb(0,0,0,0.06)]" },
+    { Icon: FaXTwitter, color: "text-zinc-800 dark:text-zinc-200", delay: 0.8, size: 38, depthClass: "scale-100 z-20 shadow-[0_8px_30px_rgb(0,0,0,0.06)]" },
 
     // FAR: Smaller, visibly blurred, lower opacity, sitting behind
-    { Icon: FaFacebook, color: "text-blue-600", delay: 0, size: 28, depthClass: "scale-75 blur-[3px] opacity-60 z-10" },
-    { Icon: BarChart, color: "text-purple-500", delay: 1.5, size: 24, depthClass: "scale-75 blur-[4px] opacity-50 z-10" },
-    { Icon: Globe, color: "text-sky-500", delay: 3.5, size: 26, depthClass: "scale-75 blur-[3px] opacity-60 z-10" },
+    { Icon: BarChart, color: "text-purple-500", delay: 1.5, size: 24, depthClass: "scale-75 blur-[3px] opacity-40 z-10" },
+    { Icon: Globe, color: "text-sky-500", delay: 3.5, size: 26, depthClass: "scale-75 blur-[4px] opacity-50 z-10" },
+    { Icon: Target, color: "text-orange-500", delay: 2.5, size: 24, depthClass: "scale-75 blur-[3px] opacity-40 z-10" },
 
     // CLOSE: Very large, heavily blurred, high opacity, sitting way in front
-    { Icon: FaYoutube, color: "text-red-500", delay: 0.5, size: 50, depthClass: "scale-[1.8] blur-[6px] opacity-70 z-30" },
-    { Icon: FaXTwitter, color: "text-zinc-800 dark:text-zinc-200", delay: 0.8, size: 45, depthClass: "scale-[2] blur-[8px] opacity-65 z-30" },
-    { Icon: TrendingUp, color: "text-green-500", delay: 2.2, size: 60, depthClass: "scale-[1.6] blur-[6px] opacity-70 z-30" },
+    { Icon: TrendingUp, color: "text-green-500", delay: 2.2, size: 60, depthClass: "scale-[1.6] blur-[6px] opacity-60 z-30" },
+    { Icon: Zap, color: "text-yellow-500", delay: 1.1, size: 65, depthClass: "scale-[1.8] blur-[8px] opacity-50 z-30" },
+    { Icon: Cpu, color: "text-rose-500", delay: 3.2, size: 70, depthClass: "scale-[2] blur-[10px] opacity-40 z-30" },
   ];
 
-  // Provide initial positions scattered around the background with 9 elements now
   const positions = [
-    { top: "15%", left: "10%" }, // FB (Mid)
-    { top: "8%", right: "35%" }, // Linkedin (Mid)
-    { bottom: "25%", left: "15%" }, // Target (Mid)
+    // PROMINENT
+    { top: "15%", left: "15%" }, // Google
+    { top: "10%", right: "30%" }, // Linkedin
+    { bottom: "35%", left: "8%" }, // Facebook
+    { bottom: "25%", right: "12%" }, // Youtube
+    { top: "45%", left: "30%" }, // X
 
-    { top: "25%", right: "12%" }, // YT (Far)
-    { bottom: "20%", right: "15%" }, // BarChart (Far)
-    { top: "45%", left: "5%" }, // Globe (Far)
+    // FAR
+    { top: "35%", right: "8%" }, // BarChart
+    { top: "5%", left: "40%" }, // Globe
+    { bottom: "15%", left: "45%" }, // Target
 
-    { top: "25%", left: "25%" }, // TrendingUp (Close)
-    { bottom: "12%", left: "35%" }, // Zap (Close)
-    { top: "35%", right: "8%" }, // Cpu (Close)
+    // CLOSE
+    { top: "25%", left: "2%" }, // TrendingUp
+    { bottom: "5%", right: "30%" }, // Zap
+    { top: "5%", right: "5%" }, // Cpu
   ];
 
   return (
