@@ -812,7 +812,6 @@ const LottieHeroBackground = ()=>{
             size: 42
         }
     ];
-    // Provide initial positions scattered around the background
     const positions = [
         {
             top: "15%",
@@ -844,17 +843,146 @@ const LottieHeroBackground = ()=>{
         }
     ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "absolute inset-0 overflow-hidden w-full h-full z-0 pointer-events-none",
+        className: "absolute inset-0 overflow-hidden w-full h-full z-0 pointer-events-none bg-[#fffdfa] dark:bg-black/90",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: `absolute inset-0 transition-colors duration-500 ${isScrolled ? 'bg-black' : 'bg-transparent'}`
+                className: `absolute inset-0 transition-colors duration-500 z-10 ${isScrolled ? 'bg-black' : 'bg-transparent'}`
             }, void 0, false, {
                 fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
-                lineNumber: 43,
+                lineNumber: 44,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "absolute inset-0 pointer-events-none opacity-60",
+                className: `absolute inset-0 transition-opacity duration-500 z-0 ${isScrolled ? 'opacity-0' : 'opacity-100'}`,
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute top-[-20%] left-[-10%] w-[60vw] h-[60vw] max-h-[800px] bg-red-400/20 dark:bg-red-600/20 rounded-full blur-[120px] mix-blend-multiply dark:mix-blend-screen pointer-events-none"
+                    }, void 0, false, {
+                        fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
+                        lineNumber: 48,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute top-[-20%] right-[-10%] w-[60vw] h-[60vw] max-h-[800px] bg-orange-400/30 dark:bg-orange-600/20 rounded-full blur-[120px] mix-blend-multiply dark:mix-blend-screen pointer-events-none"
+                    }, void 0, false, {
+                        fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
+                        lineNumber: 49,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute top-[10%] left-[20%] w-[40vw] h-[40vw] max-h-[600px] bg-yellow-300/20 dark:bg-yellow-500/10 rounded-full blur-[100px] mix-blend-multiply dark:mix-blend-screen pointer-events-none"
+                    }, void 0, false, {
+                        fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
+                        lineNumber: 50,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute inset-0 opacity-[0.03] bg-[linear-gradient(90deg,transparent_0%,rgba(0,0,0,1)_1%,transparent_1%)] bg-[length:40px_100%] pointer-events-none"
+                    }, void 0, false, {
+                        fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
+                        lineNumber: 53,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute inset-0 bg-gradient-to-b from-transparent via-white/50 to-[#fffdfa] dark:via-black/50 dark:to-background pointer-events-none"
+                    }, void 0, false, {
+                        fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
+                        lineNumber: 55,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0))
+                ]
+            }, void 0, true, {
+                fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
+                lineNumber: 47,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0)),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: `absolute inset-0 overflow-visible flex items-center justify-center pointer-events-none transition-opacity duration-500 z-0 ${isScrolled ? 'opacity-20' : 'opacity-70'}`,
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                        animate: {
+                            rotate: 360
+                        },
+                        transition: {
+                            duration: 150,
+                            repeat: Infinity,
+                            ease: "linear"
+                        },
+                        className: "absolute top-[-10%] w-[120vw] h-[120vw] max-w-[1600px] max-h-[1600px] rounded-[100%] border-[1px] border-orange-300/60 dark:border-orange-800/40 pointer-events-none"
+                    }, void 0, false, {
+                        fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
+                        lineNumber: 61,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                        animate: {
+                            rotate: -360
+                        },
+                        transition: {
+                            duration: 200,
+                            repeat: Infinity,
+                            ease: "linear"
+                        },
+                        className: "absolute top-[5%] w-[100vw] h-[70vw] max-w-[1400px] max-h-[900px] rounded-[100%] border-[2px] border-red-300/40 dark:border-red-800/30 pointer-events-none shadow-[inset_0_0_40px_rgba(248,113,113,0.05)]"
+                    }, void 0, false, {
+                        fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
+                        lineNumber: 67,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                        animate: {
+                            rotate: 360
+                        },
+                        transition: {
+                            duration: 180,
+                            repeat: Infinity,
+                            ease: "linear"
+                        },
+                        className: "absolute top-[15%] w-[80vw] h-[100vw] max-w-[1100px] max-h-[1400px] rounded-[100%] border-[1px] border-yellow-300/60 dark:border-yellow-800/30 pointer-events-none"
+                    }, void 0, false, {
+                        fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
+                        lineNumber: 73,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
+                        animate: {
+                            scale: [
+                                1,
+                                1.05,
+                                1
+                            ],
+                            opacity: [
+                                0.5,
+                                0.8,
+                                0.5
+                            ]
+                        },
+                        transition: {
+                            duration: 8,
+                            repeat: Infinity,
+                            ease: "easeInOut"
+                        },
+                        className: "absolute top-[20%] w-[60vw] h-[60vw] max-[800px] rounded-full border border-dashed border-orange-500/40 dark:border-orange-700/40 pointer-events-none"
+                    }, void 0, false, {
+                        fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
+                        lineNumber: 79,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0)),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-b from-transparent to-[#fffdfa] dark:to-black pointer-events-none"
+                    }, void 0, false, {
+                        fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
+                        lineNumber: 86,
+                        columnNumber: 9
+                    }, ("TURBOPACK compile-time value", void 0))
+                ]
+            }, void 0, true, {
+                fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
+                lineNumber: 59,
+                columnNumber: 7
+            }, ("TURBOPACK compile-time value", void 0)),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "absolute inset-0 pointer-events-none opacity-90 delay-300 z-20",
                 children: floatingIcons.map((item, i)=>{
                     const { Icon, color, delay, size } = item;
                     const pos = positions[i];
@@ -886,35 +1014,35 @@ const LottieHeroBackground = ()=>{
                             delay: delay
                         },
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: `bg-white/90 dark:bg-black/90 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-black/5 dark:border-white/10 transition-colors duration-500 ${isScrolled ? 'bg-black/80 border-white/10' : 'bg-white/90 border-black/5'}`,
+                            className: `bg-white/90 dark:bg-black/90 backdrop-blur-md p-4 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-black/5 dark:border-white/10 transition-colors duration-500 ${isScrolled ? 'bg-black/80 border-white/10 shadow-none' : 'bg-white/90 border-black/5'}`,
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Icon, {
                                 size: size,
                                 strokeWidth: 1.5
                             }, void 0, false, {
                                 fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
-                                lineNumber: 71,
+                                lineNumber: 116,
                                 columnNumber: 17
                             }, ("TURBOPACK compile-time value", void 0))
                         }, void 0, false, {
                             fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
-                            lineNumber: 66,
+                            lineNumber: 111,
                             columnNumber: 15
                         }, ("TURBOPACK compile-time value", void 0))
                     }, i, false, {
                         fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
-                        lineNumber: 50,
+                        lineNumber: 95,
                         columnNumber: 13
                     }, ("TURBOPACK compile-time value", void 0));
                 })
             }, void 0, false, {
                 fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
-                lineNumber: 45,
+                lineNumber: 90,
                 columnNumber: 7
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/vd-final/src/components/Module/hero/LottieHeroBackground.tsx",
-        lineNumber: 42,
+        lineNumber: 41,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
