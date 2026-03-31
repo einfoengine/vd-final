@@ -63,6 +63,12 @@ export default function Home() {
     ["#313030", "#e3e3e3"]
   );
 
+  // Orbit border colors — visible on light bg, subtle on dark bg
+  const orbit1Color = useTransform(scrollYProgress, [0, 1], ["rgba(99,102,241,0.35)", "rgba(59,130,246,0.12)"]);
+  const orbit2Color = useTransform(scrollYProgress, [0, 1], ["rgba(16,185,129,0.3)", "rgba(16,185,129,0.10)"]);
+  const orbit3Color = useTransform(scrollYProgress, [0, 1], ["rgba(14,165,233,0.3)", "rgba(6,182,212,0.10)"]);
+  const orbit4Color = useTransform(scrollYProgress, [0, 1], ["rgba(99,102,241,0.25)", "rgba(96,165,250,0.12)"]);
+
   return (
     <>
       {/* Dark base layer — fades in from warm cream to deep dark */}
@@ -115,25 +121,29 @@ export default function Home() {
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 150, repeat: Infinity, ease: "linear" }}
-              className="absolute top-[-10%] w-[120vw] h-[120vw] max-w-[1600px] max-h-[1600px] rounded-[100%] border-[1px] border-blue-500/10 pointer-events-none"
+              className="absolute top-[-10%] w-[120vw] h-[120vw] max-w-[1600px] max-h-[1600px] rounded-[100%] pointer-events-none"
+              style={{ border: "1.5px solid", borderColor: orbit1Color }}
             />
             {/* Middle Elliptical Orbit */}
             <motion.div
               animate={{ rotate: -360 }}
               transition={{ duration: 200, repeat: Infinity, ease: "linear" }}
-              className="absolute top-[5%] w-[100vw] h-[70vw] max-w-[1400px] max-h-[900px] rounded-[100%] border-[1px] border-emerald-500/10 pointer-events-none shadow-[inset_0_0_40px_rgba(16,185,129,0.03)]"
+              className="absolute top-[5%] w-[100vw] h-[70vw] max-w-[1400px] max-h-[900px] rounded-[100%] pointer-events-none"
+              style={{ border: "1.5px solid", borderColor: orbit2Color }}
             />
             {/* Inner Elliptical Orbit */}
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 180, repeat: Infinity, ease: "linear" }}
-              className="absolute top-[15%] w-[80vw] h-[100vw] max-w-[1100px] max-h-[1400px] rounded-[100%] border-[1px] border-cyan-500/10 pointer-events-none"
+              className="absolute top-[15%] w-[80vw] h-[100vw] max-w-[1100px] max-h-[1400px] rounded-[100%] pointer-events-none"
+              style={{ border: "1px solid", borderColor: orbit3Color }}
             />
             {/* Centered Pulsing Dashed Orbit */}
             <motion.div
-              animate={{ scale: [1, 1.05, 1], opacity: [0.2, 0.4, 0.2] }}
+              animate={{ scale: [1, 1.05, 1], opacity: [0.4, 0.7, 0.4] }}
               transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute top-[20%] w-[60vw] h-[60vw] rounded-full border border-dashed border-blue-400/15 pointer-events-none"
+              className="absolute top-[20%] w-[60vw] h-[60vw] rounded-full border-dashed pointer-events-none"
+              style={{ border: "1px dashed", borderColor: orbit4Color }}
             />
           </div>
           {/* 1. HERO - Attract */}
@@ -153,7 +163,7 @@ export default function Home() {
           </section>
 
           {/* 2. SOCIAL PROOF - Validate (Moved Up) */}
-          <section className="relative z-20 bg-white/50 backdrop-blur-sm border-b border-gray-100">
+          <section className="z-20 pt-0">
              <ClientLogos />
           </section>
 
@@ -214,7 +224,7 @@ export default function Home() {
             <HolisticApproach />
           </section>
 
-          <section id="website-audit">
+          <section id="website-audit" clpt-0>
             <div>
               <WebsiteChecklist />
               <Button

@@ -54,7 +54,7 @@ const checklistItems: ChecklistItem[] = [
 
 export const WebsiteChecklist: React.FC = () => {
   return (
-    <section className="py-20 relative overflow-hidden">
+    <section className="">
       <div className="container relative z-10">
         <ModuleTitle
           title="Make sure your website [attracts and converts]"

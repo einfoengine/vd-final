@@ -36,7 +36,7 @@ export const HolisticApproach = ({ className = "" }: { className?: string }) => 
   };
 
   return (
-    <section className={`py-24 relative overflow-hidden ${className}`}>
+    <section className={`p-0 ${className}`}>
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
         <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-purple-500/5 rounded-full blur-[100px]" />

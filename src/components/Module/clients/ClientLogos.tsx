@@ -50,7 +50,7 @@ const logos = [
 
 export const ClientLogos = () => {
   return (
-    <section className="nt-module nt-clients-logo w-full py-12 overflow-hidden">
+    <section className="nt-module nt-clients-logo w-full p-0 overflow-hidden">
       <div className="relative flex overflow-x-hidden group">
         <div className="animate-marquee whitespace-nowrap flex items-center gap-16 md:gap-24 px-12">
           {/* First Set */}

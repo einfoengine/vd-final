@@ -3491,6 +3491,10 @@
   padding-bottom: calc(var(--spacing) * 12);
 }
 
+.pb-20 {
+  padding-bottom: calc(var(--spacing) * 20);
+}
+
 .pb-\[2px\] {
   padding-bottom: 2px;
 }
