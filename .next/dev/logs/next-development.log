@@ -7196,3 +7196,54 @@ It can also happen if the client has a browser extension installed which messes 
 
 [57:23:28.286] Browser WARN    Image with src "http://localhost:3000/assets/svg/heroIcon.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
 [57:23:28.286] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[57:27:58.542] Server  LOG     ✓ Compiled in 435ms
+[57:28:11.407] Server  LOG     ✓ Compiled in 464ms
+[57:28:11.935] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 4
+[57:28:14.818] Browser WARN    Image with src "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[57:28:14.818] Browser WARN    Image with src "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[57:28:14.818] Browser WARN    Image with src "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[57:28:14.818] Browser WARN    Image with src "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[57:28:14.818] Browser WARN    Image with src "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[57:28:14.818] Browser WARN    Image with src "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[57:28:14.818] Browser WARN    Image with src "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[57:28:14.818] Browser WARN    Image with src "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[57:28:14.818] Browser WARN    Image with src "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[57:28:22.176] Server  LOG     ✓ Compiled in 57ms
+[57:28:22.268] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 4
+[57:30:04.155] Server  LOG     ✓ Compiled in 47ms
+[57:30:04.707] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 4
+[58:15:12.453] Browser ERROR   In HTML, %s cannot be a child of <%s>.%s
+This will cause a hydration error.%s <h1> h1  
+
+  ...
+    <InnerLayoutRouter url="/case-studies" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+      <SegmentViewNode type="page" pagePath="/vd-final/...">
+        <SegmentTrieNode>
+        <page>
+          <page>
+            <BreadcrumbHero title="A HOLISTIC..." subtitle="4.9" description="Drive sust..." ...>
+              <section className="relative p...">
+                <div>
+                <div className="relative p-2">
+                  <div className="relative b...">
+                    <div className="container ...">
+                      <motion.div>
+                      <motion.div initial={{opacity:0,y:30}} animate={{opacity:1,y:0}} transition={{duration:0.8}} ...>
+                        <div className="flex flex-..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
+                          <motion.h1 initial={{opacity:0,y:20}} animate={{opacity:1,y:0}} ...>
+>                           <h1
+>                             className="my-6 text-h1 font-semibold leading-tight"
+>                             style={{opacity:0,transform:"translateY..."}}
+>                             ref={function useMotionRef.useCallback}
+>                           >
+>                             <h1 className="inline-block mr-2">
+                              ...
+                          ...
+          ...
+      ...
+
+[58:15:12.453] Browser ERROR   <%s> cannot contain a nested %s.
+See this log for the ancestor stack trace. h1 <h1>
+[58:15:12.680] Browser WARN    Image with src "/assets/img/blog/UI-Design-Trends.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[58:15:12.680] Browser WARN    Image with src "/assets/img/blog/restaurant-website-trends.webp" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[58:15:25.516] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 4

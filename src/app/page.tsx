@@ -29,6 +29,7 @@ import { ClientLogos } from "@/components/Module/clients/ClientLogos";
 import { WebsiteChecklist } from "@/components/Module/website-checklist/WebsiteChecklist";
 import { SpringOffer } from "@/components/Module/spring-offer/SpringOffer";
 import { fullStackServices } from "@/data/fullStackServices";
+import { TestimonialsSection } from "@/components/Module/testimonials/TestimonialsSection";
 
 
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -186,8 +187,11 @@ export default function Home() {
           </section>
 
 
+
           {/* 4. STRATEGY BLOCK - How we think (Dark Transition Starts Here) */}
           <section ref={targetRef} id="growth-roadmap" className="nt-growth-management">
+            {/* TESTIMONIALS - Social Proof after services */}
+            <TestimonialsSection />
             <div className="container">
               <SpringOffer />
               <ModuleTitle
