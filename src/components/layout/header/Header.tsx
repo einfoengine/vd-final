@@ -135,8 +135,8 @@ export default function Header() {
           {/* Inner Content Container */}
           <div className={`rounded-full transition-all duration-500 ease-in-out ${
             isScrolled
-              ? "bg-white/70 backdrop-blur-lg shadow-sm"
-              : "bg-white/[0.06] backdrop-blur-md border border-white/10 shadow-[0_2px_30px_rgba(0,0,0,0.2)]"
+              ? "bg-white/95 backdrop-blur-xl shadow-sm"
+              : "bg-black/80 lg:bg-white/[0.06] backdrop-blur-xl border border-white/10 border-b lg:border-b-white/10 shadow-[0_2px_30px_rgba(0,0,0,0.2)]"
           }`}>
             <div className="flex items-center justify-between px-4 py-3">
               {menuContent}

@@ -73,7 +73,7 @@ export const ModuleTitle: React.FC<ModuleTitleProps> = ({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex items-center justify-center gap-4 flex-wrap text-4xl md:text-5xl font-bold text-title"
+            className="flex items-center justify-center gap-4 flex-wrap text-3xl sm:text-4xl md:text-5xl font-bold text-title"
           >
             <span>{parseHighlightedText(title)}</span>
             {titleSuffix}
@@ -131,7 +131,7 @@ export const ModuleTitle: React.FC<ModuleTitleProps> = ({
           )}
           {title && (
             <motion.h2
-              className="mb-4 text-title"
+              className="mb-4 text-3xl sm:text-4xl text-title"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false, amount: 0.2 }}
@@ -193,7 +193,7 @@ export const ModuleTitle: React.FC<ModuleTitleProps> = ({
           )}
           {title && (
             <motion.h2
-              className="mt-4 text-title"
+              className="mt-4 text-3xl sm:text-4xl text-title"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.2 }}

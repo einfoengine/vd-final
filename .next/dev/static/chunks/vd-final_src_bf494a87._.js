@@ -1102,7 +1102,7 @@ const LottieHeroBackground = ()=>{
                             delay: delay
                         },
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: `backdrop-blur-xl p-4 rounded-2xl border transition-all duration-500 will-change-transform flex items-center justify-center ${isScrolled ? 'bg-white/5 dark:bg-white/10 border-white/10 shadow-none' : 'bg-white/30 dark:bg-black/30 border-white/50 shadow-[0_8px_32px_rgba(0,0,0,0.08)]'} ${depthClass}`,
+                            className: `hidden md:flex backdrop-blur-xl p-4 rounded-2xl border transition-all duration-500 will-change-transform items-center justify-center ${isScrolled ? 'bg-white/5 dark:bg-white/10 border-white/10 shadow-none' : 'bg-white/30 dark:bg-black/30 border-white/50 shadow-[0_8px_32px_rgba(0,0,0,0.08)]'} ${depthClass}`,
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Icon, {
                                 size: size,
                                 strokeWidth: 1.5
@@ -1305,7 +1305,7 @@ const Hero = ({ dataSource, title, supertitle, subtitle, description, primaryBut
                                             0.94
                                         ]
                                     },
-                                    className: "absolute top-[140px] right-0 translate-x-1/2 z-10",
+                                    className: "absolute hidden md:block top-[-40px] md:top-[140px] right-0 md:translate-x-1/2 z-10 scale-75 md:scale-100 origin-bottom-right md:origin-center",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$common$2f$RotatingBadge$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["RotatingBadge"], {
                                         text: " Money Back Guarantee",
                                         size: 70,
@@ -1346,7 +1346,7 @@ const Hero = ({ dataSource, title, supertitle, subtitle, description, primaryBut
                                             0.94
                                         ]
                                     },
-                                    className: 'flex items-center gap-2 transition-colors duration-300',
+                                    className: 'flex items-center gap-2 transition-colors duration-300 mb-6 md:mb-2',
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
                                             initial: {
@@ -1426,7 +1426,7 @@ const Hero = ({ dataSource, title, supertitle, subtitle, description, primaryBut
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 data.supertitle && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "relative inline-block z-20 mb-[-15px] -rotate-3 hover:rotate-0 transition-transform duration-300",
+                                    className: "relative inline-block z-20 mt-4 md:mt-0 mb-4 md:mb-[-15px] -rotate-3 hover:rotate-0 transition-transform duration-300",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
                                         initial: {
                                             opacity: 0,
@@ -1480,7 +1480,7 @@ const Hero = ({ dataSource, title, supertitle, subtitle, description, primaryBut
                                             0.94
                                         ]
                                     },
-                                    className: `nt-hero-heading mb-6 transition-colors duration-300 text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-extrabold leading-[1.1] tracking-tight`,
+                                    className: `nt-hero-heading mb-6 transition-colors duration-300 text-4xl sm:text-5xl md:text-6xl lg:text-[5.5rem] font-extrabold leading-[1.1] tracking-tight`,
                                     children: parseHighlightedText(data.title, true)
                                 }, void 0, false, {
                                     fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
@@ -1506,7 +1506,7 @@ const Hero = ({ dataSource, title, supertitle, subtitle, description, primaryBut
                                             0.94
                                         ]
                                     },
-                                    className: `text-desc text-h4 transition-colors duration-300 max-w-4xl mx-auto text-white/80`,
+                                    className: `text-lg sm:text-xl md:text-2xl lg:text-3xl transition-colors duration-300 max-w-4xl mx-auto text-white/80`,
                                     children: [
                                         parseHighlightedText(data.description, false),
                                         data.typewriterTexts && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$common$2f$FlipText$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FlipText"], {
@@ -2130,7 +2130,7 @@ const DigitalFramework = ({ items = __TURBOPACK__imported__module__$5b$project$5
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "grid sm:grid-cols-3 gap-6",
+                className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
                 children: items.map((phase, idx)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(FrameworkCard, {
                         phase: phase,
                         index: idx,
@@ -2388,7 +2388,7 @@ const ModuleTitle = ({ suppertitle, title, subtitle, ctaText, ctaHref, className
                         duration: 0.6,
                         delay: 0.2
                     },
-                    className: "flex items-center justify-center gap-4 flex-wrap text-4xl md:text-5xl font-bold text-title",
+                    className: "flex items-center justify-center gap-4 flex-wrap text-3xl sm:text-4xl md:text-5xl font-bold text-title",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                             children: parseHighlightedText(title)
@@ -2521,7 +2521,7 @@ const ModuleTitle = ({ suppertitle, title, subtitle, ctaText, ctaHref, className
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0)),
                         title && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].h2, {
-                            className: "mb-4 text-title",
+                            className: "mb-4 text-3xl sm:text-4xl text-title",
                             initial: {
                                 opacity: 0,
                                 x: -30
@@ -2667,7 +2667,7 @@ const ModuleTitle = ({ suppertitle, title, subtitle, ctaText, ctaHref, className
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0)),
                         title && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].h2, {
-                            className: "mt-4 text-title",
+                            className: "mt-4 text-3xl sm:text-4xl text-title",
                             initial: {
                                 opacity: 0,
                                 y: 30
@@ -6930,9 +6930,9 @@ const SpringOffer = ()=>{
             className: "flex flex-col items-center mx-2 md:mx-4",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "bg-white/10 backdrop-blur-md rounded-xl p-3 md:p-4 min-w-[70px] md:min-w-[90px] flex items-center justify-center border border-white/20 shadow-lg",
+                    className: "bg-white/10 backdrop-blur-md rounded-xl p-2 sm:p-3 md:p-4 min-w-[60px] sm:min-w-[70px] md:min-w-[90px] flex items-center justify-center border border-white/20 shadow-lg",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "text-3xl md:text-5xl font-black text-white font-mono",
+                        className: "text-2xl sm:text-3xl md:text-5xl font-black text-white font-mono",
                         children: String(value).padStart(2, "0")
                     }, void 0, false, {
                         fileName: "[project]/vd-final/src/components/Module/spring-offer/SpringOffer.tsx",
@@ -6959,7 +6959,7 @@ const SpringOffer = ()=>{
             columnNumber: 5
         }, ("TURBOPACK compile-time value", void 0));
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "relative flex flex-col lg:flex-row items-center justify-between gap-12 bg-white/5 backdrop-blur-3xl border border-white/10 rounded-[40px] p-8 md:p-12 shadow-2xl overflow-hidden mb-16",
+        className: "relative flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 bg-white/5 backdrop-blur-3xl border border-white/10 rounded-[30px] md:rounded-[40px] p-6 sm:p-8 md:p-12 shadow-2xl overflow-hidden mb-16",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "absolute top-0 left-0 w-full h-full bg-gradient-to-br from-red-500/10 via-transparent to-orange-500/10 pointer-events-none"
@@ -7078,7 +7078,7 @@ const SpringOffer = ()=>{
                             columnNumber: 15
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                            className: "text-4xl md:text-6xl font-black text-white mb-4 leading-tight",
+                            className: "text-3xl md:text-6xl font-black text-white mb-4 leading-tight",
                             children: [
                                 "Spring '25 Sale ",
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
@@ -7196,7 +7196,7 @@ const SpringOffer = ()=>{
                             delay: 0.4
                         },
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                            className: "px-10 py-5 bg-gradient-to-r from-red-500 to-orange-500 text-white text-xl font-bold rounded-full shadow-[0_10px_30px_rgba(239,68,68,0.2)] hover:shadow-[0_10px_40px_rgba(239,68,68,0.4)] hover:scale-105 transition-all transform flex items-center gap-2 border border-white/10",
+                            className: "px-6 py-4 md:px-10 md:py-5 bg-gradient-to-r from-red-500 to-orange-500 text-white text-lg md:text-xl font-bold rounded-full shadow-[0_10px_30px_rgba(239,68,68,0.2)] hover:shadow-[0_10px_40px_rgba(239,68,68,0.4)] hover:scale-105 transition-all transform flex items-center gap-2 border border-white/10",
                             children: [
                                 "Get 25% OFF Now",
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$sparkles$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Sparkles$3e$__["Sparkles"], {

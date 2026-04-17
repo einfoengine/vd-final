@@ -39,8 +39,8 @@ export const SpringOffer = () => {
 
   const TimeUnit = ({ value, label }: { value: number; label: string }) => (
     <div className="flex flex-col items-center mx-2 md:mx-4">
-      <div className="bg-white/10 backdrop-blur-md rounded-xl p-3 md:p-4 min-w-[70px] md:min-w-[90px] flex items-center justify-center border border-white/20 shadow-lg">
-        <span className="text-3xl md:text-5xl font-black text-white font-mono">
+      <div className="bg-white/10 backdrop-blur-md rounded-xl p-2 sm:p-3 md:p-4 min-w-[60px] sm:min-w-[70px] md:min-w-[90px] flex items-center justify-center border border-white/20 shadow-lg">
+        <span className="text-2xl sm:text-3xl md:text-5xl font-black text-white font-mono">
           {String(value).padStart(2, "0")}
         </span>
       </div>
@@ -52,7 +52,7 @@ export const SpringOffer = () => {
 
 
   return (
-    <div className="relative flex flex-col lg:flex-row items-center justify-between gap-12 bg-white/5 backdrop-blur-3xl border border-white/10 rounded-[40px] p-8 md:p-12 shadow-2xl overflow-hidden mb-16">
+    <div className="relative flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 bg-white/5 backdrop-blur-3xl border border-white/10 rounded-[30px] md:rounded-[40px] p-6 sm:p-8 md:p-12 shadow-2xl overflow-hidden mb-16">
       
       {/* Subtle colored glow effects */}
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-red-500/10 via-transparent to-orange-500/10 pointer-events-none" />
@@ -88,7 +88,7 @@ export const SpringOffer = () => {
               <div className="inline-block px-4 py-1 rounded-full bg-red-500/10 text-red-400 text-sm font-bold uppercase tracking-widest mb-4 border border-red-500/20 backdrop-blur-sm">
                 Limited Time Offer
               </div>
-              <h2 className="text-4xl md:text-6xl font-black text-white mb-4 leading-tight">
+              <h2 className="text-3xl md:text-6xl font-black text-white mb-4 leading-tight">
                 Spring '25 Sale <br/>
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-orange-400">25% OFF</span> Matches
               </h2>
@@ -120,7 +120,7 @@ export const SpringOffer = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.4 }}
              >
-                <button className="px-10 py-5 bg-gradient-to-r from-red-500 to-orange-500 text-white text-xl font-bold rounded-full shadow-[0_10px_30px_rgba(239,68,68,0.2)] hover:shadow-[0_10px_40px_rgba(239,68,68,0.4)] hover:scale-105 transition-all transform flex items-center gap-2 border border-white/10">
+                <button className="px-6 py-4 md:px-10 md:py-5 bg-gradient-to-r from-red-500 to-orange-500 text-white text-lg md:text-xl font-bold rounded-full shadow-[0_10px_30px_rgba(239,68,68,0.2)] hover:shadow-[0_10px_40px_rgba(239,68,68,0.4)] hover:scale-105 transition-all transform flex items-center gap-2 border border-white/10">
                    Get 25% OFF Now
                    <Sparkles className="w-5 h-5" />
                 </button>

@@ -128,7 +128,7 @@ export const LottieHeroBackground = () => {
               }}
             >
               <div 
-                className={`backdrop-blur-xl p-4 rounded-2xl border transition-all duration-500 will-change-transform flex items-center justify-center ${
+                className={`hidden md:flex backdrop-blur-xl p-4 rounded-2xl border transition-all duration-500 will-change-transform items-center justify-center ${
                   isScrolled 
                     ? 'bg-white/5 dark:bg-white/10 border-white/10 shadow-none' 
                     : 'bg-white/30 dark:bg-black/30 border-white/50 shadow-[0_8px_32px_rgba(0,0,0,0.08)]'

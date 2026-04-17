@@ -1,7 +1,7 @@
 import Footer from "@/components/layout/footer/Footer";
 import Header from "@/components/layout/header/Header";
 import type { Metadata } from "next";
-import { Playfair_Display, Urbanist, Geist } from "next/font/google"; // remove Poppins
+import { Playfair_Display, Urbanist, Geist } from "next/font/google";
 import "./globals.css";
 
 // Fonts - Optimized for performance
@@ -49,7 +49,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn("font-sans", geist.variable)}>
       <body
-        className={`${titleFont.variable} ${highlightFont.variable} antialiased`}
+        className={`${titleFont.variable} ${highlightFont.variable} antialiased overflow-x-hidden`}
       >
         <ModalProvider>
           <AnimatedBackground />

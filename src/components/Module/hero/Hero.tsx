@@ -141,7 +141,7 @@ export const Hero: React.FC<VDheroProps> = ({
                   delay: 0.8,
                   ease: [0.25, 0.46, 0.45, 0.94]
                 }}
-                className="absolute top-[140px] right-0 translate-x-1/2 z-10"
+                className="absolute hidden md:block top-[-40px] md:top-[140px] right-0 md:translate-x-1/2 z-10 scale-75 md:scale-100 origin-bottom-right md:origin-center"
               >
                 <RotatingBadge
                   text=" Money Back Guarantee"
@@ -163,7 +163,7 @@ export const Hero: React.FC<VDheroProps> = ({
                     delay: 0.2,
                     ease: [0.25, 0.46, 0.45, 0.94]
                   }}
-                  className={'flex items-center gap-2 transition-colors duration-300'}
+                  className={'flex items-center gap-2 transition-colors duration-300 mb-6 md:mb-2'}
                 >
                   <motion.div
                     initial={{ rotate: -180, opacity: 0 }}
@@ -201,7 +201,7 @@ export const Hero: React.FC<VDheroProps> = ({
 
 
               {data.supertitle && (
-                <div className="relative inline-block z-20 mb-[-15px] -rotate-3 hover:rotate-0 transition-transform duration-300">
+                <div className="relative inline-block z-20 mt-4 md:mt-0 mb-4 md:mb-[-15px] -rotate-3 hover:rotate-0 transition-transform duration-300">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -221,7 +221,7 @@ export const Hero: React.FC<VDheroProps> = ({
                   delay: 0.4,
                   ease: [0.25, 0.46, 0.45, 0.94]
                 }}
-                className={`nt-hero-heading mb-6 transition-colors duration-300 text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-extrabold leading-[1.1] tracking-tight`}
+                className={`nt-hero-heading mb-6 transition-colors duration-300 text-4xl sm:text-5xl md:text-6xl lg:text-[5.5rem] font-extrabold leading-[1.1] tracking-tight`}
               >
                 {parseHighlightedText(data.title, true)}
               </motion.h1>
@@ -234,7 +234,7 @@ export const Hero: React.FC<VDheroProps> = ({
                   delay: 0.5,
                   ease: [0.25, 0.46, 0.45, 0.94]
                 }}
-                className={`text-desc text-h4 transition-colors duration-300 max-w-4xl mx-auto text-white/80`}
+                className={`text-lg sm:text-xl md:text-2xl lg:text-3xl transition-colors duration-300 max-w-4xl mx-auto text-white/80`}
               >
                 {parseHighlightedText(data.description, false)}
               {data.typewriterTexts && (
