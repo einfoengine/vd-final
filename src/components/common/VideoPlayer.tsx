@@ -41,7 +41,7 @@ export default function HeroVideo({ video }: HeroVideoProps) {
   }, []);
 
    // Fixed dimensions - no longer changes with scroll.
-  const containerWidth = isMdScreen ? "800px" : "90%";
+  const containerWidth = isMdScreen ? "720px" : "90%";
   const containerHeight = "auto";
 
   return (

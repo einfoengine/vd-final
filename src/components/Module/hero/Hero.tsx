@@ -130,7 +130,7 @@ export const Hero: React.FC<VDheroProps> = ({
                 duration: 1,
                 ease: [0.25, 0.46, 0.45, 0.94]
               }}
-              className={`relative flex flex-col items-center justify-center max-w-[1000px] m-auto text-center pt-[160px] mb-16 transition-colors duration-300 ${!isScrolled ? 'text-black' : 'text-white'}`}
+              className={`relative flex flex-col items-center justify-center max-w-[900px] m-auto text-center pt-[120px] mb-12 transition-colors duration-300 ${!isScrolled ? 'text-black' : 'text-white'}`}
             >
               {/* Money Back Guarantee Badge - Top Right of Text */}
               <motion.div
@@ -141,15 +141,15 @@ export const Hero: React.FC<VDheroProps> = ({
                   delay: 0.8,
                   ease: [0.25, 0.46, 0.45, 0.94]
                 }}
-                className="absolute hidden md:block top-[-40px] md:top-[140px] right-0 md:translate-x-1/2 z-10 scale-75 md:scale-100 origin-bottom-right md:origin-center"
+                className="absolute hidden md:block top-[-40px] md:top-[100px] right-0 md:translate-x-1/2 z-10 scale-75 md:scale-90 origin-bottom-right md:origin-center"
               >
                 <RotatingBadge
                   text=" Money Back Guarantee"
-                  size={70}
+                  size={60}
                   backgroundColor={!isScrolled ? "#ffffff" : "#000000"}
                   textColor={!isScrolled ? "#000000" : "#ffffff"}
                   rotationDuration={20}
-                  fontSize={10}
+                  fontSize={9}
                   externalBorderWidth={1}
                   textGap={6}
                 />
@@ -163,7 +163,7 @@ export const Hero: React.FC<VDheroProps> = ({
                     delay: 0.2,
                     ease: [0.25, 0.46, 0.45, 0.94]
                   }}
-                  className={'flex items-center gap-2 transition-colors duration-300 mb-6 md:mb-2'}
+                  className={'flex items-center gap-2 transition-colors duration-300 mb-4 md:mb-2 text-sm md:text-base'}
                 >
                   <motion.div
                     initial={{ rotate: -180, opacity: 0 }}
@@ -173,12 +173,12 @@ export const Hero: React.FC<VDheroProps> = ({
                     <Image
                       src="/assets/svg/heroIcon.svg"
                       alt="Reviews"
-                      width={40}
-                      height={40}
+                      width={32}
+                      height={32}
                     />
                   </motion.div>
                   <span>{data.subtitle}</span>
-                  <div className="flex items-center ml-3">
+                  <div className="flex items-center ml-2">
                     {[...Array(5)].map((_, i) => (
                       <motion.div
                         key={i}
@@ -191,7 +191,7 @@ export const Hero: React.FC<VDheroProps> = ({
                           stiffness: 200
                         }}
                       >
-                        <Star className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+                        <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
                       </motion.div>
                     ))}
                   </div>
@@ -201,12 +201,12 @@ export const Hero: React.FC<VDheroProps> = ({
 
 
               {data.supertitle && (
-                <div className="relative inline-block z-20 mt-4 md:mt-0 mb-4 md:mb-[-15px] -rotate-3 hover:rotate-0 transition-transform duration-300">
+                <div className="relative inline-block z-20 mt-4 md:mt-0 mb-4 md:mb-[-10px] -rotate-3 hover:rotate-0 transition-transform duration-300">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.3 }}
-                    className={`text-lg md:text-xl font-bold tracking-wide border rounded-full py-2 px-6 transition-colors duration-300 border-white/20 bg-white/10 text-white`}
+                    className={`text-base md:text-lg font-bold tracking-wide border rounded-full py-1.5 px-5 transition-colors duration-300 border-white/20 bg-white/10 text-white`}
                   >
                     <span className="relative z-10">{data.supertitle}</span>
                   </motion.div>
@@ -221,7 +221,7 @@ export const Hero: React.FC<VDheroProps> = ({
                   delay: 0.4,
                   ease: [0.25, 0.46, 0.45, 0.94]
                 }}
-                className={`nt-hero-heading mb-6 transition-colors duration-300 text-4xl sm:text-5xl md:text-6xl lg:text-[5.5rem] font-extrabold leading-[1.1] tracking-tight`}
+                className={`nt-hero-heading mb-5 transition-colors duration-300 text-3xl sm:text-4xl md:text-5xl lg:text-[4.5rem] font-extrabold leading-[1.1] tracking-tight`}
               >
                 {parseHighlightedText(data.title, true)}
               </motion.h1>
@@ -234,7 +234,7 @@ export const Hero: React.FC<VDheroProps> = ({
                   delay: 0.5,
                   ease: [0.25, 0.46, 0.45, 0.94]
                 }}
-                className={`text-lg sm:text-xl md:text-2xl lg:text-3xl transition-colors duration-300 max-w-4xl mx-auto text-white/80`}
+                className={`text-base sm:text-lg md:text-xl lg:text-2xl transition-colors duration-300 max-w-3xl mx-auto text-white/80`}
               >
                 {parseHighlightedText(data.description, false)}
               {data.typewriterTexts && (
