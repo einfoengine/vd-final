@@ -117,7 +117,7 @@ export const ProcessCarousel: React.FC<CarouselProps> = ({
                   delay: idx * 0.1,
                   ease: [0.25, 0.46, 0.45, 0.94]
                 }}
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
               >
                 <div 
                   className="w-full h-full grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center p-8 md:p-12 rounded-[40px] border border-white/10 backdrop-blur-xl relative overflow-hidden"
@@ -172,7 +172,7 @@ export const ProcessCarousel: React.FC<CarouselProps> = ({
                 delay: items.length * 0.1,
                 ease: [0.25, 0.46, 0.45, 0.94]
               }}
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
             >
               <motion.div 
                 className="w-full h-full flex flex-col items-center justify-center text-center p-8 md:p-12 rounded-[40px] border border-white/10 backdrop-blur-xl relative overflow-hidden"
@@ -220,7 +220,7 @@ export const ProcessCarousel: React.FC<CarouselProps> = ({
                 delay: idx * 0.1,
                 ease: [0.25, 0.46, 0.45, 0.94]
               }}
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
               className="rounded-[32px] p-8 border border-white/10 backdrop-blur-xl relative overflow-hidden"
               style={{ 
                 background: "linear-gradient(145deg, rgba(20,20,20,0.9), rgba(10,10,10,0.95))",
@@ -272,7 +272,7 @@ export const ProcessCarousel: React.FC<CarouselProps> = ({
               delay: items.length * 0.1,
               ease: [0.25, 0.46, 0.45, 0.94]
             }}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             className="rounded-[32px] p-8 border border-white/10 backdrop-blur-xl relative overflow-hidden text-center"
             style={{ 
               background: "linear-gradient(145deg, rgba(20,20,20,0.9), rgba(10,10,10,0.95))",

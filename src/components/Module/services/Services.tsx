@@ -62,7 +62,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
         onMouseLeave={handleMouseLeave}
         initial={{ opacity: 0, y: 50, scale: 0.9 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
-        viewport={{ once: false, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.2 }}
         transition={{
           duration: 0.6,
           delay: index * 0.1,

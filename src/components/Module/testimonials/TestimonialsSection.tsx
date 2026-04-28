@@ -178,7 +178,7 @@ function MarqueeRow({ items, reverse = false }: { items: TestimonialCard[]; reve
 
 export const TestimonialsSection: React.FC = () => {
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: false, amount: 0.1 });
+  const inView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
     <section id="testimonials" className="py-20 overflow-hidden relative">
@@ -234,7 +234,7 @@ export const TestimonialsSection: React.FC = () => {
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
         className="container mt-16 relative z-10"
       >

@@ -34,13 +34,13 @@ export const StickyCards: React.FC<StickyCardsProps> = ({
         return (
           <motion.div
             key={card.id}
-            className="sticky rounded-[32px] p-6 md:p-8 bg-white/60 backdrop-blur-2xl border border-black/10 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] max-w-5xl mx-auto"
+            className="sticky rounded-[32px] p-6 md:p-8 bg-white border border-black/10 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] max-w-5xl mx-auto"
             style={{ 
               top: `${topOffset}px`, 
             }}
             initial={{ opacity: 0, y: 50, scale: 0.9 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ 
               duration: 0.6, 
               delay: index * 0.1, 

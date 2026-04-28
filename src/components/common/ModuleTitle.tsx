@@ -50,7 +50,7 @@ export const ModuleTitle: React.FC<ModuleTitleProps> = ({
         className={`text-center space-y-3 mb-16 ${className}`}
         initial={{ opacity: 0, y: 50, scale: 0.95 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
-        viewport={{ once: false, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.2 }}
         transition={{
           duration: 0.8,
           ease: [0.25, 0.46, 0.45, 0.94],
@@ -60,7 +60,7 @@ export const ModuleTitle: React.FC<ModuleTitleProps> = ({
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-lg md:text-xl font-bold uppercase tracking-widest text-desc/70 mb-4"
           >
@@ -71,7 +71,7 @@ export const ModuleTitle: React.FC<ModuleTitleProps> = ({
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex items-center justify-center gap-4 flex-wrap text-3xl sm:text-4xl md:text-5xl font-bold text-title"
           >
@@ -83,7 +83,7 @@ export const ModuleTitle: React.FC<ModuleTitleProps> = ({
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-lg md:text-xl font-semibold text-desc/80 mt-6 max-w-4xl mx-auto leading-relaxed"
           >
@@ -94,7 +94,7 @@ export const ModuleTitle: React.FC<ModuleTitleProps> = ({
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <Button label={ctaText} href={ctaHref || "#"} />
@@ -111,7 +111,7 @@ export const ModuleTitle: React.FC<ModuleTitleProps> = ({
         className={`flex items-center justify-between gap-6 mb-16 ${className}`}
         initial={{ opacity: 0, y: 50, scale: 0.95 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
-        viewport={{ once: false, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.2 }}
         transition={{
           duration: 0.8,
           ease: [0.25, 0.46, 0.45, 0.94],
@@ -123,7 +123,7 @@ export const ModuleTitle: React.FC<ModuleTitleProps> = ({
               className="mb-4 text-desc/70 font-bold uppercase tracking-widest"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
               {parseHighlightedText(suppertitle)}
@@ -134,7 +134,7 @@ export const ModuleTitle: React.FC<ModuleTitleProps> = ({
               className="mb-4 text-3xl sm:text-4xl text-title"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               {parseHighlightedText(title)}
@@ -145,7 +145,7 @@ export const ModuleTitle: React.FC<ModuleTitleProps> = ({
               className="text-desc/80 text-lg"
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               {parseHighlightedText(subtitle)}
@@ -156,7 +156,7 @@ export const ModuleTitle: React.FC<ModuleTitleProps> = ({
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <Button label={ctaText} href={ctaHref || "#"} />
@@ -173,7 +173,7 @@ export const ModuleTitle: React.FC<ModuleTitleProps> = ({
         className={`flex items-center justify-between flex-wrap gap-4 mb-16 ${className}`}
         initial={{ opacity: 0, y: 50, scale: 0.95 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
-        viewport={{ once: false, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.2 }}
         transition={{
           duration: 0.8,
           ease: [0.25, 0.46, 0.45, 0.94],
@@ -185,7 +185,7 @@ export const ModuleTitle: React.FC<ModuleTitleProps> = ({
               className="uppercase tracking-wide text-desc/70"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
               {parseHighlightedText(suppertitle)}
@@ -196,7 +196,7 @@ export const ModuleTitle: React.FC<ModuleTitleProps> = ({
               className="mt-4 text-3xl sm:text-4xl text-title"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               {parseHighlightedText(title)}
@@ -206,7 +206,7 @@ export const ModuleTitle: React.FC<ModuleTitleProps> = ({
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           {subtitle && <p className="mb-6 text-desc/80">{parseHighlightedText(subtitle)}</p>}

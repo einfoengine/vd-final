@@ -49,14 +49,18 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn("font-sans", geist.variable)}>
       <body
-        className={`${titleFont.variable} ${highlightFont.variable} antialiased overflow-x-hidden`}
+        className={`${titleFont.variable} ${highlightFont.variable} antialiased bg-[#040810] text-[#e3e3e3]`}
       >
         <ModalProvider>
-          <AnimatedBackground />
-          <Header />
-          {children}
-          <div className="p-3">
-            <Footer />
+          <div className="flex flex-col min-h-screen overflow-x-hidden w-full relative">
+            <AnimatedBackground />
+            <Header />
+            <main className="flex-grow">
+              {children}
+            </main>
+            <div className="p-3 w-full max-w-full">
+              <Footer />
+            </div>
           </div>
         </ModalProvider>
       </body>

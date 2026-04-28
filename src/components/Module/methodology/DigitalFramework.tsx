@@ -115,7 +115,7 @@ const FrameworkCard: React.FC<FrameworkCardProps> = ({ phase, index, onSelect })
       onClick={() => onSelect(phase)}
       initial={{ opacity: 0, y: 50, scale: 0.9 }}
       whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      viewport={{ once: false, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.2 }}
       whileHover={{ scale: 1.02 }}
       transition={{
         duration: 0.6,

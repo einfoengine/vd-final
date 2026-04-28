@@ -11,7 +11,7 @@ import Socials from "./component/Socials";
 export default function Footer() {
   const footerRef = React.useRef<HTMLElement>(null);
   const [translateY, setTranslateY] = React.useState(150);
-  const isInView = useInView(footerRef, { once: false, amount: 0.1 });
+  const isInView = useInView(footerRef, { once: true, amount: 0.1 });
 
   React.useEffect(() => {
     const handleScroll = () => {
