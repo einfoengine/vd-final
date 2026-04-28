@@ -1,13 +1,12 @@
-[00:00:01.451] Server  LOG     ✓ Ready in 1121ms
-[00:00:10.530] Server  ERROR   Received `true` for a non-boolean attribute `clpt-0`.
+[00:00:01.506] Server  LOG     ✓ Ready in 1177ms
+[00:00:05.984] Server  ERROR   Received `true` for a non-boolean attribute `clpt-0`.
 
 If you want to write it to the DOM, pass a string instead: clpt-0="true" or clpt-0={value.toString()}.
-[00:00:10.905] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:11.339] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 4
-[00:00:11.339] Browser ERROR   Received `%s` for a non-boolean attribute `%s`.
+[00:00:06.963] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 4
+[00:00:06.963] Browser ERROR   Received `%s` for a non-boolean attribute `%s`.
 
 If you want to write it to the DOM, pass a string instead: %s="%s" or %s={value.toString()}. true clpt-0 clpt-0 true clpt-0
-[00:00:11.339] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:06.963] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -20,70 +19,105 @@ It can also happen if the client has a browser extension installed which messes 
 %s%s https://react.dev/link/hydration-mismatch 
 
   ...
-    <div className="relative f..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
-      <motion.div initial={{opacity:0,scale:0}} animate={{opacity:1,scale:1}} transition={{duration:0.8, ...}} ...>
-        <div className="absolute h..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
-          <RotatingBadge text={" Money B..."} size={70} backgroundColor="#ffffff" textColor="#000000" ...>
-            <div className={"rounded-..."} style={{width:"70px", ...}}>
-              <motion.div animate={{rotate:360}} transition={{duration:20, ...}} className="absolute i..." style={{...}}>
-                <div className="absolute i..." style={{...}} ref={function useMotionRef.useCallback}>
-                  <div className="w-full h-f..." style={{...}}>
-                    <div className="absolute i...">
-                      <motion.div animate={{rotate:360}} transition={{duration:20, ...}} className="relative w...">
-                        <div className="relative w..." style={{}} ref={function useMotionRef.useCallback}>
-                          <span>
-                          <span>
-                          <span>
-                          <span>
-                          <span>
-                          <span>
-                          <span>
-                          <span>
-                          <span>
-                          <span>
-                          <span>
-                          <span>
-                          <span>
-                          <span
-                            className="absolute font-semibold"
-                            style={{
-+                             color: "#000000"
--                             color: "rgb(0, 0, 0)"
-+                             fontSize: "10px"
-+                             left: "calc(50% + -19.044836657585748px)"
--                             left: "calc(50% - 19.0448px)"
-+                             top: "calc(50% + 20.525452411235136px)"
--                             top: "calc(50% + 20.5255px)"
-+                             transform: "translate(-50%, -50%) rotate(222.85714285714286deg)"
--                             transform: "translate(-50%, -50%) rotate(222.857deg)"
-+                             transformOrigin: "center"
--                             font-size: "10px"
--                             transform-origin: "center center"
-                            }}
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="/vd-final/...">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en" className="font-sans ...">
+                          <body
+                            className="urbanist_7db8e1a0-module__t9XuAa__variable playfair_display_328d9399-module__Xb..."
+-                           cz-shortcut-listen="true"
+-                           data-new-gr-c-s-check-loaded="14.1286.0"
+-                           data-gr-ext-installed=""
                           >
-+                           u
-                          ...
-              ...
-      ...
+                            ...
+                              <motion.div animate={{rotate:360}} transition={{duration:20, ...}} ...>
+                                <div className="relative w..." style={{}} ref={function useMotionRef.useCallback}>
+                                  <span>
+                                  <span>
+                                  <span>
+                                  <span>
+                                  <span>
+                                  <span>
+                                  <span>
+                                  <span>
+                                  <span
+                                    className="absolute font-semibold"
+                                    style={{
++                                     color: "#000000"
+-                                     color: "rgb(0, 0, 0)"
++                                     fontSize: "9px"
++                                     left: "calc(50% + 15.643972968731145px)"
+-                                     left: "calc(50% + 15.644px)"
++                                     top: "calc(50% + 16.860193052086007px)"
+-                                     top: "calc(50% + 16.8602px)"
++                                     transform: "translate(-50%, -50%) rotate(137.14285714285717deg)"
+-                                     transform: "translate(-50%, -50%) rotate(137.143deg)"
++                                     transformOrigin: "center"
+-                                     font-size: "9px"
+-                                     transform-origin: "center center"
+                                    }}
+                                  >
++                                   a
+                                  <span>
+                                  <span>
+                                  <span>
+                                  <span>
+                                  <span
+                                    className="absolute font-semibold"
+                                    style={{
++                                     color: "#000000"
+-                                     color: "rgb(0, 0, 0)"
++                                     fontSize: "9px"
++                                     left: "calc(50% + -15.64397296873115px)"
+-                                     left: "calc(50% - 15.644px)"
++                                     top: "calc(50% + 16.860193052086004px)"
+-                                     top: "calc(50% + 16.8602px)"
++                                     transform: "translate(-50%, -50%) rotate(222.85714285714286deg)"
+-                                     transform: "translate(-50%, -50%) rotate(222.857deg)"
++                                     transformOrigin: "center"
+-                                     font-size: "9px"
+-                                     transform-origin: "center center"
+                                    }}
+                                  >
++                                   u
+                                  ...
+                  ...
 
-[00:00:11.339] Browser WARN    Image with src "http://localhost:3000/assets/svg/heroIcon.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:00:11.339] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
-[00:00:28.753] Browser WARN    Image with src "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:28.753] Browser WARN    Image with src "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:28.753] Browser WARN    Image with src "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:28.753] Browser WARN    Image with src "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:29.153] Browser WARN    Image with src "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:29.153] Browser WARN    Image with src "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:29.153] Browser WARN    Image with src "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:29.153] Browser WARN    Image with src "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:00:46.730] Browser WARN    Image with src "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[00:04:40.091] Server  LOG     ✓ Compiled in 677ms
-[00:04:41.012] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 4
-[09:01:39.452] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 4
-[09:01:39.453] Browser ERROR   Received `%s` for a non-boolean attribute `%s`.
+[00:00:06.963] Browser WARN    Image with src "http://localhost:3000/assets/svg/heroIcon.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:00:06.963] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:00:06.963] Browser WARN    Image with src "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:06.964] Browser WARN    Image with src "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:06.964] Browser WARN    Image with src "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:06.964] Browser WARN    Image with src "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:07.116] Browser WARN    Image with src "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:07.116] Browser WARN    Image with src "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:07.116] Browser WARN    Image with src "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:00:07.116] Browser WARN    Image with src "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:01:39.444] Browser WARN    Image with src "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:05:54.471] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 4
+[00:05:54.471] Browser ERROR   Received `%s` for a non-boolean attribute `%s`.
 
 If you want to write it to the DOM, pass a string instead: %s="%s" or %s={value.toString()}. true clpt-0 clpt-0 true clpt-0
-[09:01:39.453] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:05:54.471] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -96,73 +130,96 @@ It can also happen if the client has a browser extension installed which messes 
 %s%s https://react.dev/link/hydration-mismatch 
 
   ...
-    <div className="relative f..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
-      <motion.div initial={{opacity:0,scale:0}} animate={{opacity:1,scale:1}} transition={{duration:0.8, ...}} ...>
-        <div className="absolute h..." style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
-          <RotatingBadge text={" Money B..."} size={70} backgroundColor="#ffffff" textColor="#000000" ...>
-            <div className={"rounded-..."} style={{width:"70px", ...}}>
-              <motion.div animate={{rotate:360}} transition={{duration:20, ...}} className="absolute i..." style={{...}}>
-                <div className="absolute i..." style={{...}} ref={function useMotionRef.useCallback}>
-                  <div className="w-full h-f..." style={{...}}>
-                    <div className="absolute i...">
-                      <motion.div animate={{rotate:360}} transition={{duration:20, ...}} className="relative w...">
-                        <div className="relative w..." style={{}} ref={function useMotionRef.useCallback}>
-                          <span>
-                          <span>
-                          <span>
-                          <span>
-                          <span>
-                          <span>
-                          <span>
-                          <span>
-                          <span>
-                          <span>
-                          <span>
-                          <span>
-                          <span>
-                          <span
-                            className="absolute font-semibold"
-                            style={{
-+                             color: "#000000"
--                             color: "rgb(0, 0, 0)"
-+                             fontSize: "10px"
-+                             left: "calc(50% + -19.044836657585748px)"
--                             left: "calc(50% - 19.0448px)"
-+                             top: "calc(50% + 20.525452411235136px)"
--                             top: "calc(50% + 20.5255px)"
-+                             transform: "translate(-50%, -50%) rotate(222.85714285714286deg)"
--                             transform: "translate(-50%, -50%) rotate(222.857deg)"
-+                             transformOrigin: "center"
--                             font-size: "10px"
--                             transform-origin: "center center"
-                            }}
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="/vd-final/...">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="en" className="font-sans ...">
+                          <body
+                            className="urbanist_7db8e1a0-module__t9XuAa__variable playfair_display_328d9399-module__Xb..."
+-                           data-new-gr-c-s-check-loaded="14.1286.0"
+-                           data-gr-ext-installed=""
                           >
-+                           u
-                          ...
-              ...
-      ...
+                            ...
+                              <motion.div animate={{rotate:360}} transition={{duration:20, ...}} ...>
+                                <div className="relative w..." style={{}} ref={function useMotionRef.useCallback}>
+                                  <span>
+                                  <span>
+                                  <span>
+                                  <span>
+                                  <span>
+                                  <span>
+                                  <span>
+                                  <span>
+                                  <span
+                                    className="absolute font-semibold"
+                                    style={{
++                                     color: "#FFD05B"
+-                                     color: "rgb(255, 208, 91)"
++                                     fontSize: "11px"
++                                     left: "calc(50% + 22.44570034644034px)"
+-                                     left: "calc(50% + 22.4457px)"
++                                     top: "calc(50% + 24.190711770384272px)"
+-                                     top: "calc(50% + 24.1907px)"
++                                     transform: "translate(-50%, -50%) rotate(137.14285714285717deg)"
+-                                     transform: "translate(-50%, -50%) rotate(137.143deg)"
++                                     transformOrigin: "center"
+-                                     font-size: "11px"
+-                                     transform-origin: "center center"
+                                    }}
+                                  >
++                                   a
+                                  <span>
+                                  <span>
+                                  <span>
+                                  <span>
+                                  <span
+                                    className="absolute font-semibold"
+                                    style={{
++                                     color: "#FFD05B"
+-                                     color: "rgb(255, 208, 91)"
++                                     fontSize: "11px"
++                                     left: "calc(50% + -22.445700346440347px)"
+-                                     left: "calc(50% - 22.4457px)"
++                                     top: "calc(50% + 24.190711770384265px)"
+-                                     top: "calc(50% + 24.1907px)"
++                                     transform: "translate(-50%, -50%) rotate(222.85714285714286deg)"
+-                                     transform: "translate(-50%, -50%) rotate(222.857deg)"
++                                     transformOrigin: "center"
+-                                     font-size: "11px"
+-                                     transform-origin: "center center"
+                                    }}
+                                  >
++                                   u
+                                  ...
+                  ...
 
-[09:01:39.453] Browser WARN    Image with src "http://localhost:3000/assets/svg/heroIcon.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[09:01:39.453] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
-[09:02:24.040] Browser WARN    Image with src "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[09:02:24.040] Browser WARN    Image with src "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[09:02:24.040] Browser WARN    Image with src "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[09:02:24.040] Browser WARN    Image with src "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[09:02:24.171] Browser WARN    Image with src "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[09:02:24.171] Browser WARN    Image with src "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[09:02:24.171] Browser WARN    Image with src "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[09:02:24.171] Browser WARN    Image with src "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[09:02:33.769] Browser WARN    Image with src "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
-[09:03:11.872] Server  LOG     ✓ Compiled in 263ms
-[09:03:12.539] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 4
-[09:03:12.539] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 4
-[09:05:10.295] Server  LOG     ✓ Compiled in 76ms
-[09:05:10.540] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 4
-[09:05:10.540] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 4
-[09:05:12.706] Server  LOG     ✓ Compiled in 463ms
-[09:05:14.419] Server  LOG     ✓ Compiled in 102ms
-[09:09:21.622] Server  LOG     ✓ Compiled in 153ms
-[09:09:22.085] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 4
-[09:09:22.560] Browser ERROR   Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version. 4
-[09:11:27.659] Server  LOG     ✓ Compiled in 185ms
-[20:31:02.866] Server  LOG     ✓ Compiled in 319ms
+[00:05:54.471] Browser WARN    Image with src "http://localhost:3000/assets/svg/heroIcon.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:05:54.472] Browser WARN    Please ensure that the container has a non-static position, like 'relative', 'fixed', or 'absolute' to ensure scroll offset is calculated correctly.
+[00:06:51.260] Browser WARN    Image with src "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:06:51.260] Browser WARN    Image with src "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:06:51.260] Browser WARN    Image with src "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:06:51.260] Browser WARN    Image with src "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:06:51.654] Browser WARN    Image with src "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:06:51.654] Browser WARN    Image with src "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:06:51.654] Browser WARN    Image with src "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:06:51.654] Browser WARN    Image with src "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes
+[00:07:29.697] Browser WARN    Image with src "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=80&h=80&fit=crop&crop=face" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes

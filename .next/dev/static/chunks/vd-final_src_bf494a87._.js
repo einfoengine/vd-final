@@ -348,7 +348,7 @@ function HeroVideo({ video }) {
         }
     }["HeroVideo.useEffect"], []);
     // Fixed dimensions - no longer changes with scroll.
-    const containerWidth = isMdScreen ? "800px" : "90%";
+    const containerWidth = isMdScreen ? "720px" : "90%";
     const containerHeight = "auto";
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         onClick: handleToggleSound,
@@ -1284,7 +1284,7 @@ const Hero = ({ dataSource, title, supertitle, subtitle, description, primaryBut
                                     0.94
                                 ]
                             },
-                            className: `relative flex flex-col items-center justify-center max-w-[1000px] m-auto text-center pt-[160px] mb-16 transition-colors duration-300 ${!isScrolled ? 'text-black' : 'text-white'}`,
+                            className: `relative flex flex-col items-center justify-center max-w-[900px] m-auto text-center pt-[120px] mb-12 transition-colors duration-300 ${!isScrolled ? 'text-black' : 'text-white'}`,
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
                                     initial: {
@@ -1305,14 +1305,14 @@ const Hero = ({ dataSource, title, supertitle, subtitle, description, primaryBut
                                             0.94
                                         ]
                                     },
-                                    className: "absolute hidden md:block top-[-40px] md:top-[140px] right-0 md:translate-x-1/2 z-10 scale-75 md:scale-100 origin-bottom-right md:origin-center",
+                                    className: "absolute hidden md:block top-[-40px] md:top-[100px] right-0 md:translate-x-1/2 z-10 scale-75 md:scale-90 origin-bottom-right md:origin-center",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$common$2f$RotatingBadge$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["RotatingBadge"], {
                                         text: " Money Back Guarantee",
-                                        size: 70,
+                                        size: 60,
                                         backgroundColor: !isScrolled ? "#ffffff" : "#000000",
                                         textColor: !isScrolled ? "#000000" : "#ffffff",
                                         rotationDuration: 20,
-                                        fontSize: 10,
+                                        fontSize: 9,
                                         externalBorderWidth: 1,
                                         textGap: 6
                                     }, void 0, false, {
@@ -1346,7 +1346,7 @@ const Hero = ({ dataSource, title, supertitle, subtitle, description, primaryBut
                                             0.94
                                         ]
                                     },
-                                    className: 'flex items-center gap-2 transition-colors duration-300 mb-6 md:mb-2',
+                                    className: 'flex items-center gap-2 transition-colors duration-300 mb-4 md:mb-2 text-sm md:text-base',
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
                                             initial: {
@@ -1364,8 +1364,8 @@ const Hero = ({ dataSource, title, supertitle, subtitle, description, primaryBut
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                                                 src: "/assets/svg/heroIcon.svg",
                                                 alt: "Reviews",
-                                                width: 40,
-                                                height: 40
+                                                width: 32,
+                                                height: 32
                                             }, void 0, false, {
                                                 fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
                                                 lineNumber: 173,
@@ -1384,7 +1384,7 @@ const Hero = ({ dataSource, title, supertitle, subtitle, description, primaryBut
                                             columnNumber: 19
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "flex items-center ml-3",
+                                            className: "flex items-center ml-2",
                                             children: [
                                                 ...Array(5)
                                             ].map((_, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1403,7 +1403,7 @@ const Hero = ({ dataSource, title, supertitle, subtitle, description, primaryBut
                                                         stiffness: 200
                                                     },
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$star$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Star$3e$__["Star"], {
-                                                        className: "w-5 h-5 text-yellow-400 fill-yellow-400"
+                                                        className: "w-4 h-4 text-yellow-400 fill-yellow-400"
                                                     }, void 0, false, {
                                                         fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
                                                         lineNumber: 194,
@@ -1426,7 +1426,7 @@ const Hero = ({ dataSource, title, supertitle, subtitle, description, primaryBut
                                     columnNumber: 17
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 data.supertitle && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "relative inline-block z-20 mt-4 md:mt-0 mb-4 md:mb-[-15px] -rotate-3 hover:rotate-0 transition-transform duration-300",
+                                    className: "relative inline-block z-20 mt-4 md:mt-0 mb-4 md:mb-[-10px] -rotate-3 hover:rotate-0 transition-transform duration-300",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
                                         initial: {
                                             opacity: 0,
@@ -1440,7 +1440,7 @@ const Hero = ({ dataSource, title, supertitle, subtitle, description, primaryBut
                                             duration: 0.8,
                                             delay: 0.3
                                         },
-                                        className: `text-lg md:text-xl font-bold tracking-wide border rounded-full py-2 px-6 transition-colors duration-300 border-white/20 bg-white/10 text-white`,
+                                        className: `text-base md:text-lg font-bold tracking-wide border rounded-full py-1.5 px-5 transition-colors duration-300 border-white/20 bg-white/10 text-white`,
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             className: "relative z-10",
                                             children: data.supertitle
@@ -1480,7 +1480,7 @@ const Hero = ({ dataSource, title, supertitle, subtitle, description, primaryBut
                                             0.94
                                         ]
                                     },
-                                    className: `nt-hero-heading mb-6 transition-colors duration-300 text-4xl sm:text-5xl md:text-6xl lg:text-[5.5rem] font-extrabold leading-[1.1] tracking-tight`,
+                                    className: `nt-hero-heading mb-5 transition-colors duration-300 text-3xl sm:text-4xl md:text-5xl lg:text-[4.5rem] font-extrabold leading-[1.1] tracking-tight`,
                                     children: parseHighlightedText(data.title, true)
                                 }, void 0, false, {
                                     fileName: "[project]/vd-final/src/components/Module/hero/Hero.tsx",
@@ -1506,7 +1506,7 @@ const Hero = ({ dataSource, title, supertitle, subtitle, description, primaryBut
                                             0.94
                                         ]
                                     },
-                                    className: `text-lg sm:text-xl md:text-2xl lg:text-3xl transition-colors duration-300 max-w-4xl mx-auto text-white/80`,
+                                    className: `text-base sm:text-lg md:text-xl lg:text-2xl transition-colors duration-300 max-w-3xl mx-auto text-white/80`,
                                     children: [
                                         parseHighlightedText(data.description, false),
                                         data.typewriterTexts && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$vd$2d$final$2f$src$2f$components$2f$common$2f$FlipText$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FlipText"], {
